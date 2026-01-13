@@ -1,8 +1,10 @@
 // const fs = require('fs')
-// const path = require('path')
+const path = require('path')
 const axios = require('axios')
 const { ethers } = require('ethers')
-require('dotenv').config();
+
+const envFilePath = path.resolve(__dirname, "../.env")
+require('dotenv').config({ path: envFilePath });
 
 const {getChainManager, callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require('./chainManager')
 
@@ -23,8 +25,8 @@ const sendWan = async () => {
     'Wanchain', 
     privateKey, 
     LockAddressOnWanchain, 
-    ethers.parseEther('0.1'
-  ));
+    ethers.parseEther('0.1')
+  );
   console.log(`tx is ${txResponse}, receipt is ${JSON.stringify(receipt)}`)
 }
 
