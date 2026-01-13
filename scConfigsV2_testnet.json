@@ -1,0 +1,2213 @@
+[
+  {
+    "testnet": {
+      "chainType": "WAN",
+      "rpc": "https://nodes-testnet.wandevs.org/wan",
+      "gasPrice": 100000000000,
+      "gasLimit": 10000000,
+      "chainId": 999,
+      "curveType": "1",
+      "deployedFile": "testnet.json",
+      "bip44": 2153201998,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "WAN",
+      "decimals": 18,
+      "chainName": "wan",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x14095a721dddb892d6350a777c75396d634a7d97"
+    },
+    "mainnet": {
+      "chainType": "WAN",
+      "rpc": "https://nodes.wandevs.org/wan",
+      "gasPrice": 100000000000,
+      "gasLimit": 10000000,
+      "chainId": 888,
+      "curveType": "1",
+      "deployedFile": "mainnet.json",
+      "bip44": 2153201998,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "WAN",
+      "decimals": 18,
+      "chainName": "wan",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0xba5934ab3056fca1fa458d30fbb3810c3eb5145f"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "ETH",
+      "rpc": "https://eth-sepolia.api.onfinality.io/public",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 11155111,
+      "curveType": "1",
+      "deployedFile": "rinkeby.json",
+      "bip44": 2147483708,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "ETH",
+      "decimals": 18,
+      "chainName": "ethereum",
+      "timeLock": true,
+      "useLocal": false,
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://eth-sepolia.api.onfinality.io/public",
+        "https://sepolia.gateway.tenderly.co"
+      ],
+      "multiCall": "0x482E6206aEA6B44143E1973e027381d47E029a99",
+      "algoType": "1",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x9E5a719D49cb3AEC4b5b2262b64CE36a67aCeFee",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x589E12D073020f99FEBF32B739e58216748c9ed4",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xFDa7a6d11fDd32F18e8d8d9ce1e97A9575141875",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    },
+    "mainnet": {
+      "chainType": "ETH",
+      "rpc": "https://rpc.ankr.com/eth",
+      "gasPrice": 100000000000,
+      "gasLimit": 8000000,
+      "chainId": 1,
+      "curveType": "1",
+      "deployedFile": "ethereum.json",
+      "bip44": 2147483708,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "ETH",
+      "decimals": 18,
+      "chainName": "ethereum",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0xeefba1e63905ef1d7acba5a8513c70307c1ce441"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "BSC",
+      "rpc": "https://bsc-testnet.publicnode.com",
+      "gasPrice": 50000000000,
+      "gasLimit": 2000000,
+      "chainId": 97,
+      "curveType": "1",
+      "deployedFile": "testnet_bsc.json",
+      "bip44": 2147484362,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "BSC",
+      "decimals": 18,
+      "chainName": "bsc",
+      "timeLock": true,
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://bsc-testnet.publicnode.com",
+        "https://api.zan.top/bsc-testnet"
+      ],
+      "multiCall": "0x54b738619de4770a17ff3d6ba4c2b591a886a062",
+      "algoType": "1",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xBdff39372E4BC0ceFC54b858828aaedFd5498cD1",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xb12513cFCb13b7bE59Ba431C040B7206B0a211b9",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xe110fcEd02DF3b3ABB9E13145bd62491ac3A0032",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    },
+    "mainnet": {
+      "chainType": "BSC",
+      "rpc": "https://bsc-dataseed1.binance.org",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 56,
+      "curveType": "1",
+      "deployedFile": "bsc.json",
+      "bip44": 2147484362,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "BSC",
+      "decimals": 18,
+      "chainName": "bsc",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://bsc-dataseed1.binance.org",
+        "https://bsc-dataseed.binance.org",
+        "https://bsc-dataseed1.defibit.io/",
+        "https://bsc-dataseed1.ninicoin.io/"
+      ],
+      "multiCall": "0x023a33445f11c978f8a99e232e1c526ae3c0ad70"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "AVAX",
+      "rpc": "https://api.avax-test.network/ext/bc/C/rpc",
+      "gasPrice": 470000000000,
+      "gasLimit": 3000000,
+      "chainId": 43113,
+      "curveType": "1",
+      "deployedFile": "testnet_avax.json",
+      "bip44": 2147492648,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "AVAX",
+      "decimals": 18,
+      "chainName": "avax",
+      "timeLock": true,
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://api.avax-test.network/ext/bc/C/rpc",
+        "https://rpc.ankr.com/avalanche_fuji",
+        "https://avalanche-fuji-c-chain.publicnode.com"
+      ],
+      "multiCall": "0x0ea414baaf9643be59667e92e26a87c4bae3f33a",
+      "algoType": "1",
+      "deployedInfo": {}
+    },
+    "mainnet": {
+      "chainType": "AVAX",
+      "rpc": "https://rpc.ankr.com/avalanche",
+      "gasPrice": 470000000000,
+      "gasLimit": 3000000,
+      "chainId": 43114,
+      "curveType": "1",
+      "deployedFile": "avalancheMainnet.json",
+      "bip44": 2147492648,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "AVAX",
+      "decimals": 18,
+      "chainName": "avax",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://api.avax.network/ext/bc/C/rpc",
+        "https://rpc.ankr.com/avalanche"
+      ],
+      "multiCall": "0xa4726706935901fe7dd0f23cf5d4fb19867dfc88"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "MOVR",
+      "rpc": "https://rpc.testnet.moonbeam.network",
+      "gasPrice": 800000000000,
+      "gasLimit": 8000000,
+      "chainId": 1287,
+      "curveType": "1",
+      "deployedFile": "moonbeamTestnet.json",
+      "bip44": 1073741825,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "MOVR",
+      "decimals": 18,
+      "chainName": "moonbase",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://rpc.testnet.moonbeam.network",
+        "https://rpc.api.moonbase.moonbeam.network",
+        "https://moonbase-alpha.drpc.org",
+        "https://moonbase-rpc.dwellir.com"
+      ],
+      "multiCall": "0x0d6a6a764c6b2fe4ef922b61d719a62c894959e3"
+    },
+    "mainnet": {
+      "chainType": "MOVR",
+      "rpc": "https://rpc.api.moonriver.moonbeam.network",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 1285,
+      "curveType": "1",
+      "deployedFile": "moonriverMainnet.json",
+      "bip44": 1073741825,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "MOVR",
+      "decimals": 18,
+      "chainName": "moonriver",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://moonriver.api.onfinality.io/public",
+        "https://rpc.api.moonriver.moonbeam.network"
+      ],
+      "multiCall": "0x1fe0c23940fce7f440248e00ce2a175977ee4b16"
+    }
+  },
+  {
+    "mainnet": {
+      "chainType": "GLMR",
+      "rpc": "https://rpc.api.moonbeam.network",
+      "gasPrice": 300000000000,
+      "gasLimit": 8000000,
+      "chainId": 1284,
+      "curveType": "1",
+      "deployedFile": "moonbeamMainnet.json",
+      "bip44": 1073741828,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "GLMR",
+      "decimals": 18,
+      "chainName": "moonbeam",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0xbacaaa4509ee9c9b2cf7133b970bc6db47713477",
+      "explorer": "https://blockscout.moonbeam.network/"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "MATIC",
+      "rpc": "https://polygon-amoy-bor-rpc.publicnode.com",
+      "gasPrice": 30000000000,
+      "gasLimit": 8000000,
+      "chainId": 80002,
+      "curveType": "1",
+      "deployedFile": "maticTestnet.json",
+      "bip44": 2147484614,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "MATIC",
+      "decimals": 8,
+      "chainName": "polygon",
+      "timeLock": true,
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://polygon-amoy-bor-rpc.publicnode.com",
+        "https://polygon-amoy.blockpi.network/v1/rpc/public",
+        "https://rpc-amoy.polygon.technology"
+      ],
+      "multiCall": "0x201E5dE97DFc46aAce142B2009332c524c9D8D82",
+      "algoType": "1",
+      "ignore": false,
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x265b967Af0CB6477FC0074e9F388FB2BA0bEFd18",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xFb06346e587ffB494438102515D576086bE750F4",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xc12cF8cC8Eff1F39c9e60dA81d11745c25c59501",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    },
+    "mainnet": {
+      "chainType": "MATIC",
+      "rpc": "https://polygon.llamarpc.com",
+      "gasPrice": 300000000000,
+      "gasLimit": 5000000,
+      "chainId": 137,
+      "curveType": "1",
+      "deployedFile": "maticMainnet.json",
+      "bip44": 2147484614,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "MATIC",
+      "decimals": 8,
+      "chainName": "polygon",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x1bbc16260d5d052f1493b8f2aeee7888fed1e9ab"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "ARB",
+      "rpc": "https://sepolia-rollup.arbitrum.io/rpc",
+      "gasPrice": 1000000000000,
+      "gasLimit": 3000000,
+      "chainId": 421614,
+      "curveType": "1",
+      "deployedFile": "arbTestnet.json",
+      "bip44": 1073741826,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "ARB",
+      "decimals": 18,
+      "chainName": "arbitrum",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://sepolia-rollup.arbitrum.io/rpc",
+        "https://arbitrum-sepolia.gateway.tenderly.co",
+        "https://arbitrum-sepolia-rpc.publicnode.com"
+      ],
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "explorer": "https://goerli.arbiscan.io/",
+      "algoType": "1",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    },
+    "mainnet": {
+      "chainType": "ARB",
+      "rpc": "https://arb1.arbitrum.io/rpc",
+      "gasPrice": 1000000000000,
+      "gasLimit": 5000000,
+      "chainId": 42161,
+      "curveType": "1",
+      "deployedFile": "arbMainnet.json",
+      "bip44": 1073741826,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "ARB",
+      "decimals": 18,
+      "chainName": "arbitrum",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://arb1.arbitrum.io/rpc",
+        "https://rpc.ankr.com/arbitrum"
+      ],
+      "multiCall": "0xb66f96e30d6a0ae64d24e392bb2dbd25155cb3a6",
+      "explorer": "https://rinkeby-explorer.arbitrum.io/#/"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "FTM",
+      "rpc": "https://fantom-testnet.publicnode.com",
+      "gasPrice": 500000000000,
+      "gasLimit": 8000000,
+      "chainId": 4002,
+      "curveType": "1",
+      "deployedFile": "ftmTestnet.json",
+      "bip44": 2147484655,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "FTM",
+      "decimals": 18,
+      "chainName": "fantom",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://xapi.testnet.fantom.network/lachesis",
+        "https://rpc.testnet.fantom.network",
+        "https://fantom-testnet.publicnode.com"
+      ],
+      "multiCall": "0x5379271958a603ba1cd782588643d9566799670c",
+      "explorer": "https://testnet.ftmscan.com/"
+    },
+    "mainnet": {
+      "chainType": "FTM",
+      "rpc": "https://rpcapi.fantom.network",
+      "gasPrice": 900000000000,
+      "gasLimit": 8000000,
+      "chainId": 250,
+      "curveType": "1",
+      "deployedFile": "ftmMainnet.json",
+      "bip44": 2147484655,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "FTM",
+      "decimals": 18,
+      "chainName": "fantom",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://rpcapi.fantom.network",
+        "https://rpc.fantom.network/"
+      ],
+      "multiCall": "0x5f4870d51d2629d7493970b9d4526377da98e95e",
+      "explorer": "https://www.ftmscan.com/"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "OPT",
+      "rpc": "https://sepolia.optimism.io",
+      "gasPrice": 300000000000,
+      "gasLimit": 8000000,
+      "chainId": 11155420,
+      "curveType": "1",
+      "deployedFile": "optTestnet.json",
+      "bip44": 2147484262,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "OETH",
+      "decimals": 18,
+      "chainName": "optimism",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://sepolia.optimism.io",
+        "https://optimism-sepolia.drpc.org",
+        "https://optimism-sepolia.api.onfinality.io/public",
+        "https://optimism-sepolia.therpc.io",
+        "https://optimism-sepolia.gateway.tenderly.co",
+        "https://endpoints.omniatech.io/v1/op/sepolia/public"
+      ],
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "explorer": "https://goerli-optimism.etherscan.io/",
+      "algoType": "1",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    },
+    "mainnet": {
+      "chainType": "OPT",
+      "rpc": "https://optimism-mainnet.public.blastapi.io",
+      "gasPrice": 300000000000,
+      "gasLimit": 8000000,
+      "chainId": 10,
+      "curveType": "1",
+      "deployedFile": "optMainnet.json",
+      "bip44": 2147484262,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "OETH",
+      "decimals": 18,
+      "chainName": "optimism",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x2dc0e2aa608532da689e89e237df582b783e552c",
+      "explorer": "https://optimistic.etherscan.com/"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "XDC",
+      "rpc": "https://erpc.apothem.network",
+      "wss": "wss://ws.apothem.network",
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "chainId": 51,
+      "curveType": "1",
+      "deployedFile": "xdcTestnet.json",
+      "bip44": 2147484198,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "XDC",
+      "decimals": 18,
+      "chainName": "xinfin",
+      "useLocal": true,
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://rpc.apothem.network",
+        "https://erpc.apothem.network"
+      ],
+      "multiCall": "0x4a9f99ceb037e8c4fbec272d17d40282aa67d9c6",
+      "explorer": "https://explorer.apothem.network/",
+      "algoType": "1",
+      "ignore": false,
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x18eDFE1e49CA89157384832482c66E95Ea9B0Fca",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x3E18014F7c11F4D70b0023d8f61350A3Ef8f0978",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    },
+    "mainnet": {
+      "chainType": "XDC",
+      "rpc": "https://rpc.ankr.com/xdc",
+      "wss": "wss://ws.xinfin.network",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 50,
+      "curveType": "1",
+      "deployedFile": "xdcMainnet.json",
+      "bip44": 2147484198,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "XDC",
+      "decimals": 18,
+      "chainName": "xinfin",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://rpc.ankr.com/xdc",
+        "https://rpc.xdc.org",
+        "https://erpc.xdcrpc.com"
+      ],
+      "multiCall": "0x711bc8dc6bf017958470c6a25f77d05db2dce65b",
+      "explorer": "https://explorer.xinfin.network/"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "TRON",
+      "rpc": "https://nile.trongrid.io",
+      "web3Rpc": "https://nile.trongrid.io/jsonrpc",
+      "wss": "wss://ws.apothem.network",
+      "gasPrice": 1000000000,
+      "gasLimit": 8000000,
+      "chainId": 195,
+      "curveType": "1",
+      "deployedFile": "tronTestnetNile.json",
+      "bip44": 2147483843,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "tron",
+      "symbol": "TRON",
+      "decimals": 6,
+      "chainName": "tron",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://nile.trongrid.io",
+        "https://nile.trongrid.io",
+        "https://nile.trongrid.io"
+      ],
+      "multiCall": "41b2401225f5ec9b4c1014a93edb3cda19afdd9c1b",
+      "explorer": "https://nile.tronscan.org/"
+    },
+    "mainnet": {
+      "chainType": "TRON",
+      "rpc": "https://api.trongrid.io",
+      "web3Rpc": "https://api.trongrid.io/jsonrpc",
+      "gasPrice": 1000000000,
+      "gasLimit": 8000000,
+      "chainId": 1231,
+      "curveType": "1",
+      "deployedFile": "tronMainnet.json",
+      "bip44": 2147483843,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "tron",
+      "symbol": "TRON",
+      "decimals": 6,
+      "chainName": "tron",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "419d5b1c2defe060b74fa9561269a37b1c71331848",
+      "explorer": "https://nile.tronscan.org/"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "OKT",
+      "rpc": "https://exchaintestrpc.okex.org",
+      "wss": "wss://ws.apothem.network",
+      "gasPrice": 100000000000,
+      "gasLimit": 8000000,
+      "chainId": 65,
+      "curveType": "1",
+      "deployedFile": "oktTestnet.json",
+      "bip44": 2147484644,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "OKT",
+      "decimals": 18,
+      "chainName": "okt",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x3ecc2399611a26e70dbac73714395b13bc3b69fa",
+      "explorer": "https://www.oklink.com/oec-test/",
+      "faucet": "https://www.okx.com/okc/faucet",
+      "ignore": true
+    },
+    "mainnet": {
+      "chainType": "OKT",
+      "rpc": "https://exchainrpc.okex.org",
+      "wss": "wss://ws.apothem.network",
+      "gasPrice": 100000000000,
+      "gasLimit": 8000000,
+      "chainId": 66,
+      "curveType": "1",
+      "deployedFile": "oktMainnet.json",
+      "bip44": 2147484644,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "OKT",
+      "decimals": 18,
+      "chainName": "okt",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0xbd4191828aeff23fb9e0249a5ae583a4b9425e49",
+      "explorer": "https://www.oklink.com/oec/"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "CLV",
+      "rpc": "https://api-para.clover.finance",
+      "wss": "wss://rpc-para.clover.finance",
+      "gasPrice": 150000000000,
+      "gasLimit": 2000000,
+      "chainId": 1024,
+      "curveType": "1",
+      "deployedFile": "clvTestnet.json",
+      "bip44": 1073741829,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "CLV",
+      "decimals": 18,
+      "chainName": "clover-p",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://api-para.clover.finance"
+      ],
+      "multiCall": "0x9b281146a04a67948f4601abda704016296017c5",
+      "explorer": "https://clvscan.com/",
+      "faucet": "",
+      "algoType": "1",
+      "ignore": true,
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x6E81E127a280Cd17BeBc7704Ce28a0226295A12b",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xCef19151F44fC3df678554F35c1dd7F29afacDE8",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x95492fD2f5b2D2e558e8aF811f951e2DCbc846d3",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    },
+    "mainnet": {
+      "chainType": "CLV",
+      "rpc": "https://api-para.clover.finance",
+      "wss": "wss://rpc-para.clover.finance",
+      "gasPrice": 300000000000,
+      "gasLimit": 8000000,
+      "chainId": 1024,
+      "curveType": "1",
+      "deployedFile": "clvMainnet.json",
+      "bip44": 1073741829,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "CLV",
+      "decimals": 18,
+      "chainName": "clover-p",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x9b281146a04a67948f4601abda704016296017c5",
+      "explorer": "https://clvscan.com/",
+      "faucet": ""
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "FX",
+      "rpc": "https://testnet-fx-json-web3.functionx.io:8545",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "chainId": 90001,
+      "curveType": "1",
+      "deployedFile": "fx-core-Testnet.json",
+      "bip44": 1073741830,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "FX",
+      "decimals": 18,
+      "chainName": "functionX",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://testnet-fx-json-web3.functionx.io:8545"
+      ],
+      "multiCall": "0x131DFc3Ca32D3a959012606855320cBE8e655132",
+      "explorer": "https://testnet-explorer.functionx.io/evm",
+      "faucet": "",
+      "algoType": "1",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xc21E5553c8dDDf2E4a93E5bEDBaE436d4291F603",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x4f1aB74c2a9E8f591e8A80768e115C9f75935bAD",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xc95a4bc5C14CC6a23AF46BA50D3785d5fd55446d",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    },
+    "mainnet": {
+      "chainType": "FX",
+      "rpc": "https://fx-json-web3.functionx.io:8545",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 530,
+      "curveType": "1",
+      "deployedFile": "fx-core-Mainnet.json",
+      "bip44": 1073741830,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "FX",
+      "decimals": 18,
+      "chainName": "functionX",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0xbd4191828aeff23fb9e0249a5ae583a4b9425e49",
+      "explorer": "https://explorer.functionx.io/evm",
+      "faucet": ""
+    }
+  },
+  {
+    "mainnet": {
+      "chainType": "ASTR",
+      "rpc": "https://astar-rpc.dwellir.com",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 592,
+      "curveType": "1",
+      "deployedFile": "astarMainnet.json",
+      "bip44": 2147484458,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "ASTR",
+      "decimals": 18,
+      "chainName": "ASTR",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0xb023f2d496a04c5af9cd1214924b0fb19397e3fa",
+      "explorer": "https://shibuya.subscan.io/",
+      "faucet": ""
+    },
+    "testnet": {
+      "chainType": "ASTR",
+      "rpc": "https://shibuya.public.blastapi.io",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 3000000,
+      "chainId": 81,
+      "curveType": "1",
+      "deployedFile": "astarTestnet.json",
+      "bip44": 2147484458,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "ASTR",
+      "decimals": 18,
+      "chainName": "Shibaya",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://evm.shibuya.astar.network",
+        "https://shibuya.public.blastapi.io"
+      ],
+      "multiCall": "0x8331595fb5d64466a6877276337782a94e647005",
+      "explorer": "https://shibuya.subscan.io/",
+      "faucet": "",
+      "ignore": true,
+      "algoType": "1",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xAeCbF30602caF42467e7120C04271EDcC843f3c7",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x0758fe272Ab2DeDcd182B84D3e3F9310F21a4153",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x4b1690F6596574fCB0c1B7681E7fa0cea00FC95e",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "TLOS",
+      "rpc": "https://rpc.testnet.telos.net",
+      "wss": "",
+      "gasPrice": 7000000000000,
+      "gasLimit": 2000000,
+      "chainId": 41,
+      "curveType": "1",
+      "deployedFile": "telosTestnet.json",
+      "bip44": 2147484625,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "TLOS",
+      "decimals": 18,
+      "chainName": "telos",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://telos-testnet.drpc.org",
+        "https://rpc.testnet.telos.net"
+      ],
+      "multiCall": "0x674499D5fF2B200ef60214CF07DF4c1661c75725",
+      "explorer": "https://testnet.teloscan.io (https://testnet.teloscan.io/)",
+      "faucet": "https://app.telos.net/testnet/developers",
+      "algoType": "1",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x6E81E127a280Cd17BeBc7704Ce28a0226295A12b",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xfc9a863EDFEA47F6e4e6954Be978d447133D87ce",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9B281146A04A67948f4601ABDA704016296017c5",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    },
+    "mainnet": {
+      "chainType": "TLOS",
+      "rpc": "https://mainnet.telos.net/evm",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 40,
+      "curveType": "1",
+      "deployedFile": "telosMainnet.json",
+      "bip44": 2147484625,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "TLOS",
+      "decimals": 18,
+      "chainName": "telos",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x1ed3538383bbfdb80343b18f85d6c5a5fb232fb6",
+      "explorer": "https://www.teloscan.io",
+      "faucet": "https://app.telos.net/testnet/developers"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "GTH",
+      "rpc": "https://testnet.gather.network",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "chainId": 356256156,
+      "curveType": "1",
+      "deployedFile": "gatherTestnet.json",
+      "bip44": 1073741833,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "GTH",
+      "decimals": 18,
+      "chainName": "gather",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://testnet.gather.network"
+      ],
+      "multiCall": "0xC8E41511B534f20c05dBbfBb6929f0bE506f97F3",
+      "explorer": "https://testnet-explorer.gather.network",
+      "faucet": "https://testnet-faucet.gather.network",
+      "algoType": "1",
+      "ignore": true,
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x6957e0dF854B8dC2CaDA2baC902544f2c34EbFbd",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x7e0195A43a5DD27C507A1f0B2371d543c9e4dfc9",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x2715aA7156634256aE75240C2c5543814660CD04",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    },
+    "mainnet": {
+      "chainType": "GTH",
+      "rpc": "https://mainnet.gather.network",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 192837465,
+      "curveType": "1",
+      "deployedFile": "gatherMainnet.json",
+      "bip44": 1073741833,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "GTH",
+      "decimals": 18,
+      "chainName": "gather",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x0d10a02696cb9cfdc4de45bd5580eda85f22353b",
+      "explorer": "https://explorer.gather.network",
+      "faucet": ""
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "OKB",
+      "rpc": "https://testrpc.xlayer.tech/terigon",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "chainId": 1952,
+      "curveType": "0",
+      "deployedFile": "okbTestnet.json",
+      "bip44": 1073741835,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "OKB",
+      "decimals": 18,
+      "chainName": "okb",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://testrpc.xlayer.tech/terigon",
+        "https://xlayertestrpc.okx.com/terigon"
+      ],
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "explorer": "https://www.oklink.com/cn/okbc-test",
+      "faucet": "https://www.okx.com/okbc/faucet",
+      "algoType": "2",
+      "ignore": false,
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    },
+    "mainnet": {
+      "chainType": "OKB",
+      "rpc": "https://okbtestrpc.okbchain.org",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 195,
+      "curveType": "1",
+      "deployedFile": "okbMainnet.json",
+      "bip44": 1073741835,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "OKB",
+      "decimals": 18,
+      "chainName": "okb",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x10ce92bda0f7a184a1c2de322aa1a22938098442",
+      "explorer": "https://www.oklink.com/cn/okbc-test",
+      "faucet": "https://www.okx.com/okbc/faucet"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "METIS",
+      "rpc": "https://sepolia.metisdevops.link",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "chainId": 59902,
+      "curveType": "1",
+      "deployedFile": "metisTestnet.json",
+      "bip44": 1073741834,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "METIS",
+      "decimals": 18,
+      "chainName": "mts",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://sepolia.metisdevops.link"
+      ],
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "explorer": "https://goerli.explorer.metisdevops.link/",
+      "faucet": "https://goerli.faucet.metisdevops.link",
+      "algoType": "1",
+      "ignore": false,
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    },
+    "mainnet": {
+      "chainType": "METIS",
+      "rpc": "https://andromeda.metis.io/?owner=1088",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 1088,
+      "curveType": "1",
+      "deployedFile": "metisMainnet.json",
+      "bip44": 1073741834,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "METIS",
+      "decimals": 18,
+      "chainName": "mts",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://andromeda.metis.io/?owner=1088",
+        "https://metis-rpc.gateway.pokt.network"
+      ],
+      "multiCall": "0x0d10a02696cb9cfdc4de45bd5580eda85f22353b",
+      "explorer": "https://andromeda-explorer.metis.io/",
+      "faucet": ""
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "BROCK",
+      "bip44": 2154655314,
+      "ignore": true,
+      "gasLimit": 2000000,
+      "rpcS": [
+        "https://testnet.bit-rock.io"
+      ],
+      "rpc": "https://testnet.bit-rock.io",
+      "chainId": 7771,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "BROCK",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741836,
+      "chainType": "SGB",
+      "chainId": 16,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "SGB",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "ignore": false,
+      "multiCall": "0x4a9F99ceb037E8C4FBEC272D17D40282aA67d9c6",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x6E81E127a280Cd17BeBc7704Ce28a0226295A12b",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xfc9a863EDFEA47F6e4e6954Be978d447133D87ce",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9B281146A04A67948f4601ABDA704016296017c5",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://coston-api.flare.network/ext/C/rpc",
+        "https://songbird-testnet-coston.rpc.thirdweb.com"
+      ],
+      "rpc": "https://coston-api.flare.network/ext/C/rpc"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741837,
+      "chainType": "ZKETH",
+      "chainId": 300,
+      "curveType": "0",
+      "algoType": "2",
+      "symbol": "ZKETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 40000000,
+      "multiCall": "0xc77eC36db1C1020fb6f41399Fb0d9F789bcD81ea",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x25CAbbd75c1793865571bc674BD4DEE7ADeA3597",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x18De061bB6B635d114a9EA8721a6C63D0F6F3571",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xb407AE97F54815F4EbE57d67594e8549053316F2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://sepolia.era.zksync.dev",
+        "https://zksync-sepolia.drpc.org",
+        "https://zksync-era-sepolia.blockpi.network/v1/rpc/public",
+        "https://endpoints.omniatech.io/v1/zksync-era/sepolia/public"
+      ],
+      "rpc": "https://sepolia.era.zksync.dev"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741839,
+      "chainType": "ZEN",
+      "chainId": 1663,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "ZEN",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "ignore": true,
+      "multiCall": "0x9B281146A04A67948f4601ABDA704016296017c5",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x5292B2936daD44EdFbFB2929f9f246304167843b",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x6E81E127a280Cd17BeBc7704Ce28a0226295A12b",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x0F0Bf93bf16fD28294c637D855fc73b917ef5fCc",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://horizen-gobi-testnet.rpc.thirdweb.com/",
+        "https://gobi-rpc.horizenlabs.io/ethv1"
+      ],
+      "rpc": "https://horizen-gobi-testnet.rpc.thirdweb.com/"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741840,
+      "chainType": "VC",
+      "chainId": 206,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "VC",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://testnet-rpc.vinuchain.org"
+      ],
+      "rpc": "https://testnet-rpc.vinuchain.org"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741838,
+      "chainType": "MATICETH",
+      "chainId": 2442,
+      "curveType": "0",
+      "algoType": "2",
+      "symbol": "MATICETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "ignore": false,
+      "multiCall": "0xf6e24E7191B9669dc8D52C6BE6008E783E5c01Cb",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xFb06346e587ffB494438102515D576086bE750F4",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xD21F22E9E434F3814A950Ad136D882fCFfB9685c",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xf7C0c15cfaF2F93848E39af42a43dFdccD36F705",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.cardona.zkevm-rpc.com",
+        "https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public"
+      ],
+      "rpc": "https://rpc.cardona.zkevm-rpc.com"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 2147493445,
+      "chainType": "NRG",
+      "chainId": 49797,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "NRG",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "multiCall": "0xAb0D618806A82136FbEDDC04EDC617CD6e82Edbd",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x4a9F99ceb037E8C4FBEC272D17D40282aA67d9c6",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x95492fD2f5b2D2e558e8aF811f951e2DCbc846d3",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xCef19151F44fC3df678554F35c1dd7F29afacDE8",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://nodeapi.test.energi.network"
+      ],
+      "rpc": "https://nodeapi.test.energi.network"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741841,
+      "chainType": "BASEETH",
+      "chainId": 84532,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "BASEETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://sepolia.base.org"
+      ],
+      "rpc": "https://sepolia.base.org"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741842,
+      "chainType": "LINEAETH",
+      "chainId": 59141,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "LINEAETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "ignore": false,
+      "multiCall": "0xfc9a863EDFEA47F6e4e6954Be978d447133D87ce",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3E18014F7c11F4D70b0023d8f61350A3Ef8f0978",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xD25DB04661C468ea27C720970e9521d3F259690d",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x6E81E127a280Cd17BeBc7704Ce28a0226295A12b",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.sepolia.linea.build",
+        "https://linea-sepolia.blockpi.network/v1/rpc/public",
+        "https://linea-sepolia.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+      ],
+      "rpc": "https://rpc.sepolia.linea.build"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741845,
+      "chainType": "OPBNB",
+      "chainId": 5611,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "OPBNB",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x4D77dCD4884A97E866864c6C21644bEC72002c18",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x784cFb262777a33170fdbD15d09E750b06e3641E",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x34Cd1Ce396C29075381fD2c61B0959Ce640FECc9",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x54735C4d44224E8D4dd0fd135E9AbE534F5cFC7a",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://opbnb-testnet-rpc.bnbchain.org/"
+      ],
+      "rpc": "https://opbnb-testnet-rpc.bnbchain.org/"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 2147486678,
+      "chainType": "HBAR",
+      "chainId": 296,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "HBAR",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "ignore": true,
+      "multiCall": "0xdF58D9433D0682085765A48fA358aDC95dF0E11f",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x97bC37B6b4890a7D244629D872a7C6247c045876",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xe35ff1879643490679bD1db45A7d1379f051A796",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x1e68b1534320788A34882b9CD8292b038f1C0ca7",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://testnet.hashio.io/api"
+      ],
+      "rpc": "https://testnet.hashio.io/api"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 2147536400,
+      "chainType": "CELO",
+      "chainId": 11142220,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "CELO",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://forno.celo-sepolia.celo-testnet.org/"
+      ],
+      "rpc": "https://forno.celo-sepolia.celo-testnet.org/"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741846,
+      "chainType": "BLASTETH",
+      "chainId": 168587773,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "BLASTETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0xD29f2607eAf10E5FAa334e40Cf4c0e5813B2Eb88",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xa53cD64d2103C6664a058e5e1BF89FEA23040189",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xd6b24d0867753082e40778ADdB13E462A02689dE",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x44d9F33E880F42a1DBa296818C8b55b248B3dd47",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://sepolia.blast.io",
+        "https://blast-sepolia.blockpi.network/v1/rpc/public"
+      ],
+      "rpc": "https://sepolia.blast.io"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741847,
+      "chainType": "GMELD",
+      "chainId": 222000222,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "GMELD",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "ignore": true,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://testnet-rpc.meld.com"
+      ],
+      "rpc": "https://testnet-rpc.meld.com"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741848,
+      "chainType": "DIONE",
+      "chainId": 131313,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "DIONE",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000000,
+      "gasLimit": 500000,
+      "ignore": false,
+      "multiCall": "0xb8460Eeaa06Bc6668dad9fd42B661C0B96b3bE57",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x95492fD2f5b2D2e558e8aF811f951e2DCbc846d3",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x05211bBC9E0C1ED3bE0252021Cf558718ab65189",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xAb0D618806A82136FbEDDC04EDC617CD6e82Edbd",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://testnode.dioneprotocol.com/ext/bc/D/rpc"
+      ],
+      "rpc": "https://testnode.dioneprotocol.com/ext/bc/D/rpc"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741849,
+      "chainType": "PLYR",
+      "chainId": 62831,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "PLYR",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://subnets.avax.network/plyr/testnet/rpc"
+      ],
+      "rpc": "https://subnets.avax.network/plyr/testnet/rpc"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741850,
+      "chainType": "EDX",
+      "chainId": 1995,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "EDX",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x3ecc2399611A26E70dbac73714395b13Bc3B69fA",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x0f609cc325DFBC34ee5Ee02f8875454222859D01",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xFDa7a6d11fDd32F18e8d8d9ce1e97A9575141875",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x201E5dE97DFc46aAce142B2009332c524c9D8D82",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.testnet.edexa.com",
+        "https://rpc.testnet.edexa.network"
+      ],
+      "rpc": "https://rpc.testnet.edexa.com"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 2147483961,
+      "chainType": "ZIL",
+      "chainId": 33103,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "ZIL",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 10000000000000,
+      "gasLimit": 8000000,
+      "ignore": true,
+      "multiCall": "0x35B90F99680C426bf6753a78C364B045115cb46e",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xb8460Eeaa06Bc6668dad9fd42B661C0B96b3bE57",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x18eDFE1e49CA89157384832482c66E95Ea9B0Fca",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://api.zq2-prototestnet.zilliqa.com"
+      ],
+      "rpc": "https://api.zq2-prototestnet.zilliqa.com"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741851,
+      "chainType": "WATER",
+      "chainId": 1501869,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "WATER",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.testnet9.waterfall.network"
+      ],
+      "rpc": "https://rpc.testnet9.waterfall.network"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741852,
+      "chainType": "FTN",
+      "chainId": 2552,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "FTN",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc1-horizon.bahamut.io"
+      ],
+      "rpc": "https://rpc1-horizon.bahamut.io"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741853,
+      "chainType": "5IRE",
+      "chainId": 997,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "5IRE",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.testnet.5ire.network"
+      ],
+      "rpc": "https://rpc.testnet.5ire.network"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741854,
+      "chainType": "LRPO",
+      "chainId": 12020499,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "LRPO",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "http://188.245.49.86:32795"
+      ],
+      "rpc": "http://188.245.49.86:32795"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 2147493655,
+      "chainType": "S",
+      "chainId": 14601,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "S",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.testnet.soniclabs.com/"
+      ],
+      "rpc": "https://rpc.testnet.soniclabs.com/"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 2147484466,
+      "chainType": "VET",
+      "chainId": 100010,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "VET",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x9bcef4d80cc3da5f9ffc3103a640e4a66c059a6d",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xeaeb47e53cc981a8d8c4ea73130bed7a32bc27f4",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x8dc369fa992f2f3c38474e84b0a93cc9957b1b73",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xf0b1ac208b8217261a17ec4ce68403cc9dfd6d92",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://testnet.rpc.vechain.org"
+      ],
+      "rpc": "https://testnet.rpc.vechain.org"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741855,
+      "chainType": "IMX",
+      "chainId": 13473,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "IMX",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.testnet.immutable.com"
+      ],
+      "rpc": "https://rpc.testnet.immutable.com"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741856,
+      "chainType": "SHIDO",
+      "chainId": 9007,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "SHIDO",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc-testnet-nodes.shidoscan.com"
+      ],
+      "rpc": "https://rpc-testnet-nodes.shidoscan.com"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741857,
+      "chainType": "WORLDETH",
+      "chainId": 4801,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "WORLDETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x0F0Bf93bf16fD28294c637D855fc73b917ef5fCc",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xD25DB04661C468ea27C720970e9521d3F259690d",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x5292B2936daD44EdFbFB2929f9f246304167843b",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xfc9a863EDFEA47F6e4e6954Be978d447133D87ce",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://worldchain-sepolia.g.alchemy.com/public",
+        "https://worldchain-sepolia.drpc.org",
+        "https://4801.rpc.thirdweb.com",
+        "https://worldchain-sepolia.gateway.tenderly.co"
+      ],
+      "rpc": "https://worldchain-sepolia.g.alchemy.com/public"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741858,
+      "chainType": "UNIETH",
+      "chainId": 1301,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "UNIETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x0F0Bf93bf16fD28294c637D855fc73b917ef5fCc",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xD25DB04661C468ea27C720970e9521d3F259690d",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x5292B2936daD44EdFbFB2929f9f246304167843b",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xfc9a863EDFEA47F6e4e6954Be978d447133D87ce",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://sepolia.unichain.org",
+        "https://unichain-sepolia-rpc.publicnode.com/",
+        "https://unichain-sepolia.drpc.org",
+        "https://unichain-sepolia.api.onfinality.io/public",
+        "https://unichain-sepolia.therpc.io"
+      ],
+      "rpc": "https://sepolia.unichain.org"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 2166483766,
+      "chainType": "SEI",
+      "chainId": 1328,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "SEI",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://evm-rpc-testnet.sei-apis.com/",
+        "https://sei-testnet.drpc.org/",
+        "https://sei-testnet-public.nodies.app/"
+      ],
+      "rpc": "https://evm-rpc-testnet.sei-apis.com/"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741859,
+      "chainType": "0G",
+      "chainId": 16602,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "0G",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x674499D5fF2B200ef60214CF07DF4c1661c75725",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xc12cF8cC8Eff1F39c9e60dA81d11745c25c59501",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xf7C0c15cfaF2F93848E39af42a43dFdccD36F705",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x30de9d1d358ff1b60fb8057235aac35e23b7650f",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://evmrpc-testnet.0g.ai/"
+      ],
+      "rpc": "https://evmrpc-testnet.0g.ai/"
+    }
+  },
+  {
+    "testnet": {
+      "bip44": 1073741861,
+      "chainType": "XPL",
+      "chainId": 9746,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "XPL",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x8331595fb5D64466A6877276337782A94E647005",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x3274F4a76B0D55c99a852d18565EBDfb67aB313A",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x08bad1A48b0B08Bf769f83ba30c1DaD0F8Bb8b6B",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x9c843263Bd9ae7277ab7c29c18e3F532894A0d35",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://testnet-rpc.plasma.to/"
+      ],
+      "rpc": "https://testnet-rpc.plasma.to/"
+    }
+  }
+]

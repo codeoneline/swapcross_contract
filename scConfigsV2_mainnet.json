@@ -1,0 +1,1945 @@
+[
+  {
+    "testnet": {
+      "chainType": "WAN",
+      "rpc": "https://nodes-testnet.wandevs.org/wan",
+      "gasPrice": 100000000000,
+      "gasLimit": 10000000,
+      "chainId": 999,
+      "curveType": "1",
+      "deployedFile": "testnet.json",
+      "bip44": 2153201998,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "WAN",
+      "decimals": 18,
+      "chainName": "wan",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x14095a721dddb892d6350a777c75396d634a7d97"
+    },
+    "mainnet": {
+      "chainType": "WAN",
+      "rpc": "https://nodes.wandevs.org/wan",
+      "gasPrice": 100000000000,
+      "gasLimit": 10000000,
+      "chainId": 888,
+      "curveType": "1",
+      "deployedFile": "mainnet.json",
+      "bip44": 2153201998,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "WAN",
+      "decimals": 18,
+      "chainName": "wan",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0xba5934ab3056fca1fa458d30fbb3810c3eb5145f"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "ETH",
+      "rpc": "https://ethereum-goerli.publicnode.com",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 5,
+      "curveType": "1",
+      "deployedFile": "rinkeby.json",
+      "bip44": 2147483708,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "ETH",
+      "decimals": 18,
+      "chainName": "ethereum",
+      "timeLock": true,
+      "useLocal": false,
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x95492fd2f5b2d2e558e8af811f951e2dcbc846d3"
+    },
+    "mainnet": {
+      "chainType": "ETH",
+      "rpc": "https://eth.meowrpc.com",
+      "gasPrice": 100000000000,
+      "gasLimit": 8000000,
+      "chainId": 1,
+      "curveType": "1",
+      "deployedFile": "ethereum.json",
+      "bip44": 2147483708,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "ETH",
+      "decimals": 18,
+      "chainName": "ethereum",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://eth.meowrpc.com",
+        "https://rpc.mevblocker.io",
+        "https://ethereum.publicnode.com",
+        "https://gateway.tenderly.co/public/mainnet",
+        "https://1rpc.io/eth"
+      ],
+      "multiCall": "0xeefba1e63905ef1d7acba5a8513c70307c1ce441",
+      "algoType": "1",
+      "deployedInfo": {}
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "BSC",
+      "rpc": "https://data-seed-prebsc-2-s2.binance.org:8545/",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 97,
+      "curveType": "1",
+      "deployedFile": "testnet_bsc.json",
+      "bip44": 2147484362,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "BSC",
+      "decimals": 18,
+      "chainName": "bsc",
+      "timeLock": true,
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://data-seed-prebsc-2-s2.binance.org:8545/",
+        "https://bsctestapi.terminet.io/rpc",
+        "https://bsc-testnet.public.blastapi.io"
+      ],
+      "multiCall": "0x54b738619de4770a17ff3d6ba4c2b591a886a062"
+    },
+    "mainnet": {
+      "chainType": "BSC",
+      "rpc": "https://bsc-rpc.publicnode.com",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 56,
+      "curveType": "1",
+      "deployedFile": "bsc.json",
+      "bip44": 2147484362,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "BSC",
+      "decimals": 18,
+      "chainName": "bsc",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://bsc-rpc.publicnode.com",
+        "https://bsc.drpc.org",
+        "https://bnb.rpc.subquery.network/public",
+        "https://1rpc.io/bnb",
+        "https://bsc.meowrpc.com"
+      ],
+      "multiCall": "0x023a33445f11c978f8a99e232e1c526ae3c0ad70",
+      "algoType": "1",
+      "deployedInfo": {}
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "AVAX",
+      "rpc": "https://api.avax-test.network/ext/bc/C/rpc",
+      "gasPrice": 470000000000,
+      "gasLimit": 3000000,
+      "chainId": 43113,
+      "curveType": "1",
+      "deployedFile": "testnet_avax.json",
+      "bip44": 2147492648,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "AVAX",
+      "decimals": 18,
+      "chainName": "avax",
+      "timeLock": true,
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x0ea414baaf9643be59667e92e26a87c4bae3f33a"
+    },
+    "mainnet": {
+      "chainType": "AVAX",
+      "rpc": "https://api.avax.network/ext/bc/C/rpc",
+      "gasPrice": 470000000000,
+      "gasLimit": 3000000,
+      "chainId": 43114,
+      "curveType": "1",
+      "deployedFile": "avalancheMainnet.json",
+      "bip44": 2147492648,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "AVAX",
+      "decimals": 18,
+      "chainName": "avax",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://api.avax.network/ext/bc/C/rpc",
+        "https://avax.meowrpc.com",
+        "https://1rpc.io/avax/c",
+        "https://api.tatum.io/v3/blockchain/node/avax-mainnet"
+      ],
+      "multiCall": "0xa4726706935901fe7dd0f23cf5d4fb19867dfc88",
+      "algoType": "1",
+      "deployedInfo": {}
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "MOVR",
+      "rpc": "https://moonbeam-alpha.api.onfinality.io/public",
+      "gasPrice": 800000000000,
+      "gasLimit": 8000000,
+      "chainId": 1287,
+      "curveType": "1",
+      "deployedFile": "moonbeamTestnet.json",
+      "bip44": 1073741825,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "MOVR",
+      "decimals": 18,
+      "chainName": "moonbase",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x0d6a6a764c6b2fe4ef922b61d719a62c894959e3"
+    },
+    "mainnet": {
+      "chainType": "MOVR",
+      "rpc": "https://rpc.api.moonriver.moonbeam.network",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 1285,
+      "curveType": "1",
+      "deployedFile": "moonriverMainnet.json",
+      "bip44": 1073741825,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "MOVR",
+      "decimals": 18,
+      "chainName": "moonriver",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://moonriver.unitedbloc.com:2000",
+        "https://moonriver-rpc.dwellir.com",
+        "https://rpc.api.moonriver.moonbeam.network",
+        "https://moonriver.api.onfinality.io/public"
+      ],
+      "multiCall": "0x1fe0c23940fce7f440248e00ce2a175977ee4b16"
+    }
+  },
+  {
+    "mainnet": {
+      "chainType": "GLMR",
+      "rpc": "https://rpc.api.moonbeam.network",
+      "gasPrice": 300000000000,
+      "gasLimit": 8000000,
+      "chainId": 1284,
+      "curveType": "1",
+      "deployedFile": "moonbeamMainnet.json",
+      "bip44": 1073741828,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "GLMR",
+      "decimals": 18,
+      "chainName": "moonbeam",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://rpc.api.moonbeam.network",
+        "https://1rpc.io/glmr"
+      ],
+      "multiCall": "0xbacaaa4509ee9c9b2cf7133b970bc6db47713477",
+      "explorer": "https://blockscout.moonbeam.network/"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "MATIC",
+      "rpc": "https://polygon-mumbai-bor.publicnode.com",
+      "gasPrice": 30000000000,
+      "gasLimit": 8000000,
+      "chainId": 80001,
+      "curveType": "1",
+      "deployedFile": "maticTestnet.json",
+      "bip44": 2147484614,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "MATIC",
+      "decimals": 8,
+      "chainName": "polygon",
+      "timeLock": true,
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://polygon-mumbai-bor.publicnode.com",
+        "https://endpoints.omniatech.io/v1/matic/mumbai/public"
+      ],
+      "multiCall": "0x905b3237b2367b2ddebdf54d4f5320429710850a"
+    },
+    "mainnet": {
+      "chainType": "MATIC",
+      "rpc": "https://polygon-rpc.com",
+      "gasPrice": 300000000000,
+      "gasLimit": 5000000,
+      "chainId": 137,
+      "curveType": "1",
+      "deployedFile": "maticMainnet.json",
+      "bip44": 2147484614,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "MATIC",
+      "decimals": 8,
+      "chainName": "polygon",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://polygon-rpc.com",
+        "https://polygon.drpc.org",
+        "https://rpc-mainnet.matic.quiknode.pro",
+        "https://polygon.api.onfinality.io/public"
+      ],
+      "multiCall": "0x1bbc16260d5d052f1493b8f2aeee7888fed1e9ab",
+      "algoType": "1",
+      "deployedInfo": {}
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "ARB",
+      "rpc": "https://goerli-rollup.arbitrum.io/rpc",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 421613,
+      "curveType": "1",
+      "deployedFile": "arbTestnet.json",
+      "bip44": 1073741826,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "ARB",
+      "decimals": 18,
+      "chainName": "arbitrum",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x674499d5ff2b200ef60214cf07df4c1661c75725",
+      "explorer": "https://goerli.arbiscan.io/"
+    },
+    "mainnet": {
+      "chainType": "ARB",
+      "rpc": "https://arb1.arbitrum.io/rpc",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 42161,
+      "curveType": "1",
+      "deployedFile": "arbMainnet.json",
+      "bip44": 1073741826,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "ARB",
+      "decimals": 18,
+      "chainName": "arbitrum",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://arb1.arbitrum.io/rpc",
+        "https://1rpc.io/arb",
+        "https://arbitrum-one.publicnode.com",
+        "https://api.tatum.io/v3/blockchain/node/arb-one-mainnet"
+      ],
+      "multiCall": "0xb66f96e30d6a0ae64d24e392bb2dbd25155cb3a6",
+      "explorer": "https://rinkeby-explorer.arbitrum.io/#/",
+      "algoType": "1",
+      "deployedInfo": {}
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "FTM",
+      "rpc": "https://fantom-testnet.publicnode.com",
+      "gasPrice": 500000000000,
+      "gasLimit": 8000000,
+      "chainId": 4002,
+      "curveType": "1",
+      "deployedFile": "ftmTestnet.json",
+      "bip44": 2147484655,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "FTM",
+      "decimals": 18,
+      "chainName": "fantom",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://fantom-testnet.publicnode.com",
+        "https://rpc.testnet.fantom.network",
+        "https://fantom-testnet.public.blastapi.io"
+      ],
+      "multiCall": "0x5379271958a603ba1cd782588643d9566799670c",
+      "explorer": "https://testnet.ftmscan.com/"
+    },
+    "mainnet": {
+      "chainType": "FTM",
+      "rpc": "https://rpcapi.fantom.network",
+      "gasPrice": 900000000000,
+      "gasLimit": 8000000,
+      "chainId": 250,
+      "curveType": "1",
+      "deployedFile": "ftmMainnet.json",
+      "bip44": 2147484655,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "FTM",
+      "decimals": 18,
+      "chainName": "fantom",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://1rpc.io/ftm",
+        "https://rpcapi.fantom.network",
+        "https://fantom-public.nodies.app"
+      ],
+      "multiCall": "0x5f4870d51d2629d7493970b9d4526377da98e95e",
+      "explorer": "https://www.ftmscan.com/"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "OPT",
+      "rpc": "https://goerli.optimism.io/",
+      "gasPrice": 300000000000,
+      "gasLimit": 8000000,
+      "chainId": 420,
+      "curveType": "1",
+      "deployedFile": "optTestnet.json",
+      "bip44": 2147484262,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "OETH",
+      "decimals": 18,
+      "chainName": "optimism",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x05211bbc9e0c1ed3be0252021cf558718ab65189",
+      "explorer": "https://goerli-optimism.etherscan.io/"
+    },
+    "mainnet": {
+      "chainType": "OPT",
+      "rpc": "https://optimism.publicnode.com",
+      "gasPrice": 300000000000,
+      "gasLimit": 2000000,
+      "chainId": 10,
+      "curveType": "1",
+      "deployedFile": "optMainnet.json",
+      "bip44": 2147484262,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "OETH",
+      "decimals": 18,
+      "chainName": "optimism",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://optimism.publicnode.com",
+        "https://1rpc.io/op",
+        "https://optimism.meowrpc.com",
+        "https://api.tatum.io/v3/blockchain/node/optimism-mainnet"
+      ],
+      "multiCall": "0x2dc0e2aa608532da689e89e237df582b783e552c",
+      "explorer": "https://optimistic.etherscan.com/",
+      "algoType": "1",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xBe5187C2A7eb776c1CaEeD2C37E7599fb05000D3",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xC6Ae1Db6C66d909F7bFEeEb24F9adb8620bf9dbf",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x1eD3538383BBFDB80343B18F85D6c5A5Fb232fb6",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "XDC",
+      "rpc": "https://erpc.apothem.network",
+      "wss": "wss://ws.apothem.network",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 51,
+      "curveType": "1",
+      "deployedFile": "xdcTestnet.json",
+      "bip44": 2147484198,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "XDC",
+      "decimals": 18,
+      "chainName": "xinfin",
+      "useLocal": true,
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://erpc.apothem.network",
+        "https://apothem.xdcrpc.com",
+        "https://rpc.apothem.network"
+      ],
+      "multiCall": "0x4a9f99ceb037e8c4fbec272d17d40282aa67d9c6",
+      "explorer": "https://explorer.apothem.network/"
+    },
+    "mainnet": {
+      "chainType": "XDC",
+      "rpc": "https://rpc.ankr.com/xdc",
+      "wss": "wss://ws.xinfin.network",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 50,
+      "curveType": "1",
+      "deployedFile": "xdcMainnet.json",
+      "bip44": 2147484198,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "XDC",
+      "decimals": 18,
+      "chainName": "xinfin",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://rpc.ankr.com/xdc",
+        "https://rpc.xinfin.network",
+        "https://rpc1.xinfin.network",
+        "https://rpc.xdcrpc.com",
+        "https://erpc.xdcrpc.com"
+      ],
+      "multiCall": "0x711bc8dc6bf017958470c6a25f77d05db2dce65b",
+      "explorer": "https://explorer.xinfin.network/",
+      "algoType": "1",
+      "deployedInfo": {}
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "TRON",
+      "rpc": "https://api.nileex.io",
+      "web3Rpc": "https://nile.trongrid.io/jsonrpc",
+      "wss": "wss://ws.apothem.network",
+      "gasPrice": 1000000000,
+      "gasLimit": 8000000,
+      "chainId": 195,
+      "curveType": "1",
+      "deployedFile": "tronTestnetNile.json",
+      "bip44": 2147483843,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "tron",
+      "symbol": "TRON",
+      "decimals": 6,
+      "chainName": "tron",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "41b2401225f5ec9b4c1014a93edb3cda19afdd9c1b",
+      "explorer": "https://nile.tronscan.org/"
+    },
+    "mainnet": {
+      "chainType": "TRON",
+      "rpc": "https://api.trongrid.io",
+      "web3Rpc": "https://api.trongrid.io/jsonrpc",
+      "gasPrice": 1000000000,
+      "gasLimit": 8000000,
+      "chainId": 1231,
+      "curveType": "1",
+      "deployedFile": "tronMainnet.json",
+      "bip44": 2147483843,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "tron",
+      "symbol": "TRON",
+      "decimals": 6,
+      "chainName": "tron",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "419d5b1c2defe060b74fa9561269a37b1c71331848",
+      "explorer": "https://nile.tronscan.org/"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "OKT",
+      "rpc": "https://exchaintestrpc.okex.org",
+      "wss": "wss://ws.apothem.network",
+      "gasPrice": 100000000000,
+      "gasLimit": 8000000,
+      "chainId": 65,
+      "curveType": "1",
+      "deployedFile": "oktTestnet.json",
+      "bip44": 2147484644,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "OKT",
+      "decimals": 18,
+      "chainName": "okt",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x3ecc2399611a26e70dbac73714395b13bc3b69fa",
+      "explorer": "https://www.oklink.com/oec-test/",
+      "faucet": "https://www.okx.com/okc/faucet",
+      "ignore": true
+    },
+    "mainnet": {
+      "chainType": "OKT",
+      "rpc": "https://exchainrpc.okex.org",
+      "wss": "wss://ws.apothem.network",
+      "gasPrice": 100000000000,
+      "gasLimit": 8000000,
+      "chainId": 66,
+      "curveType": "1",
+      "deployedFile": "oktMainnet.json",
+      "bip44": 2147484644,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "OKT",
+      "decimals": 18,
+      "chainName": "okt",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0xbd4191828aeff23fb9e0249a5ae583a4b9425e49",
+      "explorer": "https://www.oklink.com/oec/"
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "CLV",
+      "rpc": "https://api-para.clover.finance",
+      "wss": "wss://rpc-para.clover.finance",
+      "gasPrice": 300000000000,
+      "gasLimit": 8000000,
+      "chainId": 1024,
+      "curveType": "1",
+      "deployedFile": "clvTestnet.json",
+      "bip44": 1073741829,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "CLV",
+      "decimals": 18,
+      "chainName": "clover-p",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x9b281146a04a67948f4601abda704016296017c5",
+      "explorer": "https://clvscan.com/",
+      "faucet": ""
+    },
+    "mainnet": {
+      "chainType": "CLV",
+      "rpc": "https://api-para.clover.finance",
+      "wss": "wss://rpc-para.clover.finance",
+      "gasPrice": 300000000000,
+      "gasLimit": 8000000,
+      "chainId": 1024,
+      "curveType": "1",
+      "deployedFile": "clvMainnet.json",
+      "bip44": 1073741829,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "CLV",
+      "decimals": 18,
+      "chainName": "clover-p",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x9b281146a04a67948f4601abda704016296017c5",
+      "explorer": "https://clvscan.com/",
+      "faucet": "",
+      "algoType": "1",
+      "ignore": true,
+      "deployedInfo": {}
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "FX",
+      "rpc": "https://testnet-fx-json-web3.functionx.io:8545",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 90001,
+      "curveType": "1",
+      "deployedFile": "fx-core-Testnet.json",
+      "bip44": 1073741830,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "FX",
+      "decimals": 18,
+      "chainName": "functionX",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x131dfc3ca32d3a959012606855320cbe8e655132",
+      "explorer": "https://testnet-explorer.functionx.io/evm",
+      "faucet": ""
+    },
+    "mainnet": {
+      "chainType": "FX",
+      "rpc": "https://fx-json-web3.functionx.io:8545",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "chainId": 530,
+      "curveType": "1",
+      "deployedFile": "fx-core-Mainnet.json",
+      "bip44": 1073741830,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "FX",
+      "decimals": 18,
+      "chainName": "functionX",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://fx-json-web3.functionx.io:8545"
+      ],
+      "multiCall": "0x0575344F57a655F9A76f9546D8B53CdECF94EEc9",
+      "explorer": "https://explorer.functionx.io/evm",
+      "faucet": "",
+      "algoType": "1",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x86b830023A8593a6a98f30783029506290558D0E",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xdF935552FaC687123C642F589296762B632a9Aaf",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xc928c8e48647c8b0ce550C2352087B1cF5c6111e",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    }
+  },
+  {
+    "mainnet": {
+      "chainType": "ASTR",
+      "rpc": "https://astar-rpc.dwellir.com",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "chainId": 592,
+      "curveType": "1",
+      "deployedFile": "astarMainnet.json",
+      "bip44": 2147484458,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "ASTR",
+      "decimals": 18,
+      "chainName": "ASTR",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://astar-rpc.dwellir.com",
+        "https://evm.astar.network",
+        "https://astar.api.onfinality.io/public"
+      ],
+      "multiCall": "0xb023f2d496a04c5af9cd1214924b0fb19397e3fa",
+      "explorer": "https://shibuya.subscan.io/",
+      "faucet": "",
+      "algoType": "1",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x372d0695E75563D9180F8CE31c9924D7e8aaac47",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x592dE30Bebff484B5a43A6E8E3ec1a814902E0b6",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xd97de67b982d79ED9f7EB2b1A13abC704b2cA082",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    },
+    "testnet": {
+      "chainType": "ASTR",
+      "rpc": "https://shibuya.public.blastapi.io",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 81,
+      "curveType": "1",
+      "deployedFile": "astarTestnet.json",
+      "bip44": 2147484458,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "ASTR",
+      "decimals": 18,
+      "chainName": "Shibaya",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x8331595fb5d64466a6877276337782a94e647005",
+      "explorer": "https://shibuya.subscan.io/",
+      "faucet": "",
+      "ignore": true
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "TLOS",
+      "rpc": "https://rpc.testnet.telos.net",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 41,
+      "curveType": "1",
+      "deployedFile": "telosTestnet.json",
+      "bip44": 2147484625,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "TLOS",
+      "decimals": 18,
+      "chainName": "telos",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x674499d5ff2b200ef60214cf07df4c1661c75725",
+      "explorer": "https://testnet.teloscan.io (https://testnet.teloscan.io/)",
+      "faucet": "https://app.telos.net/testnet/developers"
+    },
+    "mainnet": {
+      "chainType": "TLOS",
+      "rpc": "https://rpc.telos.net",
+      "wss": "",
+      "gasPrice": 7000000000000,
+      "gasLimit": 2000000,
+      "chainId": 40,
+      "curveType": "1",
+      "deployedFile": "telosMainnet.json",
+      "bip44": 2147484625,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "TLOS",
+      "decimals": 18,
+      "chainName": "telos",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://rpc.telos.net",
+        "https://telos.drpc.org",
+        "https://rpc.ankr.com/telos"
+      ],
+      "multiCall": "0xcA11bde05977b3631167028862bE2a173976CA11",
+      "explorer": "https://www.teloscan.io",
+      "faucet": "https://app.telos.net/testnet/developers",
+      "algoType": "1",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x482E6206aEA6B44143E1973e027381d47E029a99",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x201E5dE97DFc46aAce142B2009332c524c9D8D82",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x4a9F99ceb037E8C4FBEC272D17D40282aA67d9c6",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "GTH",
+      "rpc": "https://testnet.gather.network",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 356256156,
+      "curveType": "1",
+      "deployedFile": "gatherTestnet.json",
+      "bip44": 1073741833,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "GTH",
+      "decimals": 18,
+      "chainName": "gather",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x8331595fb5d64466a6877276337782a94e647005",
+      "explorer": "https://testnet-explorer.gather.network",
+      "faucet": "https://testnet-faucet.gather.network"
+    },
+    "mainnet": {
+      "chainType": "GTH",
+      "rpc": "https://mainnet.gather.network",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "chainId": 192837465,
+      "curveType": "1",
+      "deployedFile": "gatherMainnet.json",
+      "bip44": 1073741833,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "GTH",
+      "decimals": 18,
+      "chainName": "gather",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://mainnet.gather.network"
+      ],
+      "multiCall": "0x372d0695E75563D9180F8CE31c9924D7e8aaac47",
+      "explorer": "https://explorer.gather.network",
+      "faucet": "",
+      "algoType": "1",
+      "ignore": true,
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xBe5187C2A7eb776c1CaEeD2C37E7599fb05000D3",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xC6Ae1Db6C66d909F7bFEeEb24F9adb8620bf9dbf",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x1eD3538383BBFDB80343B18F85D6c5A5Fb232fb6",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "OKB",
+      "rpc": "https://okbtestrpc.okbchain.org",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 195,
+      "curveType": "1",
+      "deployedFile": "okbTestnet.json",
+      "bip44": 1073741835,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "OKB",
+      "decimals": 18,
+      "chainName": "okb",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [],
+      "multiCall": "0x10ce92bda0f7a184a1c2de322aa1a22938098442",
+      "explorer": "https://www.oklink.com/cn/okbc-test",
+      "faucet": "https://www.okx.com/okbc/faucet"
+    },
+    "mainnet": {
+      "chainType": "OKB",
+      "rpc": "https://rpc.ankr.com/xlayer",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "chainId": 196,
+      "curveType": "0",
+      "deployedFile": "okbMainnet.json",
+      "bip44": 1073741835,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "OKB",
+      "decimals": 18,
+      "chainName": "okb",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://rpc.ankr.com/xlayer",
+        "https://rpc.xlayer.tech",
+        "https://xlayerrpc.okx.com"
+      ],
+      "multiCall": "0xD4B5f10D61916Bd6E0860144a91Ac658dE8a1437",
+      "explorer": "https://www.oklink.com/cn/okbc-test",
+      "faucet": "https://www.okx.com/okbc/faucet",
+      "algoType": "2",
+      "ignore": false,
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x8D42d317B2bd6B60183461ed41bd00F17C3f3fE8",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xc21E5553c8dDDf2E4a93E5bEDBaE436d4291F603",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x50133f6836CB91237E17177E2985cBDAD51f0cf2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "METIS",
+      "rpc": "https://goerli.gateway.metisdevops.link",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 8000000,
+      "chainId": 599,
+      "curveType": "1",
+      "deployedFile": "metisTestnet.json",
+      "bip44": 1073741834,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "METIS",
+      "decimals": 18,
+      "chainName": "mts",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://goerli.gateway.metisdevops.link",
+        "https://metis-rpc.gateway.pokt.network/"
+      ],
+      "multiCall": "0x4a9f99ceb037e8c4fbec272d17d40282aa67d9c6",
+      "explorer": "https://goerli.explorer.metisdevops.link/",
+      "faucet": "https://goerli.faucet.metisdevops.link"
+    },
+    "mainnet": {
+      "chainType": "METIS",
+      "rpc": "https://andromeda.metis.io/?owner=1088",
+      "wss": "",
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "chainId": 1088,
+      "curveType": "1",
+      "deployedFile": "metisMainnet.json",
+      "bip44": 1073741834,
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "symbol": "METIS",
+      "decimals": 18,
+      "chainName": "mts",
+      "maxNoBlockTime": 1800000,
+      "rpcS": [
+        "https://andromeda.metis.io/?owner=1088",
+        "https://metis-mainnet.public.blastapi.io",
+        "https://metis.drpc.org",
+        "https://metis.api.onfinality.io/public"
+      ],
+      "multiCall": "0xF1C113a6493E51BD546Bcf7693871F6B03c75747",
+      "explorer": "https://andromeda-explorer.metis.io/",
+      "faucet": "",
+      "algoType": "1",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xBe5187C2A7eb776c1CaEeD2C37E7599fb05000D3",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xC6Ae1Db6C66d909F7bFEeEb24F9adb8620bf9dbf",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x1eD3538383BBFDB80343B18F85D6c5A5Fb232fb6",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      }
+    }
+  },
+  {
+    "testnet": {
+      "chainType": "BROCK",
+      "bip44": 2154655314,
+      "ignore": true
+    },
+    "mainnet": {
+      "bip44": 2154655314,
+      "chainType": "BROCK",
+      "chainId": 7171,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "BROCK",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "ignore": true,
+      "multiCall": "0xD4B5f10D61916Bd6E0860144a91Ac658dE8a1437",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x8D42d317B2bd6B60183461ed41bd00F17C3f3fE8",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xc21E5553c8dDDf2E4a93E5bEDBaE436d4291F603",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x50133f6836CB91237E17177E2985cBDAD51f0cf2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://connect.bit-rock.io",
+        "https://brockrpc.io"
+      ],
+      "rpc": "https://connect.bit-rock.io"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741836,
+      "chainType": "SGB",
+      "chainId": 19,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "SGB",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "ignore": false,
+      "multiCall": "0xD4B5f10D61916Bd6E0860144a91Ac658dE8a1437",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x8D42d317B2bd6B60183461ed41bd00F17C3f3fE8",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xc21E5553c8dDDf2E4a93E5bEDBaE436d4291F603",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x50133f6836CB91237E17177E2985cBDAD51f0cf2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://songbird-api.flare.network/ext/C/rpc"
+      ],
+      "rpc": "https://songbird-api.flare.network/ext/C/rpc"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741839,
+      "chainType": "ZEN",
+      "chainId": 7332,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "ZEN",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "ignore": true,
+      "multiCall": "0xc21E5553c8dDDf2E4a93E5bEDBaE436d4291F603",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x290108879b633557cb35e8baa57eA9216278A61b",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x97E0883493e8bB7A119A1E36E53ee9E7A2D3CA7b",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x8D42d317B2bd6B60183461ed41bd00F17C3f3fE8",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://eon-rpc.horizenlabs.io/ethv1",
+        "https://rpc.ankr.com/horizen_eon"
+      ],
+      "rpc": "https://eon-rpc.horizenlabs.io/ethv1"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741840,
+      "chainType": "VC",
+      "chainId": 207,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "VC",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "multiCall": "0x0D4d2595B1d83AB6110b4291816D62d1417C5A8B",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xb30778550a959C207601d77ff13Fe38A5Abb2546",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x72cCF64EE5E2C7629eE4eEe3e6AD6990289178ae",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xb023f2D496A04c5Af9cd1214924B0Fb19397e3fA",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.vinuchain.org"
+      ],
+      "rpc": "https://rpc.vinuchain.org"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741841,
+      "chainType": "BASEETH",
+      "chainId": 8453,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "BASEETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "multiCall": "0xBe5187C2A7eb776c1CaEeD2C37E7599fb05000D3",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x70114d2a0Ec788BaFee869aCf7FD1F8c76491799",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x2715aA7156634256aE75240C2c5543814660CD04",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x09cDfc56439643d151585B77899d0dC0f982BcD2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://mainnet.base.org",
+        "https://base.lava.build",
+        "https://base.public.blockpi.network/v1/rpc/public"
+      ],
+      "rpc": "https://mainnet.base.org"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 2147493445,
+      "chainType": "NRG",
+      "chainId": 39797,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "NRG",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "multiCall": "0x1eD3538383BBFDB80343B18F85D6c5A5Fb232fb6",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x09cDfc56439643d151585B77899d0dC0f982BcD2",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xBe5187C2A7eb776c1CaEeD2C37E7599fb05000D3",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x1289f70b8a16797cccBfcCA8a845f36324aC9F8B",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://nodeapi.energi.network"
+      ],
+      "rpc": "https://nodeapi.energi.network"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741837,
+      "chainType": "ZKETH",
+      "chainId": 324,
+      "curveType": "0",
+      "algoType": "2",
+      "symbol": "ZKETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 40000000,
+      "multiCall": "0xA09655Ab05ae915bD60775233Ec0669f9bFd3b37",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x60e0d58e5Edec764E2c40C36B50b076074476557",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x102F0ce7a439d51247167D6233A0a44c3f8389a1",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x6a1B7D7d4B9b9F3e9cE585db35bF68038267Aef2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://mainnet.era.zksync.io",
+        "https://1rpc.io/zksync2-era",
+        "https://zksync-era.blockpi.network/v1/rpc/public"
+      ],
+      "rpc": "https://mainnet.era.zksync.io"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741842,
+      "chainType": "LINEAETH",
+      "chainId": 59144,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "LINEAETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "multiCall": "0x5B0B9D1A58cacb8E3f7Cb72225996fc535530f6B",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xDF8af8C2e8cAd112e501c4c3C639A3380985e3fE",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xFFB876Bd5Bee99e992cAc826A04396002f5f4a65",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x97E0883493e8bB7A119A1E36E53ee9E7A2D3CA7b",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.linea.build",
+        "https://linea.drpc.org",
+        "https://linea-rpc.publicnode.com"
+      ],
+      "rpc": "https://rpc.linea.build"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741838,
+      "chainType": "MATICETH",
+      "chainId": 1101,
+      "curveType": "0",
+      "algoType": "2",
+      "symbol": "MATICETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "ignore": false,
+      "multiCall": "0xB3C52Ff7721d548e27F7218013A2e98dfEeb3ec0",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x53f3F40A220A4226f983924B1eA48cE116fd5eAe",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xB13aFe3e965DcD483022b1CC3Adf03Eea039A754",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x2eA7211507851074bC640dF83058c9B3c9B5DF55",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://zkevm-rpc.com",
+        "https://polygon-zkevm.drpc.org"
+      ],
+      "rpc": "https://zkevm-rpc.com"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741845,
+      "chainType": "OPBNB",
+      "chainId": 204,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "OPBNB",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0xD29f2607eAf10E5FAa334e40Cf4c0e5813B2Eb88",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xa53cD64d2103C6664a058e5e1BF89FEA23040189",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xd6b24d0867753082e40778ADdB13E462A02689dE",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x44d9F33E880F42a1DBa296818C8b55b248B3dd47",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://opbnb-mainnet-rpc.bnbchain.org",
+        "https://opbnb-rpc.publicnode.com",
+        "https://1rpc.io/opbnb"
+      ],
+      "rpc": "https://opbnb-mainnet-rpc.bnbchain.org"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 2147536400,
+      "chainType": "CELO",
+      "chainId": 42220,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "CELO",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x149180976accE60cED0A9c339853C9D1d4160765",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x4C0caDC3f72992C95475E55506B27B451B04C11a",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x14CA89ac9Cd73B01Bf71a3aF3f8cf8fd224d6A1d",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x77E3695C26FF538B4dB9593B20620b73D00c7059",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://forno.celo.org",
+        "https://rpc.ankr.com/celo",
+        "https://1rpc.io/celo"
+      ],
+      "rpc": "https://forno.celo.org"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741847,
+      "chainType": "GMELD",
+      "chainId": 333000333,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "GMELD",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "ignore": true,
+      "multiCall": "0xD4B5f10D61916Bd6E0860144a91Ac658dE8a1437",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x8D42d317B2bd6B60183461ed41bd00F17C3f3fE8",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xc21E5553c8dDDf2E4a93E5bEDBaE436d4291F603",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x50133f6836CB91237E17177E2985cBDAD51f0cf2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc-1.meld.com"
+      ],
+      "rpc": "https://rpc-1.meld.com"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741846,
+      "chainType": "BLASTETH",
+      "chainId": 81457,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "BLASTETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0xD4B5f10D61916Bd6E0860144a91Ac658dE8a1437",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x8D42d317B2bd6B60183461ed41bd00F17C3f3fE8",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xc21E5553c8dDDf2E4a93E5bEDBaE436d4291F603",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x50133f6836CB91237E17177E2985cBDAD51f0cf2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.blast.io",
+        "https://blast.blockpi.network/v1/rpc/public",
+        "https://rpc.ankr.com/blast",
+        "https://blastl2-mainnet.public.blastapi.io"
+      ],
+      "rpc": "https://rpc.blast.io"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741849,
+      "chainType": "PLYR",
+      "chainId": 16180,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "PLYR",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0xD4B5f10D61916Bd6E0860144a91Ac658dE8a1437",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x8D42d317B2bd6B60183461ed41bd00F17C3f3fE8",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xc21E5553c8dDDf2E4a93E5bEDBaE436d4291F603",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x50133f6836CB91237E17177E2985cBDAD51f0cf2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://subnets.avax.network/plyr/mainnet/rpc"
+      ],
+      "rpc": "https://subnets.avax.network/plyr/mainnet/rpc"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741851,
+      "chainType": "WATER",
+      "chainId": 181,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "WATER",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 2000000,
+      "multiCall": "0xD4B5f10D61916Bd6E0860144a91Ac658dE8a1437",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x8D42d317B2bd6B60183461ed41bd00F17C3f3fE8",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xc21E5553c8dDDf2E4a93E5bEDBaE436d4291F603",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x50133f6836CB91237E17177E2985cBDAD51f0cf2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.waterfall.network"
+      ],
+      "rpc": "https://rpc.waterfall.network"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741848,
+      "chainType": "DIONE",
+      "chainId": 153153,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "DIONE",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000000,
+      "gasLimit": 500000,
+      "ignore": false,
+      "multiCall": "0xD4B5f10D61916Bd6E0860144a91Ac658dE8a1437",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x8D42d317B2bd6B60183461ed41bd00F17C3f3fE8",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xc21E5553c8dDDf2E4a93E5bEDBaE436d4291F603",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x50133f6836CB91237E17177E2985cBDAD51f0cf2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://node.dioneprotocol.com/ext/bc/D/rpc"
+      ],
+      "rpc": "https://node.dioneprotocol.com/ext/bc/D/rpc"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741853,
+      "chainType": "5IRE",
+      "chainId": 995,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "5IRE",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "ignore": true,
+      "multiCall": "0xD4B5f10D61916Bd6E0860144a91Ac658dE8a1437",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x8D42d317B2bd6B60183461ed41bd00F17C3f3fE8",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xc21E5553c8dDDf2E4a93E5bEDBaE436d4291F603",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x50133f6836CB91237E17177E2985cBDAD51f0cf2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.5ire.network"
+      ],
+      "rpc": "https://rpc.5ire.network"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741850,
+      "chainType": "EDX",
+      "chainId": 5424,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "EDX",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0xD4B5f10D61916Bd6E0860144a91Ac658dE8a1437",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x8D42d317B2bd6B60183461ed41bd00F17C3f3fE8",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xc21E5553c8dDDf2E4a93E5bEDBaE436d4291F603",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x50133f6836CB91237E17177E2985cBDAD51f0cf2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.edexa.com",
+        "https://rpc.edexa.network"
+      ],
+      "rpc": "https://rpc.edexa.com"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 2147484466,
+      "chainType": "VET",
+      "chainId": 100009,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "VET",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0xfc061da2e19334675721b2f7f7c8caba0ae2abd7",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x79104fbbcb218fe97358e75e3e199842b4407653",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xfb37aee0ebfbd3929923d1366ba30df037e9e47c",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0xb339a550cecf276a969d902b72da15058708711f",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://mainnet.rpc.vechain.org/"
+      ],
+      "rpc": "https://mainnet.rpc.vechain.org/"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741856,
+      "chainType": "SHIDO",
+      "chainId": 9008,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "SHIDO",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0xD4B5f10D61916Bd6E0860144a91Ac658dE8a1437",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x8D42d317B2bd6B60183461ed41bd00F17C3f3fE8",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0xc21E5553c8dDDf2E4a93E5bEDBaE436d4291F603",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x50133f6836CB91237E17177E2985cBDAD51f0cf2",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://evm.shidoscan.net",
+        "https://shido-mainnet-archive-lb-nw5es9.zeeve.net/USjg7xqUmCZ4wCsqEOOE/rpc"
+      ],
+      "rpc": "https://evm.shidoscan.net"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741857,
+      "chainType": "WORLDETH",
+      "chainId": 480,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "WORLDETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0xf94145caf4f93d2aB1284EA6324C520c85827bcf",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x841C1d6EBE4870233497247dDF008aF313D57dF4",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x41B0AD2cC2c56950C52E7E34c4fFd6D9C4361284",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x3e65170df6a2ed3D54EDcD42EA63E9e626664eD6",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://worldchain-mainnet.g.alchemy.com/public",
+        "https://worldchain.drpc.org",
+        "https://worldchain-mainnet.gateway.tenderly.co/",
+        "https://480.rpc.thirdweb.com/"
+      ],
+      "rpc": "https://worldchain-mainnet.g.alchemy.com/public"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 2147493655,
+      "chainType": "S",
+      "chainId": 146,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "S",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x149180976accE60cED0A9c339853C9D1d4160765",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x4C0caDC3f72992C95475E55506B27B451B04C11a",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x14CA89ac9Cd73B01Bf71a3aF3f8cf8fd224d6A1d",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x77E3695C26FF538B4dB9593B20620b73D00c7059",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://rpc.soniclabs.com/",
+        "https://sonic-rpc.publicnode.com/",
+        "https://rpc.ankr.com/sonic_mainnet",
+        "https://sonic.drpc.org/"
+      ],
+      "rpc": "https://rpc.soniclabs.com/"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741858,
+      "chainType": "UNIETH",
+      "chainId": 130,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "UNIETH",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 800000,
+      "multiCall": "0x149180976accE60cED0A9c339853C9D1d4160765",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0xe0C8c2fDc6fc440BD1eC918299585321494536Ff",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x9C11539603661b6c90E65E96Aa8aC4B8E4b914c8",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x77E3695C26FF538B4dB9593B20620b73D00c7059",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://mainnet.unichain.org",
+        "https://unichain-rpc.publicnode.com",
+        "https://unichain.drpc.org",
+        "https://unichain.api.onfinality.io/public",
+        "https://rpc.poolz.finance/unichain",
+        "https://unichain-mainnet.gateway.tatum.io"
+      ],
+      "rpc": "https://mainnet.unichain.org"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 1073741859,
+      "chainType": "0G",
+      "chainId": 16661,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "0G",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x149180976accE60cED0A9c339853C9D1d4160765",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x4C0caDC3f72992C95475E55506B27B451B04C11a",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x14CA89ac9Cd73B01Bf71a3aF3f8cf8fd224d6A1d",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x77E3695C26FF538B4dB9593B20620b73D00c7059",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://evmrpc.0g.ai/"
+      ],
+      "rpc": "https://evmrpc.0g.ai/"
+    }
+  },
+  {
+    "mainnet": {
+      "bip44": 2166483766,
+      "chainType": "SEI",
+      "chainId": 1329,
+      "curveType": "1",
+      "algoType": "1",
+      "symbol": "SEI",
+      "ownerSk": "f1fc0288344abd7c014f3bebc08638eba44e9b267b8aa2250d05f64ce3ba3700",
+      "chainKind": "eth",
+      "decimals": 18,
+      "maxNoBlockTime": 1800000,
+      "gasPrice": 1000000000000,
+      "gasLimit": 500000,
+      "multiCall": "0x149180976accE60cED0A9c339853C9D1d4160765",
+      "deployedInfo": {
+        "OracleProxy": {
+          "address": "0x4C0caDC3f72992C95475E55506B27B451B04C11a",
+          "abi": "abi.OracleDelegate.json"
+        },
+        "CrossProxy": {
+          "address": "0x14CA89ac9Cd73B01Bf71a3aF3f8cf8fd224d6A1d",
+          "abi": "abi.CrossDelegate.json"
+        },
+        "TokenManagerProxy": {
+          "address": "0x77E3695C26FF538B4dB9593B20620b73D00c7059",
+          "abi": "abi.TokenManagerDelegate.json"
+        }
+      },
+      "rpcS": [
+        "https://evm-rpc.sei-apis.com/",
+        "https://sei-evm-rpc.publicnode.com/",
+        "https://sei-public.nodies.app/",
+        "https://sei.drpc.org/"
+      ],
+      "rpc": "https://evm-rpc.sei-apis.com/"
+    }
+  }
+]
