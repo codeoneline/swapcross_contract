@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.24;
 
 interface IERC20 {
     function transfer(address to, uint256 amount) external returns (bool);
@@ -10,18 +10,21 @@ interface IERC20 {
 }
 
 /**
- * @title OKXDexSwap
+ * @title SwapCross
  * @notice 通过 OKX DEX Aggregator 进行代币兑换的智能合约
  * @dev 支持 Ethereum、Arbitrum、Optimism、Polygon 等 EVM 兼容链
  */
-contract OKXDexSwap {
+contract SwapCross {
     address public owner;
     address public okxDexRouter;
     
-    // OKX DEX Router 地址 (不同链可能不同)
-    // Ethereum Mainnet: 0x40aA958dd87FC8305b97f2BA922CDdCa374bcD7f
-    // Arbitrum: 0x40aA958dd87FC8305b97f2BA922CDdCa374bcD7f
-    // Optimism: 0x40aA958dd87FC8305b97f2BA922CDdCa374bcD7f
+    // OKX DEX Router 地址 (官方部署地址)
+    // Ethereum Mainnet: 0x5E1f62Dac767b0491e3CE72469C217365D5B48cC
+    // Arbitrum One: 0x368E01160C2244B0363a35B3fF0A971E44a89284
+    // Base: 0x4409921ae43a39a11d90f7b7f96cfd0b8093d9fc
+    // BNB Chain: 0x3156020dfF8D99af1dDC523ebDfb1ad2018554a0
+    // Polygon: 0xf332761c673b59B21fF6dfa8adA44d78c12dEF09
+    // Optimism: 0x68D6B739D2020067D1e2F713b999dA97E4d54812
     
     event SwapExecuted(
         address indexed sender,
@@ -136,18 +139,18 @@ contract OKXDexSwap {
     /**
      * @notice 恢复误转入合约的代币 (仅限 owner)
      */
-    function recoverTokens(address token, uint256 amount) external onlyOwner {
-        _transferToken(token, owner, amount);
-        emit TokensRecovered(token, amount);
-    }
+    // function recoverTokens(address token, uint256 amount) external onlyOwner {
+    //     _transferToken(token, owner, amount);
+    //     emit TokensRecovered(token, amount);
+    // }
     
     /**
      * @notice 转移合约所有权
      */
-    function transferOwnership(address newOwner) external onlyOwner {
-        require(newOwner != address(0), "Invalid owner address");
-        owner = newOwner;
-    }
+    // function transferOwnership(address newOwner) external onlyOwner {
+    //     require(newOwner != address(0), "Invalid owner address");
+    //     owner = newOwner;
+    // }
     
     // 接收 ETH
     receive() external payable {}

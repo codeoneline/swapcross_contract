@@ -39,10 +39,12 @@ module.exports = {
     ethereum: {
       url: "https://ethereum-rpc.publicnode.com",
       accounts: [process.env.PK],
+      okxDexRouter: "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC",
     },
     arbitrum: {
       url: "https://arbitrum-one-rpc.publicnode.com",
       accounts: [process.env.PK],
+      okxDexRouter: "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC",
     },
     op: {
       url: "https://optimism-rpc.publicnode.com",
@@ -52,6 +54,7 @@ module.exports = {
       url: "https://bsc-rpc.publicnode.com",
       accounts: [process.env.PK],
       gasPrice: 3e9,
+      okxDexRouter: "0x3156020dfF8D99af1dDC523ebDfb1ad2018554a0",
     },
     base: {
       url: "https://base-rpc.publicnode.com",
@@ -60,6 +63,7 @@ module.exports = {
     polygon: {
       url: process.env.RPC_URL || 'https://polygon-rpc.com',
       accounts: [process.env.PK],
+      okxDexRouter: "0xf332761c673b59B21fF6dfa8adA44d78c12dEF09"
     },
     wanchainMainnet: {
       url: "https://gwan-ssl.wandevs.org:56891/",
@@ -76,6 +80,7 @@ module.exports = {
       minGasPrice: 10e9,
       gas: 8e6,
       maxPriorityFeePerGas: 1e9,
+      okxDexRouter: "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC"
     },
     sepolia: {
       url: "https://rpc2.sepolia.org",

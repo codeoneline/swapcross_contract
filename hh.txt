@@ -1,12 +1,3 @@
-// This setup uses Hardhat Ignition to manage smart contract deployments.
-// Learn more about it at https://v2.hardhat.org/ignition
-
-const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
-
-const JAN_1ST_2030 = 1893456000;
-const Now = 1768280808;
-const ONE_GWEI = 1_000_000_000n;
-
 // # 使用默认值部署
 // npx hardhat ignition deploy ./ignition/modules/Lock.js
 
@@ -57,3 +48,42 @@ module.exports = buildModule("LockModule", (m) => {
 // m.useModule(module)
 // 使用其他模块
 // javascriptconst tokenModule = m.useModule(require("./Token"));
+
+
+
+完整示例：更复杂的部署模块
+const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
+
+module.exports = buildModule("ComplexModule", (m) => {
+  // 1. 获取参数
+  const owner = m.getParameter("owner", "0x...");
+  const initialSupply = m.getParameter("initialSupply", 1000000n);
+
+  // 2. 部署库
+  const safeMath = m.library("SafeMath");
+
+  // 3. 部署第一个合约
+  const token = m.contract("MyToken", [initialSupply], {
+    libraries: {
+      SafeMath: safeMath,
+    },
+  });
+
+  // 4. 部署第二个合约，依赖第一个
+  const vault = m.contract("Vault", [token], {
+    from: owner,
+  });
+
+  // 5. 调用合约函数进行初始化
+  m.call(token, "approve", [vault, initialSupply]);
+  m.call(vault, "initialize", []);
+
+  // 6. 发送 ETH
+  m.send(vault, ethers.parseEther("10"));
+
+  // 7. 静态调用检查状态
+  const balance = m.staticCall(token, "balanceOf", [owner]);
+
+  // 8. 返回部署的合约
+  return { token, vault, safeMath };
+});
