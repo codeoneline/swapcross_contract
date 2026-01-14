@@ -6,7 +6,7 @@ const { ethers } = require('ethers')
 const envFilePath = path.resolve(__dirname, "../.env")
 require('dotenv').config({ path: envFilePath });
 
-const {getChainManager, callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require('./chainManager')
+const {getChainManager, callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require('../lib/chainManager')
 
 function sleep(ms) {
   return new Promise(function (resolve, reject) {

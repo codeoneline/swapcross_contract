@@ -2,7 +2,7 @@ const { Web3 } = require('web3');
 const axios = require('axios');
 const dotenv = require('dotenv');
 const CryptoJS = require('crypto-js');
-const { getSwapData } = require('./okxDexhelper')
+const { getSwapData } = require('../lib/okxDexhelper')
 const path = require('path')
 
 // 配置代理
