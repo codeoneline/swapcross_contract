@@ -1,9 +1,6 @@
 const { ethers } = require('ethers')
-const configs_mainnet = require('./configs_mainnet')
+let configs = require('./configs_mainnet')
 
-const configs_testnet = require('./configs_testnet')
-
-const configs = configs_testnet
 const createProvider = (rpc_url, name, chainId) => {
   if (!rpc_url) {
     console.error('rpc error');
@@ -408,7 +405,7 @@ async function multiCallBatch(chainName, calls, batchSize = 100) {
   }
 
   const manager = getChainManager(chainName);
-  const multiCallAddress = configs[chainName]?.multiCall;
+  const multiCallAddress = manager.config?.multiCall;
   if (!multiCallAddress) {
     throw new Error(`MultiCall address not configured for chain ${chainName}`);
   }
