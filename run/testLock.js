@@ -1,12 +1,10 @@
 // const fs = require('fs')
-const path = require('path')
-const axios = require('axios')
 const { ethers } = require('ethers')
-
+const path = require('path')
 const envFilePath = path.resolve(__dirname, "../.env")
 require('dotenv').config({ path: envFilePath });
 
-const {getChainManager, callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require('../lib/chainManager')
+const {callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require('../lib/chainManagerTestnet')
 
 function sleep(ms) {
   return new Promise(function (resolve, reject) {
