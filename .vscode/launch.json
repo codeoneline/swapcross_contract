@@ -7,6 +7,26 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Deploy SwapAndCross to Ethereum",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "hardhat"
+      ],
+      "args": [
+        "ignition",
+        "deploy",
+        "./ignition/modules/SwapAndCross.js",
+        "--network",
+        "ethereum"
+      ],
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Deploy Cross to Avalanche",
       "runtimeExecutable": "npx",
       "runtimeArgs": [

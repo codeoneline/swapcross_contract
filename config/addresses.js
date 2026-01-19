@@ -1,20 +1,71 @@
 module.exports = {
   ethereum: {
-    okxDexRouter: "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC"
+    okxDexRouter: "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC",
+    wanBridge: "0x589e12d073020f99febf32b739e58216748c9ed4",
   },
   arbitrum: {
-    okxDexRouter: "0x368E01160C2244B0363a35B3fF0A971E44a89284"
+    okxDexRouter: "0x368E01160C2244B0363a35B3fF0A971E44a89284",
+    wanBridge: "0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b",
   },
   base: {
-    okxDexRouter: "0x4409921ae43a39a11d90f7b7f96cfd0b8093d9fc"
+    okxDexRouter: "0x4409921ae43a39a11d90f7b7f96cfd0b8093d9fc",
+    wanBridge: "0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b"
   },
   bsc: {
-    okxDexRouter: "0x3156020dfF8D99af1dDC523ebDfb1ad2018554a0"
+    okxDexRouter: "0x3156020dfF8D99af1dDC523ebDfb1ad2018554a0",
+    wanBridge: "0xb12513cfcb13b7be59ba431c040b7206b0a211b9",
   },
   polygon: {
-    okxDexRouter: "0xf332761c673b59B21fF6dfa8adA44d78c12dEF09"
+    okxDexRouter: "0xf332761c673b59B21fF6dfa8adA44d78c12dEF09",
+    wanBridge: "0xfb06346e587ffb494438102515d576086be750f4",
   },
   wanchainTestnet: {
-    okxDexRouter: "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC" // 假的
+    okxDexRouter: "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC", // 假的
+    wanBridge: "0x62de27e16f6f31d9aa5b02f4599fc6e21b339e79",
+  },
+  avalanche: {
+    okxDexRouter: "0x8aDFb0D24cdb09c6eB6b001A41820eCe98831B91",
+    wanBridge: "0x4c200a0867753454db78af84d147bd03e567f234"
   },
 };
+
+
+// WAN	CELO	0G	TLOS	AVAX	KATANAETH	ZKETH	ARB	METIS	VC	IMX	MOVR	MATIC	BSC	SHIDO	UNIETH	BASEETH	FTM	DIONE	FX	SGB	TRON	XDC	MATICETH	OKB	FTN	LINEAETH	OPT	SEI	NRG	WORLDETH	XPL	ETH	LRPO	VET	OPBNB	S
+
+// 0x62de27e16f6f31d9aa5b02f4599fc6e21b339e79
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0xf7c0c15cfaf2f93848e39af42a43dfdccd36f705
+// 0xfc9a863edfea47f6e4e6954be978d447133d87ce
+// 0x4c200a0867753454db78af84d147bd03e567f234
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0x18de061bb6b635d114a9ea8721a6c63d0f6f3571
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0x9274be9167c7dba7f81b61d3870e0272cb8474f6
+// 0xfb06346e587ffb494438102515d576086be750f4
+// 0xb12513cfcb13b7be59ba431c040b7206b0a211b9
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0x5292b2936dad44edfbfb2929f9f246304167843b
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0x265fc66e84939f36d90ee38734afe4a770d2c114
+// 0x05211bbc9e0c1ed3be0252021cf558718ab65189
+// 0x4f1ab74c2a9e8f591e8a80768e115c9f75935bad
+// 0xfc9a863edfea47f6e4e6954be978d447133d87ce
+// 41f1b7f2e5aaccce1e39ad9baa8ff6aa828a01ce19
+// 0x18edfe1e49ca89157384832482c66e95ea9b0fca
+// 0xd21f22e9e434f3814a950ad136d882fcffb9685c
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0xd25db04661c468ea27c720970e9521d3f259690d
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0x95492fd2f5b2d2e558e8af811f951e2dcbc846d3
+// 0x5292b2936dad44edfbfb2929f9f246304167843b
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0x589e12d073020f99febf32b739e58216748c9ed4
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b
+// 0x8dc369fa992f2f3c38474e84b0a93cc9957b1b73
+// 0x34cd1ce396c29075381fd2c61b0959ce640fecc9
+// 0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b

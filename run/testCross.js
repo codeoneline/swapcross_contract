@@ -245,12 +245,13 @@ const sendCrossBurnUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, to
   console.log(`  Status: ${result.receipt.status === 1 ? 'Success' : 'Failed'}`);
 }
 
-
+const sendCrossWan = async (fromChainSymbol, toChainSymbol, assetSymbol, tokenPairId)
 
 setTimeout( async() => {
   // usdt AVAX->WAN
   // await sendCrossUsdt('AVAX', 'WAN', 'USDT', 233)
-  await sendCrossBurnUsdt('WAN', 'AVAX', 'USDT', 233)
+  // await sendCrossBurnUsdt('WAN', 'AVAX', 'USDT', 233)
+  
 }, 0)
 
 /*
