@@ -9,12 +9,12 @@ async function main() {
   console.log(`Deploying to ${network}`);
   console.log(`Using OKX DEX Router: ${okxDexRouter}`);
 
-  const SwapCross = await hre.ethers.getContractFactory("SwapCross");
-  const swap = await SwapCross.deploy(okxDexRouter);
+  const Swap = await hre.ethers.getContractFactory("Swap");
+  const swap = await Swap.deploy(okxDexRouter);
 
   await swap.waitForDeployment();
 
-  console.log(`SwapCross deployed to: ${await swap.getAddress()}`);
+  console.log(`Swap deployed to: ${await swap.getAddress()}`);
 }
 
 main().catch((error) => {

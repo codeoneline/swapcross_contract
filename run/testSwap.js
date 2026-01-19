@@ -14,7 +14,7 @@ const erc20Abi = [
     'function balanceOf(address account) external view returns (uint256)',
     'function decimals() external view returns (uint8)',
 ];
-const swapCrossAbi = [
+const swapAbi = [
     'function swap(address tokenIn, address tokenOut, uint256 amountIn, uint256 minAmountOut, bytes calldata swapCallData) external payable returns (uint256 amountOut)',
 ]
 
@@ -42,15 +42,15 @@ const sendSwap = async () => {
     const amountIn = 100000000000000;//ethers.parseUnits("1000", 6); // 1000 USDT
     const slippagePercent = '0.5';
 
-    // 步骤 1: 用户授权 SwapCross 合约
-    const SwapCrossAddress = '0xc28F4d079fBB6B4AF630dd8822c59107c2402f8b'
+    // 步骤 1: 用户授权 Swap 合约
+    const SwapAddress = '0xc28F4d079fBB6B4AF630dd8822c59107c2402f8b'
     const { txResponse, receipt } = await sendContractAndWait(
       chainName,
       privateKey,
       tokenIn,
       erc20Abi,
       'approve',
-      [SwapCrossAddress, amountIn],
+      [SwapAddress, amountIn],
       {}, // options
       1   // confirmations
     );
@@ -78,8 +78,8 @@ const sendSwap = async () => {
     const result = await sendContractAndWait(
         chainName,
         privateKey,
-        SwapCrossAddress,
-        swapCrossAbi,
+        SwapAddress,
+        swapAbi,
         'swap',
         [tokenIn, tokenOut, amountIn, minReceiveAmount, swapCallData],
         options, // optionsc

@@ -7,11 +7,11 @@ module.exports = {
     {
       "type": "node",
       "request": "launch",
-      "name": "run testSwapCross",
+      "name": "run testSwap",
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/run/testSwapCross.js"
+      "program": "${workspaceFolder}/run/testSwap.js"
     },
     {
       "type": "node",
@@ -25,11 +25,11 @@ module.exports = {
     {
       "type": "node",
       "request": "launch",
-      "name": "run testSwapCross",
+      "name": "run testSwap",
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/run/testSwapCross.js"
+      "program": "${workspaceFolder}/run/testSwap.js"
     },
     {
       "type": "node",
@@ -43,7 +43,7 @@ module.exports = {
     {
       "type": "node",
       "request": "launch",
-      "name": "Deploy SwapCross to Ethereum",
+      "name": "Deploy Swap to Ethereum",
       "runtimeExecutable": "npx",
       "runtimeArgs": [
         "hardhat"
@@ -51,11 +51,11 @@ module.exports = {
       "args": [
         "ignition",
         "deploy",
-        "./ignition/modules/SwapCross.js",
+        "./ignition/modules/Swap.js",
         "--network",
         "ethereum",
         "--parameters",
-        "{\"SwapCrossModule\":{\"network\":\"ethereum\"}}"
+        "{\"SwapModule\":{\"network\":\"ethereum\"}}"
       ],
       "console": "integratedTerminal",
       "skipFiles": [

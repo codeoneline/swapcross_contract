@@ -36,11 +36,11 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "run testSwapCross",
+      "name": "run testSwap",
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/run/testSwapCross.js"
+      "program": "${workspaceFolder}/run/testSwap.js"
     },
     {
       "type": "node",
@@ -63,7 +63,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Deploy SwapCross to Wanchain",
+      "name": "Deploy Swap to Wanchain",
       "runtimeExecutable": "npx",
       "runtimeArgs": [
         "hardhat"
@@ -71,7 +71,7 @@
       "args": [
         "ignition",
         "deploy",
-        "./ignition/modules/SwapCross.js",
+        "./ignition/modules/Swap.js",
         "--network",
         "wanchainTestnet"
       ],
@@ -83,7 +83,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Deploy SwapCross to Ethereum",
+      "name": "Deploy Swap to Ethereum",
       "runtimeExecutable": "npx",
       "runtimeArgs": [
         "hardhat"
@@ -91,11 +91,11 @@
       "args": [
         "ignition",
         "deploy",
-        "./ignition/modules/SwapCross.js",
+        "./ignition/modules/Swap.js",
         "--network",
         "ethereum",
         "--parameters",
-        "{\"SwapCrossModule\":{\"network\":\"ethereum\"}}"
+        "{\"SwapModule\":{\"network\":\"ethereum\"}}"
       ],
       "console": "integratedTerminal",
       "skipFiles": [

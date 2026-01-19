@@ -39,6 +39,6 @@ module.exports = buildModule("CrossModule", (m) => {
 
 
 
-// npx hardhat ignition deploy ./ignition/modules/SwapCross.js --network ethereum --parameters '{"SwapCrossModule":{"network":"ethereum"}}'
+// npx hardhat ignition deploy ./ignition/modules/Swap.js --network ethereum --parameters '{"SwapModule":{"network":"ethereum"}}'
 // npx hardhat ignition deploy ./ignition/modules/Cross.js --network wanchainTestnet
 // npx hardhat ignition deploy ./ignition/modules/Cross.js --network fuji

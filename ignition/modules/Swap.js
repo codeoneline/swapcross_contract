@@ -9,7 +9,7 @@
 const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
 const addresses = require("../../config/addresses");
 
-module.exports = buildModule("SwapCrossModule", (m) => {
+module.exports = buildModule("SwapModule", (m) => {
   // const unlockTime = m.getParameter("unlockTime", "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC");
   // const network = m.getParameter("network", "");
   const network = hre.network.name;
@@ -22,12 +22,12 @@ module.exports = buildModule("SwapCrossModule", (m) => {
     return 
   } 
 
-  const swap = m.contract("SwapCross", [okxDexRouter], {});
+  const swap = m.contract("Swap", [okxDexRouter], {});
 
   return { swap };
 });
 
 
 
-// npx hardhat ignition deploy ./ignition/modules/SwapCross.js --network ethereum --parameters '{"SwapCrossModule":{"network":"ethereum"}}'
-// npx hardhat ignition deploy ./ignition/modules/SwapCross.js --network wanchainTestnet
+// npx hardhat ignition deploy ./ignition/modules/Swap.js --network ethereum --parameters '{"SwapModule":{"network":"ethereum"}}'
+// npx hardhat ignition deploy ./ignition/modules/Swap.js --network wanchainTestnet
