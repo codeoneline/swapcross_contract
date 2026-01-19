@@ -1,4 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
+const path = require('path')
+require('dotenv').config({ path: path.resolve(__dirname, "./.env") });
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
@@ -44,7 +46,7 @@ module.exports = {
     arbitrum: {
       url: "https://arbitrum-one-rpc.publicnode.com",
       accounts: [process.env.PK],
-      okxDexRouter: "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC",
+      okxDexRouter: "0x368E01160C2244B0363a35B3fF0A971E44a89284",
     },
     op: {
       url: "https://optimism-rpc.publicnode.com",
@@ -59,6 +61,7 @@ module.exports = {
     base: {
       url: "https://base-rpc.publicnode.com",
       accounts: [process.env.PK],
+      okxDexRouter: "0x4409921ae43a39a11d90f7b7f96cfd0b8093d9fc",
     },
     polygon: {
       url: process.env.RPC_URL || 'https://polygon-rpc.com',
@@ -80,7 +83,8 @@ module.exports = {
       minGasPrice: 10e9,
       gas: 8e6,
       maxPriorityFeePerGas: 1e9,
-      okxDexRouter: "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC"
+      okxDexRouter: "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC", // 假的
+      bridgeAddress: '0x62de27e16f6f31d9aa5b02f4599fc6e21b339e79',
     },
     sepolia: {
       url: "https://rpc2.sepolia.org",
@@ -89,6 +93,7 @@ module.exports = {
     fuji: {
       url: 'https://avalanche-fuji-c-chain-rpc.publicnode.com',
       accounts: [process.env.PK],
+      bridgeAddress: '0x4c200a0867753454db78af84d147bd03e567f234',
     },
     avalanche: {
       url: 'https://avalanche.public-rpc.com',

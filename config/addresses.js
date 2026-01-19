@@ -15,6 +15,6 @@ module.exports = {
     okxDexRouter: "0xf332761c673b59B21fF6dfa8adA44d78c12dEF09"
   },
   wanchainTestnet: {
-    okxDexRouter: "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC"
+    okxDexRouter: "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC" // 假的
   },
 };

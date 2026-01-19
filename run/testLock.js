@@ -1,18 +1,9 @@
 // const fs = require('fs')
 const { ethers } = require('ethers')
 const path = require('path')
-const envFilePath = path.resolve(__dirname, "../.env")
-require('dotenv').config({ path: envFilePath });
+require('dotenv').config({ path: path.resolve(__dirname, "../.env") });
 
-const {callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require('../lib/chainManagerTestnet')
-
-function sleep(ms) {
-  return new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve();
-    }, ms);
-  })
-}
+const { callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require(path.resolve(__dirname, "../lib/chainManagerTestnet"))
 
 const LockAbi = require('../artifacts/contracts/Lock.sol/Lock.json').abi
 const LockAddressOnWanchain = "0x213510bC45a26AB7cD6fbcEd8Ef2091DD472B7Fb"

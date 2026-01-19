@@ -1,4 +1,4 @@
-{
+module.exports = {
   // 使用 IntelliSense 了解相关属性。 
   // 悬停以查看现有属性的描述。
   // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
@@ -7,22 +7,11 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Deploy Cross to Avalanche",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "hardhat"
-      ],
-      "args": [
-        "ignition",
-        "deploy",
-        "./ignition/modules/Cross.js",
-        "--network",
-        "fuji"
-      ],
-      "console": "integratedTerminal",
+      "name": "run testSwapCross",
       "skipFiles": [
         "<node_internals>/**"
-      ]
+      ],
+      "program": "${workspaceFolder}/run/testSwapCross.js"
     },
     {
       "type": "node",
@@ -45,40 +34,11 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "run testCross",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "program": "${workspaceFolder}/run/testCross.js"
-    },
-    {
-      "type": "node",
-      "request": "launch",
       "name": "run testLock",
       "skipFiles": [
         "<node_internals>/**"
       ],
       "program": "${workspaceFolder}/run/testLock.js"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Deploy SwapCross to Wanchain",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "hardhat"
-      ],
-      "args": [
-        "ignition",
-        "deploy",
-        "./ignition/modules/SwapCross.js",
-        "--network",
-        "wanchainTestnet"
-      ],
-      "console": "integratedTerminal",
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
     },
     {
       "type": "node",
@@ -101,6 +61,21 @@
       "skipFiles": [
         "<node_internals>/**"
       ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "test cmc_crypto local",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "runtimeArgs": ["-r", "dotenv/config"],
+      "cwd": "${workspaceRoot}",
+			"stopOnEntry": false,
+			"runtimeExecutable": null,
+			"env": { "NODE_ENV": "develop"},
+      "program": "${workspaceFolder}/node_modules/.bin/_mocha",
+      "args": ["./test/cmc_crypto_test.js", "dotenv_config_path=.env.local"]
     }
   ]
 }

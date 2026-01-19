@@ -12,11 +12,11 @@ const addresses = require("../../config/addresses");
 module.exports = buildModule("SwapCrossModule", (m) => {
   // const unlockTime = m.getParameter("unlockTime", "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC");
   // const network = m.getParameter("network", "");
-  const networkName = hre.network.name;
+  const network = hre.network.name;
   const config = hre.network.config;
-  console.log(`Deploying to network: ${networkName}`);
+  console.log(`Deploying to network: ${network}`);
   console.log(`config is network: ${JSON.stringify(config)}`);
-  const okxDexRouter = addresses[networkName].okxDexRouter;
+  const okxDexRouter = addresses[network].okxDexRouter;
   console.log(`okxDexRouter is ${okxDexRouter}`)
   if (network === "" || !okxDexRouter) {
     return 
