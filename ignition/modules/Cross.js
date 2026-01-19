@@ -13,8 +13,6 @@
 const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, "./.env") });
 const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
-const addresses = require("../../config/addresses");
-
 
 module.exports = buildModule("CrossModule", (m) => {
   const network = hre.network.name;
