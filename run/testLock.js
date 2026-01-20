@@ -3,15 +3,16 @@ const { ethers } = require('ethers')
 const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, "../.env") });
 
-const { callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require(path.resolve(__dirname, "../lib/chainManagerTestnet"))
+const { callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require(path.resolve(__dirname, "../lib/chainManager"))
 
 const LockAbi = require('../artifacts/contracts/Lock.sol/Lock.json').abi
 const LockAddressOnWanchain = "0x213510bC45a26AB7cD6fbcEd8Ef2091DD472B7Fb"
 const privateKey = process.env.PK
 
+const networkName = 'wanchainTestnet'
 const sendWan = async () => {
   const { txResponse, receipt } = await sendNativeAndWait(
-    'Wanchain', 
+    networkName, 
     privateKey, 
     LockAddressOnWanchain, 
     ethers.parseEther('0.1')
@@ -20,7 +21,7 @@ const sendWan = async () => {
 }
 
 const getUnlockTime = async() => {
-  const unlockTime = await callContract('Wanchain', LockAddressOnWanchain, LockAbi, "unlockTime")
+  const unlockTime = await callContract(networkName, LockAddressOnWanchain, LockAbi, "unlockTime")
   // unlockTime is 1768280808, type is bigint
   console.log(`unlockTime is ${unlockTime}, type is ${typeof unlockTime}`)
 }
@@ -29,7 +30,7 @@ const sendWithdraw = async () => {
   try {
     // 1. 首先运行诊断
     console.log('Running wallet diagnosis...');
-    const diagResult = await diagnoseWallet('Wanchain', privateKey);
+    const diagResult = await diagnoseWallet(networkName, privateKey);
     if (!diagResult) {
       throw new Error('Wallet diagnosis failed');
     }
@@ -37,7 +38,7 @@ const sendWithdraw = async () => {
     // 2. 调用 withdraw
     console.log('\nCalling withdraw...');
     const { txResponse, receipt } = await sendContractAndWait(
-      'Wanchain',
+      networkName,
       privateKey,
       LockAddressOnWanchain,
       LockAbi,

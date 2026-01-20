@@ -14,21 +14,23 @@ const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, "./.env") });
 const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
 
+const networksConfig = require(path.resolve(__dirname, "../../config/networks"))
+
+// deployed on wanchain testnet and avalanche testnet (fuji)
 module.exports = buildModule("CrossModule", (m) => {
   const network = hre.network.name;
   const config = hre.network.config;
+  const myConfig = networksConfig[network]
   console.log(`Deploying to network: ${network}`);
-  console.log(`config is network: ${JSON.stringify(config)}`);
-  const bridgeAddress = '0x62de27e16f6f31d9aa5b02f4599fc6e21b339e79' // on wanchain
-  if (network !== "wanchainTestnet") {
-    return 
-  } 
-  // const bridgeAddress = '0x4c200a0867753454db78af84d147bd03e567f234' // on avax
-  // if (network !== "fuji") {
-  //   return 
-  // } 
-  console.log(`bridge address on ${network} is ${bridgeAddress}`)
+  console.log(`hh network is: ${JSON.stringify(config)}`);
+  console.log(`my network is: ${JSON.stringify(myConfig)}`);
+  console.log(`bridge address on ${network} is ${myConfig.wanBridge}`)
 
+  const bridgeAddress = myConfig.wanBridge
+  if (!bridgeAddress) {
+    console(`bad wanBridge`)
+    return
+  } 
 
   const cross = m.contract("Cross", [bridgeAddress], {});
 

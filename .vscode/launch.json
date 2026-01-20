@@ -7,6 +7,15 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "run okxDexHelper",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/lib/okxDexHelper.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Deploy SwapAndCross to Ethereum",
       "runtimeExecutable": "npx",
       "runtimeArgs": [
@@ -61,15 +70,6 @@
         "<node_internals>/**"
       ],
       "program": "${workspaceFolder}/run/testSwap.js"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "run testCross",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "program": "${workspaceFolder}/run/testCross.js"
     },
     {
       "type": "node",

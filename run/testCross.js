@@ -63,14 +63,11 @@ const axios = require('axios')
 const { ethers } = require('ethers')
 const BigNumber = require('bignumber.js');
 
-const { getValidAmount, getNetworkfee, sleep, tryLoadJsonObj} = require(path.resolve(__dirname, "../lib/utils"))
-const { callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require(path.resolve(__dirname, "../lib/chainManagerTestnet"))
-
-const crossAbi = [
-  'function swap(address tokenIn, address tokenOut, uint256 amountIn, uint256 minAmountOut, bytes calldata swapCallData) external payable returns (uint256 amountOut)',
-]
+const { getValidAmount, getNetworkfee, sleep, tryLoadJsonObj, getNetworkByChainType} = require(path.resolve(__dirname, "../lib/utils"))
+const { callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require(path.resolve(__dirname, "../lib/chainManager"))
 
 let gTokenPairsInfo = tryLoadJsonObj(path.resolve(__dirname, "../data/TokenPairs-testnet.json"), {total: 0, tokenPairs: {}});
+let gTokenPairsInfoTestnet = tryLoadJsonObj(path.resolve(__dirname, "../data/TokenPairs-testnet.json"), {total: 0, tokenPairs: {}});
 
 async function reqQuotaAndFee(fromSymbol, toSymbol, tokenPairID, symbol) {
   do {
@@ -95,7 +92,24 @@ async function reqQuotaAndFee(fromSymbol, toSymbol, tokenPairID, symbol) {
   } while (true);
 }
 
-const sendCrossUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, tokenPairId) => {
+const sendCrossUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, tokenPairId, isTestnet = false) => {
+  const tokenPairs = isTestnet ? gTokenPairsInfoTestnet.tokenPairs : gTokenPairsInfo.tokenPairs
+  const tokenPair = tokenPairs[tokenPairId]
+  const myFromConfig = getNetworkByChainType(fromChainSymbol, isTestnet)
+  const myToConfig = getNetworkByChainType(toChainSymbol, isTestnet)
+
+  const fromChainID = parseInt(tokenPair.fromChainID)
+  const toChainID = parseInt(tokenPair.toChainID)
+  if (myFromConfig.bip44 !== fromChainID && myFromConfig.bip44 !== toChainID) {
+    console.log(`bad from chain`)
+  }
+  if (myToConfig.bip44 !== fromChainID && myToConfig.bip44 !== toChainID) {
+    console.log(`bad to chain`)
+  }
+
+  const crossType = myFromConfig.bip44 === fromChainID ? 0 : 1
+  const token = myFromConfig.bip44 === fromChainID ? tokenPair.fromAccount : tokenPair.toAccount
+
   const feeInfo = await reqQuotaAndFee(fromChainSymbol, toChainSymbol, tokenPairId, assetSymbol)
   console.log(`${assetSymbol}, ${tokenPairId}, ${fromChainSymbol} ->  ${toChainSymbol} fee is ${JSON.stringify(feeInfo, null, 2)}`)
 
@@ -103,11 +117,11 @@ const sendCrossUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, tokenP
   amount = BigNumber(getValidAmount(feeInfo.networkFee, amount))
   let networkFee = BigNumber(getNetworkfee(feeInfo.networkFee, amount))
   const params = {
-    token: "0x1f6515c5e45c7d572fbb5d18ce613332c17ab288",           // USDT地址
+    token: token,// "0x1f6515c5e45c7d572fbb5d18ce613332c17ab288",           // USDT地址
     amount: amount.toFixed(),            // 0.000100 USDT (6 decimals)
     smgID: "0x000000000000000000000000000000000000000000000000006465765f323638",           // Storeman Group ID
     tokenPairID: tokenPairId,         // 代币对ID
-    crossType: 0,             // 0=Lock, 1=Burn
+    crossType,             // 0=Lock, 1=Burn
     recipient: ethers.getBytes("0x8d7a93ab1e89719e060fec1f21244f6832c46fb6"),       // 目标链接收地址(bytes格式)
     networkFee: networkFee.toFixed(0)
   };
@@ -119,7 +133,7 @@ const sendCrossUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, tokenP
     value = networkFee.plus(amount)
   }
 
-  const chainName = 'Avalanche'
+  const networkName = myFromConfig.networkName//'Avalanche'
   const privateKey = process.env.PK
   const CrossAddress = '0xB46D6Fa374b9f172648586a0Cfb0ba10b41751EB'
   const CrossAbi = ['function cross(tuple(address token, uint256 amount, bytes32 smgID, uint256 tokenPairID, uint8 crossType, bytes recipient, uint256 networkFee) params) external payable returns (bytes32 txHash)']
@@ -133,7 +147,7 @@ const sendCrossUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, tokenP
   // 步骤 1: 用户授权 Cross 合约
   if (!isNativeCross) {
     const { txResponse, receipt } = await sendContractAndWait(
-      chainName,
+      networkName,
       privateKey,
       params.token,
       erc20Abi,
@@ -153,7 +167,7 @@ const sendCrossUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, tokenP
   // const options = isNativeCross ? { value: value.toFixed(0) } : {};  // 添加 ETH value
   const options = value.isZero() ? {} : { value: value.toFixed(0) } ;  // 添加 ETH value
   const result = await sendContractAndWait(
-    chainName,
+    networkName,
     privateKey,
     CrossAddress,
     CrossAbi,
@@ -169,7 +183,22 @@ const sendCrossUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, tokenP
   console.log(`  Status: ${result.receipt.status === 1 ? 'Success' : 'Failed'}`);
 }
 
-const sendCrossBurnUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, tokenPairId) => {
+const sendCrossBurnUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, tokenPairId, isTestnet = false) => {
+  const tokenPair = gTokenPairsInfo.tokenPairs[tokenPairId]
+  const myFromConfig = getNetworkByChainType(fromChainSymbol, isTestnet)
+  const myToConfig = getNetworkByChainType(toChainSymbol, isTestnet)
+
+  const fromChainID = parseInt(tokenPair.fromChainID)
+  const toChainID = parseInt(tokenPair.toChainID)
+  if (myFromConfig.bip44 !== fromChainID && myFromConfig.bip44 !== toChainID) {
+    console.log(`bad from chain`)
+  }
+  if (myToConfig.bip44 !== fromChainID && myToConfig.bip44 !== toChainID) {
+    console.log(`bad to chain`)
+  }
+  const crossType = myFromConfig.bip44 === fromChainID ? 0 : 1
+  const token = myFromConfig.bip44 === fromChainID ? tokenPair.fromAccount : tokenPair.toAccount
+
   const feeInfo = await reqQuotaAndFee(fromChainSymbol, toChainSymbol, tokenPairId, assetSymbol)
   console.log(`${assetSymbol}, ${tokenPairId}, ${fromChainSymbol} ->  ${toChainSymbol} fee is ${JSON.stringify(feeInfo, null, 2)}`)
 
@@ -178,11 +207,11 @@ const sendCrossBurnUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, to
   let networkFee = BigNumber(getNetworkfee(feeInfo.networkFee, amount)).plus()
   networkFee = BigNumber("837218039856179603")  // only for test
   const params = {
-    token: "0x3d5950287b45f361774e5fb6e50d70eea06bc167",           // wanUSDT地址
+    token: token, // "0x3d5950287b45f361774e5fb6e50d70eea06bc167",           // wanUSDT地址
     amount: amount.toFixed(),            // 0.000100 USDT (6 decimals)
     smgID: "0x000000000000000000000000000000000000000000000000006465765f323638",           // Storeman Group ID
     tokenPairID: tokenPairId,         // 代币对ID
-    crossType: 1,             // 0=Lock, 1=Burn
+    crossType: crossType, // 1,             // 0=Lock, 1=Burn
     recipient: ethers.getBytes("0x8d7a93ab1e89719e060fec1f21244f6832c46fb6"),       // 目标链接收地址(bytes格式)
     networkFee: networkFee.toFixed(0)
   };
@@ -194,7 +223,7 @@ const sendCrossBurnUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, to
     value = networkFee.plus(amount)
   }
 
-  const chainName = 'Wanchain'
+  const networkName = myFromConfig.networkName// 'Wanchain'
   const privateKey = process.env.PK
   const CrossAddress = '0xB46D6Fa374b9f172648586a0Cfb0ba10b41751EB' // 再wanchain上部署的Cross
   const CrossAbi = ['function cross(tuple(address token, uint256 amount, bytes32 smgID, uint256 tokenPairID, uint8 crossType, bytes recipient, uint256 networkFee) params) external payable returns (bytes32 txHash)']
@@ -208,7 +237,7 @@ const sendCrossBurnUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, to
   // 步骤 1: 用户授权 Cross 合约
   // if (!isNativeCross) {
   //   const { txResponse, receipt } = await sendContractAndWait(
-  //     chainName,
+  //     networkName,
   //     privateKey,
   //     params.token,
   //     erc20Abi,
@@ -229,7 +258,7 @@ const sendCrossBurnUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, to
   console.log(`params is ${JSON.stringify(params, null, 2)}`)
   console.log(`options is ${JSON.stringify(options, null, 2)}`)
   const result = await sendContractAndWait(
-    chainName,
+    networkName,
     privateKey,
     CrossAddress,
     CrossAbi,
@@ -245,12 +274,14 @@ const sendCrossBurnUsdt = async (fromChainSymbol, toChainSymbol, assetSymbol, to
   console.log(`  Status: ${result.receipt.status === 1 ? 'Success' : 'Failed'}`);
 }
 
-const sendCrossWan = async (fromChainSymbol, toChainSymbol, assetSymbol, tokenPairId)
+const sendCrossWan = async (fromChainSymbol, toChainSymbol, assetSymbol, tokenPairId) => {
+
+}
 
 setTimeout( async() => {
   // usdt AVAX->WAN
-  // await sendCrossUsdt('AVAX', 'WAN', 'USDT', 233)
-  // await sendCrossBurnUsdt('WAN', 'AVAX', 'USDT', 233)
+  // await sendCrossUsdt('AVAX', 'WAN', 'USDT', 233, true)
+  await sendCrossBurnUsdt('WAN', 'AVAX', 'USDT', 233, true)
   
 }, 0)
 

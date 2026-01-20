@@ -20,14 +20,14 @@ const swapAbi = [
 
 const sendSwap = async () => {
     // Your wallet information - REPLACE WITH YOUR OWN VALUES
-    const chainName = 'Ethereum'
+    const networkName = 'ethereum'
     const chainIndex = 1
     const walletAddress = process.env.EVM_WALLET_ADDRESS;
     const privateKey = process.env.EVM_PRIVATE_KEY;
 
     // 1. 首先运行诊断
     console.log('Running wallet diagnosis...');
-    const diagResult = await diagnoseWallet(chainName, privateKey);
+    const diagResult = await diagnoseWallet(networkName, privateKey);
     if (!diagResult) {
       throw new Error('Wallet diagnosis failed');
     }
@@ -45,7 +45,7 @@ const sendSwap = async () => {
     // 步骤 1: 用户授权 Swap 合约
     const SwapAddress = '0xc28F4d079fBB6B4AF630dd8822c59107c2402f8b'
     const { txResponse, receipt } = await sendContractAndWait(
-      chainName,
+      networkName,
       privateKey,
       tokenIn,
       erc20Abi,
@@ -76,7 +76,7 @@ const sendSwap = async () => {
     // const options = txValue && txValue !== "0" ? { value: txValue } : {};
 
     const result = await sendContractAndWait(
-        chainName,
+        networkName,
         privateKey,
         SwapAddress,
         swapAbi,

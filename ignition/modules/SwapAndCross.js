@@ -7,20 +7,22 @@
 // Optimism: 0x68D6B739D2020067D1e2F713b999dA97E4d54812
 
 const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
-const addresses = require("../../config/addresses");
+const path = require('path')
+const networksConfig = require(path.resolve(__dirname, "../../config/networks"))
 
 module.exports = buildModule("SwapAndCrossModule", (m) => {
-  // const unlockTime = m.getParameter("unlockTime", "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC");
-  // const network = m.getParameter("network", "");
   const network = hre.network.name;
   const config = hre.network.config;
+  const myConfig = networksConfig[network]
   console.log(`Deploying to network: ${network}`);
   console.log(`config is network: ${JSON.stringify(config)}`);
-  const okxDexRouter = addresses[network].okxDexRouter;
-  const wanBridge = addresses[network].wanBridge;
+  console.log(`my network is: ${JSON.stringify(myConfig)}`);
+  const okxDexRouter = myConfig.okxDexRouter;
+  const wanBridge = myConfig.wanBridge;
   console.log(`okxDexRouter is ${okxDexRouter}`)
   console.log(`wanBridge is ${wanBridge}`)
-  if (network === "" || !okxDexRouter || !wanBridge) {
+  if (!okxDexRouter || !wanBridge) {
+    console(`bad okxDexRouter or wanBridge`)
     return 
   } 
 
