@@ -6,7 +6,7 @@ require('dotenv').config({ path: path.resolve(__dirname, "../.env") });
 // const proxyUrl = 'http://127.0.0.1:7897'; // 你的代理地址
 // const agent = new HttpsProxyAgent(proxyUrl);
 const { callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require(path.resolve(__dirname, "../lib/chainManager"))
-const { getSwapData } = require(path.resolve(__dirname, "../lib/okxDexhelper"))
+const { getSwapData } = require(path.resolve(__dirname, "../lib/okxDexHelper"))
 
 const erc20Abi = [
     'function approve(address spender, uint256 amount) external returns (bool)',

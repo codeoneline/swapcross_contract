@@ -2,22 +2,11 @@ const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, "../.env") });
 
 const networksConfig = require(path.resolve(__dirname, "../config/networks"))
+const { getValidAmount, getNetworkfee, sleep, tryLoadJsonObj, getNetworkByChainType} = require(path.resolve(__dirname, "../lib/utils"))
 const gTokenPairsInfo = tryLoadJsonObj(path.resolve(__dirname, "../data/TokenPairs-testnet.json"), {total: 0, tokenPairs: {}});
 const gTokenPairsInfoTestnet = tryLoadJsonObj(path.resolve(__dirname, "../data/TokenPairs-testnet.json"), {total: 0, tokenPairs: {}});
-// 源链ID:
-// 2147483708 (ETH)
-// 目标链ID:
-// 2147492648 (AVAX)
-// 源代币精度:
-// 6
-// 目标代币精度:
-// 6
-// 源地址:
-// 0xdac17f958d2ee523a2206206994597c13d831ec7
-// 目标地址:
-// 0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7
 const { callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require(path.resolve(__dirname, "../lib/chainManager"))
-const { getSwapData, sendGetRequest } = require(path.resolve(__dirname, "../lib/okxDexhelper"))
+const { getSwapData, sendGetRequest } = require(path.resolve(__dirname, "../lib/okxDexHelper"))
 
 const erc20Abi = [
     'function approve(address spender, uint256 amount) external returns (bool)',
@@ -47,12 +36,14 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
     }
 
     const allCoins = await sendGetRequest('/api/v6/dex/aggregator/all-tokens', {chainIndex: 1})
-    const fromTokensInfo = allCoins.findAll(info => info.tokenSymbol === fromTokenSymbol)
-    const toTokensInfo = allCoins.findAll(info => info.tokenSymbol === toTokenSymbol)
+    const fromTokensInfo = allCoins.filter(info => info.tokenSymbol === fromTokenSymbol)
+    const toTokensInfo = allCoins.filter(info => info.tokenSymbol === toTokenSymbol)
     if (fromTokensInfo.length !== 1 || toTokensInfo.length !== 1) {
       console.log(`bad tokenSymbol, from count ${fromTokensInfo.length}, to count ${toTokensInfo.length}`)
       return
     }
+
+
     const crossType = myFromConfig.bip44 === fromChainID ? 0 : 1
     const crossFromTokenAddress = myFromConfig.bip44 === fromChainID ? tokenPair.fromAccount : tokenPair.toAccount
     const crossToTokenAddress = myFromConfig.bip44 === fromChainID ? tokenPair.toAccount : tokenPair.fromAccount
@@ -118,7 +109,8 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
     // const txValue = swapData.tx.value;
     // const options = txValue && txValue !== "0" ? { value: txValue } : {};
 
-    const SwapAndCrossAddress = require(path.resolve(__dirname, `../ignition/deployments/chain-${}`))
+    const swapChainId = myFromConfig.chainIndex
+    const SwapAndCrossAddress = require(path.resolve(__dirname, `../ignition/deployments/chain-${swapChainId}/deployed_addresses.json`))["SwapAndCrossModule#SwapAndCross"]
     const swapParams = {
       tokenIn, 
       tokenOut, 

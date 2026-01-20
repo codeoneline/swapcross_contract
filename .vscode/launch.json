@@ -7,6 +7,15 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "run testSwapAndCross",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/run/testSwapAndCross.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "run okxDexHelper",
       "skipFiles": [
         "<node_internals>/**"
