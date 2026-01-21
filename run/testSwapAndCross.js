@@ -1,8 +1,10 @@
+const { ethers } = require('ethers');
+const BigNumber = require('bignumber.js')
 const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, "../.env") });
 
 const networksConfig = require(path.resolve(__dirname, "../config/networks"))
-const { getValidAmount, getNetworkfee, sleep, tryLoadJsonObj, getNetworkByChainType} = require(path.resolve(__dirname, "../lib/utils"))
+const { getValidAmount, getNetworkfee, reqQuotaAndFee, tryLoadJsonObj, getNetworkByChainType} = require(path.resolve(__dirname, "../lib/utils"))
 const gTokenPairsInfo = tryLoadJsonObj(path.resolve(__dirname, "../data/TokenPairs-mainnet.json"), {total: 0, tokenPairs: {}});
 const gTokenPairsInfoTestnet = tryLoadJsonObj(path.resolve(__dirname, "../data/TokenPairs-testnet.json"), {total: 0, tokenPairs: {}});
 const { callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require(path.resolve(__dirname, "../lib/chainManager"))
@@ -35,7 +37,7 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
       return
     }
 
-    const allCoins = await sendGetRequest('/api/v6/dex/aggregator/all-tokens', {chainIndex: 1})
+    const allCoins = await sendGetRequest('/api/v6/dex/aggregator/all-tokens', {chainIndex: myFromConfig.chainId})
     const fromTokensInfo = allCoins.filter(info => info.tokenSymbol === fromTokenSymbol)
     const toTokensInfo = allCoins.filter(info => info.tokenSymbol === toTokenSymbol)
     if (fromTokensInfo.length !== 1 || toTokensInfo.length !== 1) {
@@ -58,7 +60,7 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
 
 
     const networkName = myFromConfig.networkName
-    const chainIndex = myFromConfig.chainIndex
+    const chainIndex = myFromConfig.chainId
     const walletAddress = process.env.EVM_WALLET_ADDRESS;
     const privateKey = process.env.EVM_PRIVATE_KEY;
 
@@ -73,71 +75,98 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
     // const USDT_ETH = '0xdac17f958d2ee523a2206206994597c13d831ec7'; // USDT on ETH
     // const USDC_ETH = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'; // USDC on ETH
 
-    const tokenIn = fromTokensInfo.tokenContractAddress //"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE";
-    const tokenOut = toTokensInfo.tokenContractAddress //USDC_ETH
-    const amountIn = 100000000000000;//ethers.parseUnits("1000", 6); // 1000 USDT
+    const tokenIn = swapFromTokenInfo.tokenContractAddress //"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE";
+    const tokenOut = swapToTokenInfo.tokenContractAddress // 0xdac17f958d2ee523a2206206994597c13d831ec7
+    const amountIn = 100000000000000;//  0.0001 eth
     const slippagePercent = '0.5';
 
-    // 步骤 1: 用户授权 Swap 合约
     // const SwapAndCrossAddress = '0x32d4464bb786c31375C61e22683642CA97B44854'
-    const swapChainId = myFromConfig.chainIndex
+    const swapChainId = myFromConfig.chainId
     const SwapAndCrossAddress = require(path.resolve(__dirname, `../ignition/deployments/chain-${swapChainId}/deployed_addresses.json`))["SwapAndCrossModule#SwapAndCross"]
-    const { txResponse, receipt } = await sendContractAndWait(
-      networkName,
-      privateKey,
-      tokenIn,
-      erc20Abi,
-      'approve',
-      [SwapAndCrossAddress, amountIn],
-      {}, // options
-      1   // confirmations
-    );
 
-    console.log(`✓ Transaction successful!`);
-    console.log(`  Hash: ${txResponse.hash}`);
-    console.log(`  Block: ${receipt.blockNumber}`);
-    console.log(`  Gas Used: ${receipt.gasUsed}`);
-    console.log(`  Status: ${receipt.status === 1 ? 'Success' : 'Failed'}`);
-
-    // 步骤 2: 获取 OKX DEX API 的 callData
-    const swapData = await getSwapData(tokenIn, tokenOut, amountIn, slippagePercent, chainIndex, walletAddress)
+    const swapData = await getSwapData(tokenIn, tokenOut, amountIn, slippagePercent, chainIndex, SwapAndCrossAddress)
     console.log('Swap data obtained');
 
-    // 步骤 3: 调用 swap
-    const minReceiveAmount = swapData.tx.minReceiveAmount
+    const minAmountOut = swapData.tx.minReceiveAmount
     const swapCallData = swapData.tx.data
 
+
+    const feeInfo = await reqQuotaAndFee(fromChainSymbol, toChainSymbol, tokenPairId, toTokenSymbol)
+    console.log(`${toTokenSymbol}, ${tokenPairId}, ${fromChainSymbol} ->  ${toChainSymbol} fee is ${JSON.stringify(feeInfo, null, 2)}`)
+    if (feeInfo.networkFee.isPercent) {
+      console.log('bad networkFee, isPercent = true!')
+      return
+    }
+    // let amountValid = BigNumber(getValidAmount(feeInfo.networkFee, minAmountOut))
+    // let networkFee = BigNumber(getNetworkfee(feeInfo.networkFee, amountValid))
+    let networkFee = BigNumber(feeInfo.networkFee.value)
     const isNativeSwap = tokenIn.toLowerCase() === '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee';
-    const options = isNativeSwap ? { value: amountIn } : {};  // 添加 ETH value
-    // 或者这么写
-    // const txValue = swapData.tx.value;
-    // const options = txValue && txValue !== "0" ? { value: txValue } : {};
+    let totalValue = BigNumber(0);
+
+    // 如果是原生币 swap，需要包含 amountIn
+    if (isNativeSwap) {
+      totalValue = totalValue.plus(amountIn);
+      console.log(`Adding swap amount: ${amountIn}`);
+    }
+    
+    // 添加 bridge 的 network fee
+    if (!networkFee.isZero()) {
+      totalValue = totalValue.plus(networkFee);
+      console.log(`Adding network fee: ${networkFee.toFixed(0)}`);
+    }
+    
+    const options = totalValue.isGreaterThan(0) ? { value: totalValue.toFixed(0) } : {};
+    console.log(`\n=== Transaction Value Breakdown ===`);
+    console.log(`Swap input (ETH): ${isNativeSwap ? ethers.formatEther(amountIn) : '0'} ETH`);
+    console.log(`Network fee: ${ethers.formatEther(networkFee.toFixed(0))} ETH`);
+    console.log(`Total value: ${ethers.formatEther(totalValue.toFixed(0))} ETH`);
+    console.log(`===================================\n`);
+
+    
+    // 步骤 1: 用户授权 Swap 合约, 转erc20才用
+    if (!isNativeSwap) {
+      const { txResponse, receipt } = await sendContractAndWait(
+        networkName,
+        privateKey,
+        tokenIn,
+        erc20Abi,
+        'approve',
+        [SwapAndCrossAddress, amountIn],
+        {}, // options
+        1   // confirmations
+      );
+      console.log(`✓ Transaction successful!`);
+      console.log(`  Hash: ${txResponse.hash}`);
+      console.log(`  Block: ${receipt.blockNumber}`);
+      console.log(`  Gas Used: ${receipt.gasUsed}`);
+      console.log(`  Status: ${receipt.status === 1 ? 'Success' : 'Failed'}`);
+    }
 
     const swapParams = {
       tokenIn, 
       tokenOut, 
       amountIn, 
-      minReceiveAmount, 
+      minAmountOut, 
       swapCallData
     }
-
+  
     const crossParams = {
-      token: token,// "0x1f6515c5e45c7d572fbb5d18ce613332c17ab288",           // USDT地址
-      amount: amount.toFixed(),            // 0.000100 USDT (6 decimals)
-      smgID: "0x000000000000000000000000000000000000000000000000006465765f323638",           // Storeman Group ID
+      smgID: "0x000000000000000000000000000000000000000000000041726965735f303632",           // Storeman Group ID
+      // token: tokenOut,// "0x1f6515c5e45c7d572fbb5d18ce613332c17ab288",           // USDT地址
+      // amount: amount.toFixed(),            // 0.000100 USDT (6 decimals)
       tokenPairID: tokenPairId,         // 代币对ID
       crossType,             // 0=Lock, 1=Burn
-      recipient: ethers.getBytes("0x8d7a93ab1e89719e060fec1f21244f6832c46fb6"),       // 目标链接收地址(bytes格式)
+      recipient: ethers.getBytes(walletAddress), //ethers.getBytes("0x8d7a93ab1e89719e060fec1f21244f6832c46fb6"),       // 目标链接收地址(bytes格式)
       networkFee: networkFee.toFixed(0)
     };
-
+    console.log('Executing swapAndCross...');
     const result = await sendContractAndWait(
         networkName,
         privateKey,
-        SwapAddress,
-        swapAbi,
-        'swap',
-        [tokenIn, tokenOut, amountIn, minReceiveAmount, swapCallData],
+        SwapAndCrossAddress,
+        swapAndCrossAbi,
+        'swapAndCross',
+        [swapParams, crossParams],
         options, // optionsc
         1   // confirmations
       );
