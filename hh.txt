@@ -87,3 +87,10 @@ module.exports = buildModule("ComplexModule", (m) => {
   // 8. 返回部署的合约
   return { token, vault, safeMath };
 });
+
+
+    "verifyByFile": "npx hardhat verify --network goerli --constructor-args arguments.js 0x1234",
+    "verify": npx hardhat verify --network ethereum  0x1234... "Hello" "0xabc..."
+    
+    npx hardhat verify --network ethereum 0x32d4464bb786c31375C61e22683642CA97B44854 "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC" "0x589e12d073020f99febf32b739e58216748c9ed4"
+    npx hardhat verify --network ethereum 0x88381a53b020ea92FB1B059e0EAD49cD88BE3318 "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC" "0x589e12d073020f99febf32b739e58216748c9ed4"

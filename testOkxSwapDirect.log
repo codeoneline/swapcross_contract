@@ -1,0 +1,247 @@
+/home/jsw/.nvm/versions/node/v22.21.1/bin/node ./run/testOkxSwapDirect.js
+[dotenv@17.2.3] injecting env (9) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+Validating configuration...
+=== OKX Swap Diagnosis ===
+Wallet: 0x34aABB238177eF195ed90FEa056Edd6648732014
+Contract: 0x88381a53b020ea92fb1b059e0ead49cd88be3318
+
+=== Test 1: Generate swap data FOR CONTRACT ===
+Strategy: Use contract address as userWalletAddress
+Getting swap data from OKX API...
+Swap API Request Parameters: {
+  "chainIndex": 1,
+  "fromTokenAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+  "toTokenAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+  "amount": "1000000000000000",
+  "slippagePercent": "2.0",
+  "userWalletAddress": "0x88381a53b020ea92fb1b059e0ead49cd88be3318",
+  "swapReceiverAddress": "0x88381a53b020ea92fb1b059e0ead49cd88be3318",
+  "excludeDexIds": "6"
+}
+query_string ?chainIndex=1&fromTokenAddress=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&toTokenAddress=0xdac17f958d2ee523a2206206994597c13d831ec7&amount=1000000000000000&slippagePercent=2.0&userWalletAddress=0x88381a53b020ea92fb1b059e0ead49cd88be3318&swapReceiverAddress=0x88381a53b020ea92fb1b059e0ead49cd88be3318&excludeDexIds=6
+GET /api/v6/dex/aggregator/swap Response: {
+  "code": "0",
+  "data": [
+    {
+      "routerResult": {
+        "chainIndex": "1",
+        "contextSlot": 24317078,
+        "dexRouterList": [
+          {
+            "dexProtocol": {
+              "dexName": "Fluid",
+              "percent": "100"
+            },
+            "fromToken": {
+              "decimal": "18",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+              "tokenSymbol": "WETH",
+              "tokenUnitPrice": "2864.25"
+            },
+            "fromTokenIndex": "0",
+            "toToken": {
+              "decimal": "18",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+              "tokenSymbol": "wsteth",
+              "tokenUnitPrice": "3512.585186707579909817"
+            },
+            "toTokenIndex": "1"
+          },
+          {
+            "dexProtocol": {
+              "dexName": "Curve V2",
+              "percent": "100"
+            },
+            "fromToken": {
+              "decimal": "18",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+              "tokenSymbol": "wsteth",
+              "tokenUnitPrice": "3512.585186707579909817"
+            },
+            "fromTokenIndex": "1",
+            "toToken": {
+              "decimal": "8",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+              "tokenSymbol": "WBTC",
+              "tokenUnitPrice": "87504.54524429154"
+            },
+            "toTokenIndex": "2"
+          },
+          {
+            "dexProtocol": {
+              "dexName": "Uniswap V3",
+              "percent": "100"
+            },
+            "fromToken": {
+              "decimal": "8",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+              "tokenSymbol": "WBTC",
+              "tokenUnitPrice": "87504.54524429154"
+            },
+            "fromTokenIndex": "2",
+            "toToken": {
+              "decimal": "6",
+              "isHoneyPot": false,
+              "taxRate": "0",
+              "tokenContractAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+              "tokenSymbol": "USDT",
+              "tokenUnitPrice": "0.99871"
+            },
+            "toTokenIndex": "3"
+          }
+        ],
+        "estimateGasFee": "1147310",
+        "fromToken": {
+          "decimal": "18",
+          "isHoneyPot": false,
+          "taxRate": "0",
+          "tokenContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "tokenSymbol": "ETH",
+          "tokenUnitPrice": "2864.25"
+        },
+        "fromTokenAmount": "1000000000000000",
+        "priceImpactPercent": "0.07",
+        "router": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee--0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0--0x2260fac5e5542a773aa44fbcfedf7c193bc2c599--0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "swapMode": "exactIn",
+        "toToken": {
+          "decimal": "6",
+          "isHoneyPot": false,
+          "taxRate": "0",
+          "tokenContractAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "tokenSymbol": "USDT",
+          "tokenUnitPrice": "0.99871"
+        },
+        "toTokenAmount": "2869997",
+        "tradeFee": "1.173365724222115554"
+      },
+      "tx": {
+        "data": "0x0c307f76000000000000000000000000000000000000000000000000000000000003541800000000000000000000000088381a53b020ea92fb1b059e0ead49cd88be3318000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec700000000000000000000000000000000000000000000000000038d7ea4c6800000000000000000000000000000000000000000000000000000000000002aeab500000000000000000000000000000000000000000000000000000000697711e0000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000026000000000000000000000000000000000000000000000000000000000000004a000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000001200000000000000000000000000000000000000000000000000000000000000160000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000000000000000000000000000000000000000000100000000000000000000000097a7f8be1364759266cc5a619772458cc126b612000000000000000000000000000000000000000000000000000000000000000100000000000000000000000097a7f8be1364759266cc5a619772458cc126b61200000000000000000000000000000000000000000000000000000000000000018000000000000000000127100b1a513ee24972daef112bc777a5610d4325c9e7000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000040000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000007f39c581f595b53c5cb19bd0b3f8da6c935e2ca000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000001600000000000000000000000007f39c581f595b53c5cb19bd0b3f8da6c935e2ca00000000000000000000000000000000000000000000000000000000000000001000000000000000000000000b2dc2da9684dfef77cfa5c6bb07e7330237152920000000000000000000000000000000000000000000000000000000000000001000000000000000000000000b2dc2da9684dfef77cfa5c6bb07e73302371529200000000000000000000000000000000000000000000000000000000000000018000000000000000010227108cd52ee292313c4d851e71a7064f096504ab3ee90000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000800000000000000000000000007f39c581f595b53c5cb19bd0b3f8da6c935e2ca00000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c5990000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000001600000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c59900000000000000000000000000000000000000000000000000000000000000010000000000000000000000006747bcaf9bd5a5f0758cbe08903490e45ddfacb500000000000000000000000000000000000000000000000000000000000000010000000000000000000000006747bcaf9bd5a5f0758cbe08903490e45ddfacb50000000000000000000000000000000000000000000000000000000000000001000000000000000002032710f98cf0d979cfbb780774f318e3da4f7317af50d70000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000400000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec777777777111180000000000000000000000000000000000000000000002bcaed777777771111000000000064fa00a9ed787f3793db668bff3e6e6e7db0f92a1b",
+        "from": "0x88381a53b020ea92fb1b059e0ead49cd88be3318",
+        "gas": "1147310",
+        "gasPrice": "547691878",
+        "maxPriorityFeePerGas": "500000000",
+        "maxSpendAmount": "",
+        "minReceiveAmount": "2812597",
+        "signatureData": [
+          ""
+        ],
+        "slippagePercent": "2",
+        "to": "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC",
+        "value": "1000000000000000"
+      }
+    }
+  ],
+  "msg": ""
+}
+✅ Got swap data for contract
+Router: 0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee--0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0--0x2260fac5e5542a773aa44fbcfedf7c193bc2c599--0xdac17f958d2ee523a2206206994597c13d831ec7
+Expected output: 2869997
+
+Testing static call from contract...
+❌ Still failed even with contract as userWalletAddress
+Error: missing revert data
+
+=== Test 2: Try Uniswap-only route ===
+Strategy: Exclude problematic DEXs
+Getting swap data from OKX API...
+Swap API Request Parameters: {
+  "chainIndex": 1,
+  "fromTokenAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+  "toTokenAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+  "amount": "1000000000000000",
+  "slippagePercent": "2.0",
+  "userWalletAddress": "0x88381a53b020ea92fb1b059e0ead49cd88be3318",
+  "swapReceiverAddress": "0x88381a53b020ea92fb1b059e0ead49cd88be3318",
+  "dexIds": "1,3,5"
+}
+query_string ?chainIndex=1&fromTokenAddress=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&toTokenAddress=0xdac17f958d2ee523a2206206994597c13d831ec7&amount=1000000000000000&slippagePercent=2.0&userWalletAddress=0x88381a53b020ea92fb1b059e0ead49cd88be3318&swapReceiverAddress=0x88381a53b020ea92fb1b059e0ead49cd88be3318&dexIds=1,3,5
+GET /api/v6/dex/aggregator/swap Response: {
+  "code": "82000",
+  "data": [],
+  "msg": "Insufficient liquidity"
+}
+Error: GET /api/v6/dex/aggregator/swap {"chainIndex":1,"fromTokenAddress":"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE","toTokenAddress":"0xdac17f958d2ee523a2206206994597c13d831ec7","amount":"1000000000000000","slippagePercent":"2.0","userWalletAddress":"0x88381a53b020ea92fb1b059e0ead49cd88be3318","swapReceiverAddress":"0x88381a53b020ea92fb1b059e0ead49cd88be3318","dexIds":"1,3,5"} Error: Insufficient liquidity
+Failed to get swap data: GET /api/v6/dex/aggregator/swap {"chainIndex":1,"fromTokenAddress":"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE","toTokenAddress":"0xdac17f958d2ee523a2206206994597c13d831ec7","amount":"1000000000000000","slippagePercent":"2.0","userWalletAddress":"0x88381a53b020ea92fb1b059e0ead49cd88be3318","swapReceiverAddress":"0x88381a53b020ea92fb1b059e0ead49cd88be3318","dexIds":"1,3,5"} Error: Insufficient liquidity
+❌ Failed to get Uniswap-only swap data
+Error: GET /api/v6/dex/aggregator/swap {"chainIndex":1,"fromTokenAddress":"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE","toTokenAddress":"0xdac17f958d2ee523a2206206994597c13d831ec7","amount":"1000000000000000","slippagePercent":"2.0","userWalletAddress":"0x88381a53b020ea92fb1b059e0ead49cd88be3318","swapReceiverAddress":"0x88381a53b020ea92fb1b059e0ead49cd88be3318","dexIds":"1,3,5"} Error: Insufficient liquidity
+
+=== Test 3: Try to decode error details ===
+Getting swap data from OKX API...
+Swap API Request Parameters: {
+  "chainIndex": 1,
+  "fromTokenAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+  "toTokenAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+  "amount": "1000000000000000",
+  "slippagePercent": "2.0",
+  "userWalletAddress": "0x34aABB238177eF195ed90FEa056Edd6648732014",
+  "swapReceiverAddress": "0x88381a53b020ea92fb1b059e0ead49cd88be3318",
+  "excludeDexIds": "6"
+}
+query_string ?chainIndex=1&fromTokenAddress=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&toTokenAddress=0xdac17f958d2ee523a2206206994597c13d831ec7&amount=1000000000000000&slippagePercent=2.0&userWalletAddress=0x34aABB238177eF195ed90FEa056Edd6648732014&swapReceiverAddress=0x88381a53b020ea92fb1b059e0ead49cd88be3318&excludeDexIds=6
+Error: {msg: 'Too Many Requests', code: '50011'}
+Failed to get swap data: Request failed with status code 429
+Test 3 setup failed: Request failed with status code 429
+
+=== Test 4: Try smaller amount ===
+Getting swap data from OKX API...
+Swap API Request Parameters: {
+  "chainIndex": 1,
+  "fromTokenAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+  "toTokenAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+  "amount": "100000000000000",
+  "slippagePercent": "2.0",
+  "userWalletAddress": "0x88381a53b020ea92fb1b059e0ead49cd88be3318",
+  "swapReceiverAddress": "0x88381a53b020ea92fb1b059e0ead49cd88be3318",
+  "dexIds": "1,3"
+}
+query_string ?chainIndex=1&fromTokenAddress=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&toTokenAddress=0xdac17f958d2ee523a2206206994597c13d831ec7&amount=100000000000000&slippagePercent=2.0&userWalletAddress=0x88381a53b020ea92fb1b059e0ead49cd88be3318&swapReceiverAddress=0x88381a53b020ea92fb1b059e0ead49cd88be3318&dexIds=1,3
+GET /api/v6/dex/aggregator/swap Response: {
+  "code": "82000",
+  "data": [],
+  "msg": "Insufficient liquidity"
+}
+Error: GET /api/v6/dex/aggregator/swap {"chainIndex":1,"fromTokenAddress":"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE","toTokenAddress":"0xdac17f958d2ee523a2206206994597c13d831ec7","amount":"100000000000000","slippagePercent":"2.0","userWalletAddress":"0x88381a53b020ea92fb1b059e0ead49cd88be3318","swapReceiverAddress":"0x88381a53b020ea92fb1b059e0ead49cd88be3318","dexIds":"1,3"} Error: Insufficient liquidity
+Failed to get swap data: GET /api/v6/dex/aggregator/swap {"chainIndex":1,"fromTokenAddress":"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE","toTokenAddress":"0xdac17f958d2ee523a2206206994597c13d831ec7","amount":"100000000000000","slippagePercent":"2.0","userWalletAddress":"0x88381a53b020ea92fb1b059e0ead49cd88be3318","swapReceiverAddress":"0x88381a53b020ea92fb1b059e0ead49cd88be3318","dexIds":"1,3"} Error: Insufficient liquidity
+Failed to get swap data for small amount
+Error: GET /api/v6/dex/aggregator/swap {"chainIndex":1,"fromTokenAddress":"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE","toTokenAddress":"0xdac17f958d2ee523a2206206994597c13d831ec7","amount":"100000000000000","slippagePercent":"2.0","userWalletAddress":"0x88381a53b020ea92fb1b059e0ead49cd88be3318","swapReceiverAddress":"0x88381a53b020ea92fb1b059e0ead49cd88be3318","dexIds":"1,3"} Error: Insufficient liquidity
+
+=== Diagnosis Summary ===
+═══════════════════════════════════════════════════════════════
+
+Based on the tests above, here are the likely causes:
+1. WRONG userWalletAddress parameter ⚠️ MOST LIKELY
+   → You passed wallet address, should pass contract address
+   → Solution: Use contract address for both userWalletAddress and swapReceiverAddress
+
+2. Problematic DEX adapter (e.g., Balancer)
+   → Some DEX adapters may restrict contract calls
+   → Solution: Use excludeDexIds or dexIds to avoid them
+
+3. Gas estimation issue
+   → Static call uses limited gas
+   → Solution: Set higher gasLimit in your contract call
+
+4. Amount too small/large for route
+   → Certain routes have min/max amounts
+   → Solution: Adjust amount or try different routes
+
+5. Price/liquidity changed
+   → Market moved between API call and execution
+   → Solution: Get fresh swap data right before execution
+═══════════════════════════════════════════════════════════════
+Recommended actions:
+1. ✅ Use contract address as userWalletAddress in OKX API
+2. ✅ Set excludeDexIds="6" to avoid Balancer
+3. ✅ Use higher gas limit (3,000,000+) in contract
+4. ✅ Increase swap amount to 0.001 ETH or more
+5. ✅ Add proper error handling in contract

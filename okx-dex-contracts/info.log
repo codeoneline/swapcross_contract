@@ -1,0 +1,94 @@
+CommissionInfo 内存布局
+
+0x00: isFromTokenCommission (bool)
+0x20: isToTokenCommission (bool)
+0x40: token (address)           # 佣金代币地址
+0x60: toBCommission (uint256)   # B端佣金模式
+0x80: commissionLength (uint256) # 推荐人数量
+0xa0: commissionRate0 (uint256)  # 第一个推荐人佣金率
+0xc0: referrerAddress0 (address) # 第一个推荐人地址
+0xe0: commissionRate1           # 第二个推荐人佣金率
+0x100: referrerAddress1         # 第二个推荐人地址
+... 以此类推
+
+
+TrimInfo 内存布局
+
+0x00: hasTrim (bool)
+0x20: trimRate (uint256)        # 修剪率
+0x40: trimAddress (address)     # 修剪地址
+0x60: toBTrim (uint256)         # B端修剪模式
+0x80: expectAmountOut (uint256) # 预期输出金额
+0xa0: chargeRate (uint256)      # 收费率（双修剪模式）
+0xc0: chargeAddress (address)   # 收费地址（双修剪模式）
+
+
+_getCommissionAndTrimInfo()
+CommissionInfo
+{
+  "isFromTokenCommission":false,
+  "isToTokenCommission":false,
+  "token":"0x0000000000000000000000000000000000000000",
+  "toBCommission":"0",
+  "commissionLength":"0",
+  "commissionRate":"0",
+  "referrerAddress":"0x0000000000000000000000000000000000000000",
+  "commissionRate2":"0",
+  "referrerAddress2":"0x0000000000000000000000000000000000000000",
+  "commissionRate3":"0",
+  "referrerAddress3":"0x0000000000000000000000000000000000000000",  
+  "commissionRate4":"0",
+  "referrerAddress4":"0x0000000000000000000000000000000000000000",
+  "commissionRate5":"0",
+  "referrerAddress5":"0x0000000000000000000000000000000000000000",
+  "commissionRate6":"0",
+  "referrerAddress6":"0x0000000000000000000000000000000000000000",
+  "commissionRate7":"0",
+  "referrerAddress7":"0x0000000000000000000000000000000000000000",
+  "commissionRate8":"0",
+  "referrerAddress8":"0x0000000000000000000000000000000000000000"
+},
+TrimInfo
+{
+  "hasTrim":true,
+  "trimRate":"100",
+  "trimAddress":"0xfa00a9ed787f3793db668bff3e6e6e7db0f92a1b",
+  "toBTrim":"2",
+  "expectAmountOut":"302037",
+  "chargeRate":"0",
+  "chargeAddress":"0x0000000000000000000000000000000000000000"
+}
+
+    struct CommissionInfo {
+        bool isFromTokenCommission; //0x00
+        bool isToTokenCommission; //0x20
+        address token; // 0x40
+        uint256 toBCommission; // 0x60, 0 for no commission, 1 for no-toB commission, 2 for toB commission
+        uint256 commissionLength; // 0x80
+        uint256 commissionRate; // 0xa0
+        address referrerAddress; // 0xc0
+        uint256 commissionRate2; // 0xe0
+        address referrerAddress2; // 0x100
+        uint256 commissionRate3; // 0x120
+        address referrerAddress3; // 0x140
+        uint256 commissionRate4; // 0x160
+        address referrerAddress4; // 0x180
+        uint256 commissionRate5; // 0x1a0
+        address referrerAddress5; // 0x1c0
+        uint256 commissionRate6; // 0x1e0
+        address referrerAddress6; // 0x200
+        uint256 commissionRate7; // 0x220
+        address referrerAddress7; // 0x240
+        uint256 commissionRate8; // 0x260
+        address referrerAddress8; // 0x280
+    }
+
+    struct TrimInfo {
+        bool hasTrim; // 0x00
+        uint256 trimRate; // 0x20
+        address trimAddress; // 0x40
+        uint256 toBTrim; // 0x60, 0 for no trim, 1 for no-toB trim, 2 for toB trim
+        uint256 expectAmountOut; // 0x80
+        uint256 chargeRate; // 0xa0
+        address chargeAddress; // 0xc0
+    }

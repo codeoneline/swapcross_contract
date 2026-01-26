@@ -7,6 +7,42 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "run k1",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/run/testOkxSwapDirect_k1.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "run k2",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/run/testOkxSwapDirect_k2.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "run testOkxSwapDirect",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/run/testOkxSwapDirect.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "run verifyOkxSwapReceiver",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/run/verifyOkxSwapReceiver.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "run testSwapAndCross",
       "skipFiles": [
         "<node_internals>/**"

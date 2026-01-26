@@ -1,0 +1,55 @@
+/home/jsw/.nvm/versions/node/v22.21.1/bin/node ./run/testOkxSwapDirect_k2.js
+[dotenv@17.2.3] injecting env (9) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+=== Testing Direct Uniswap V3 Call ===
+Contract: 0x88381a53b020ea92fb1b059e0ead49cd88be3318
+Uniswap V3 Router: 0xE592427A0AEce92De3Edee1F18E0157C05861564
+
+Swap params:
+  Token in: WETH
+  Token out: USDT
+  Amount in: 0.01 ETH
+  Fee tier: 0.3%
+  Recipient: 0x88381a53b020ea92fb1b059e0ead49cd88be3318
+
+Testing static call from contract address...
+Error: execution reverted: "STF" (action="call", data="0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000035354460000000000000000000000000000000000000000000000000000000000", reason="STF", transaction={ "data": "0x414bf389000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec70000000000000000000000000000000000000000000000000000000000000bb800000000000000000000000088381a53b020ea92fb1b059e0ead49cd88be33180000000000000000000000000000000000000000000000000000000069770b03000000000000000000000000000000000000000000000000002386f26fc1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "from": "0x88381a53b020ea92FB1B059e0EAD49cD88BE3318", "to": "0xE592427A0AEce92De3Edee1F18E0157C05861564" }, invocation=null, revert={ "args": [ "STF" ], "name": "Error", "signature": "Error(string)" }, code=CALL_EXCEPTION, version=6.16.0)
+
+✅ GOOD NEWS!
+═══════════════════════════════════════════════════
+Error is about insufficient balance, NOT contract restriction!
+This proves that Uniswap V3 DOES accept contract calls.
+
+The issue with OKX is likely:
+  1. Complex multi-hop routes using problematic DEXs
+  2. Amount too small for certain routes
+  3. Need to use simpler routes (Uniswap only)
+═══════════════════════════════════════════════════
+
+=== Comparison: Call from EOA ===
+EOA Error: execution reverted: "STF" (action="call", data="0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000035354460000000000000000000000000000000000000000000000000000000000", reason="STF", transaction={ "data": "0x414bf389000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec70000000000000000000000000000000000000000000000000000000000000bb800000000000000000000000088381a53b020ea92fb1b059e0ead49cd88be33180000000000000000000000000000000000000000000000000000000069770b03000000000000000000000000000000000000000000000000002386f26fc1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "from": "0x34aABB238177eF195ed90FEa056Edd6648732014", "to": "0xE592427A0AEce92De3Edee1F18E0157C05861564" }, invocation=null, revert={ "args": [ "STF" ], "name": "Error", "signature": "Error(string)" }, code=CALL_EXCEPTION, version=6.16.0)
+(Same type of error = contract and EOA treated equally)
+
+=== Recommendations ===
+═══════════════════════════════════════════════════════════════
+
+1. INCREASE SWAP AMOUNT
+   → Use at least 0.01 ETH ($28) or more
+   → Small amounts have limited routing options
+
+2. EXCLUDE PROBLEMATIC DEXS
+   → excludeDexIds: "2,6" (Curve, Balancer)
+   → Or use dexIds: "1,3,5" (Uniswap V2, V3, Sushiswap)
+
+3. CORRECT API PARAMETERS
+   → userWalletAddress: YOUR_CONTRACT_ADDRESS
+   → swapReceiverAddress: YOUR_CONTRACT_ADDRESS
+
+4. ALTERNATIVE: USE DIRECT UNISWAP V3
+   → If OKX keeps failing, call Uniswap V3 directly
+   → Your contract wraps ETH → WETH → swap → unwrap
+
+5. CONSIDER OTHER AGGREGATORS
+   → 1inch: Better for contract integration
+   → ParaSwap: Supports contract receivers
+   → Cowswap: Intent-based, contract-friendly
+═══════════════════════════════════════════════════════════════

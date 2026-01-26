@@ -25,7 +25,14 @@ module.exports = {
   sourcify: {
     enabled: true
   },
+  etherscan: {
+    apiKey: "NR74JXIII693YYXXTTKHENDPTT8QVG8PG2"
+  },
   networks: {
+    ethereum: {
+      url: "https://ethereum-rpc.publicnode.com",
+      accounts: [process.env.PK],
+    },
     localTest: {
       url: "http://127.0.0.1:8545/",
       accounts: [process.env.PK],
@@ -36,10 +43,6 @@ module.exports = {
     },
     sonic: {
       url: "https://sonic-rpc.publicnode.com",
-      accounts: [process.env.PK],
-    },
-    ethereum: {
-      url: "https://ethereum-rpc.publicnode.com",
       accounts: [process.env.PK],
     },
     arbitrum: {
