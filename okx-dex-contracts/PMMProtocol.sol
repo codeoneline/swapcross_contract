@@ -195,16 +195,16 @@ contract PMMProtocol is EIP712 {
     // This function does not support deflationary or rebasing tokens.
     // The protocol assumes standard token behavior with exact transfer amounts,
     // which is valid for mainstream tokens typically used by market makers.
-//     order: {
-//   "rfqId": "4266789015778628352",
-//   "expiry": "1769056483",
-//   "makerAsset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-//   "takerAsset": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-//   "makerAddress": "0x67336cec42645f55059eff241cb02ea5cc52ff86",
-//   "makerAmount": "301774",
-//   "takerAmount": "100000000000000",
-//   "usePermit2": false
-// }
+    order: {
+  "rfqId": "4266789015778628352",
+  "expiry": "1769056483",
+  "makerAsset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "takerAsset": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+  "makerAddress": "0x67336cec42645f55059eff241cb02ea5cc52ff86",
+  "makerAmount": "301774",
+  "takerAmount": "100000000000000",
+  "usePermit2": false
+}
     function fillOrderRFQTo(
         OrderRFQLib.OrderRFQ memory order,
         bytes calldata signature,
