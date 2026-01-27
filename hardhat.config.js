@@ -91,7 +91,7 @@ module.exports = {
       accounts: [process.env.PK],
     },
     avalanche: {
-      url: 'https://avalanche.public-rpc.com',
+      url: 'https://api.avax.network/ext/bc/C/rpc',
       accounts: [process.env.PK],
     },
     polygonZkEvm: {

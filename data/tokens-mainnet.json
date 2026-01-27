@@ -1,0 +1,4059 @@
+{
+  "1073741825": {
+    "0x576fde3f61b7c97e381c94e7a03dbc2e08af1111": {
+      "id": 51,
+      "addr": "0x576fde3f61b7c97e381c94e7a03dbc2e08af1111",
+      "name": "ETH@moonriver",
+      "symbol": "ETH.m",
+      "decimals": "18"
+    },
+    "0xe936caa7f6d9f5c9e907111fcaf7c351c184cda7": {
+      "id": 53,
+      "addr": "0xe936caa7f6d9f5c9e907111fcaf7c351c184cda7",
+      "name": "USDT@moonriver",
+      "symbol": "USDT.m",
+      "decimals": "6"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 73,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "MOVR",
+      "symbol": "MOVR",
+      "decimals": "18"
+    },
+    "0x53f14c39ad32315ba97d6efe028355b6a96925ae": {
+      "id": 77,
+      "addr": "0x53f14c39ad32315ba97d6efe028355b6a96925ae",
+      "name": "KYL@moonriver",
+      "symbol": "KYL.m",
+      "decimals": "18"
+    },
+    "0x748134b5f553f2bcbd78c6826de99a70274bdeb3": {
+      "id": 79,
+      "addr": "0x748134b5f553f2bcbd78c6826de99a70274bdeb3",
+      "name": "USDC@moonriver",
+      "symbol": "USDC.m",
+      "decimals": "6"
+    },
+    "0xa4dd0b5b5e83a4d9c6b4b406affb1d388df27862": {
+      "id": 93,
+      "addr": "0xa4dd0b5b5e83a4d9c6b4b406affb1d388df27862",
+      "name": "PHA@moonriver",
+      "symbol": "PHA.m",
+      "decimals": "18"
+    },
+    "0x900f1ec5819fa087d368877cd03b265bf1802667": {
+      "id": 104,
+      "addr": "0x900f1ec5819fa087d368877cd03b265bf1802667",
+      "name": "IMX@moonriver",
+      "symbol": "IMX.m",
+      "decimals": "18"
+    },
+    "0xf47002e6151e06554b8f16e9cc704edd3fc078b8": {
+      "id": 99,
+      "addr": "0xf47002e6151e06554b8f16e9cc704edd3fc078b8",
+      "name": "BNB@moonriver",
+      "symbol": "BNB.m",
+      "decimals": "18"
+    },
+    "0x10acbe3b9e6a2ff7f341e5cbf4b6617741ff44aa": {
+      "id": 109,
+      "addr": "0x10acbe3b9e6a2ff7f341e5cbf4b6617741ff44aa",
+      "name": "TEM@moonriver",
+      "symbol": "TEM.m",
+      "decimals": "9"
+    },
+    "0xd924f195c6012c301f42290cf0fde385a66039de": {
+      "id": 95,
+      "addr": "0xd924f195c6012c301f42290cf0fde385a66039de",
+      "name": "FTM@moonriver",
+      "symbol": "FTM.m",
+      "decimals": "18"
+    },
+    "0x147dbae284bbd624b7b5a98dc862e21e8857446d": {
+      "id": 106,
+      "addr": "0x147dbae284bbd624b7b5a98dc862e21e8857446d",
+      "name": "FHM@moonriver",
+      "symbol": "FHM.m",
+      "decimals": "9"
+    },
+    "0x78f811a431d248c1edcf6d95ec8551879b2897c3": {
+      "id": 49,
+      "addr": "0x78f811a431d248c1edcf6d95ec8551879b2897c3",
+      "name": "BTC@moonriver",
+      "symbol": "BTC.m",
+      "decimals": "8"
+    },
+    "0x15b9ca9659f5dff2b7d35a98dd0790a3cbb3d445": {
+      "id": 50,
+      "addr": "0x15b9ca9659f5dff2b7d35a98dd0790a3cbb3d445",
+      "name": "DOT@moonriver",
+      "symbol": "DOT.m",
+      "decimals": "10"
+    },
+    "0xdd7f2bc5f0ef210ca183349ae90785fdfb374ae7": {
+      "id": 52,
+      "addr": "0xdd7f2bc5f0ef210ca183349ae90785fdfb374ae7",
+      "name": "LTC@moonriver",
+      "symbol": "LTC.m",
+      "decimals": "8"
+    },
+    "0x9d5bc9b873aed984e2b6a64d4792249d68bba2fe": {
+      "id": 54,
+      "addr": "0x9d5bc9b873aed984e2b6a64d4792249d68bba2fe",
+      "name": "XRP@moonriver",
+      "symbol": "XRP.m",
+      "decimals": "6"
+    },
+    "0x41562ae242d194247389152acaa7a9397136b09f": {
+      "id": 55,
+      "addr": "0x41562ae242d194247389152acaa7a9397136b09f",
+      "name": "WAN@moonriver",
+      "symbol": "WAN.m",
+      "decimals": "18"
+    },
+    "0xc005a7a1502c9de16ccdaba7cda0cee4ac304993": {
+      "id": 89,
+      "addr": "0xc005a7a1502c9de16ccdaba7cda0cee4ac304993",
+      "name": "AVAX@moonriver",
+      "symbol": "AVAX.m",
+      "decimals": "18"
+    },
+    "0xb668cd490a4421f993f93be2819a922dbbb32804": {
+      "id": 91,
+      "addr": "0xb668cd490a4421f993f93be2819a922dbbb32804",
+      "name": "DOGE@moonriver",
+      "symbol": "DOGE.m",
+      "decimals": "8"
+    },
+    "0xffef2639b2ee39f9c284d0107e567dd2f7b20613": {
+      "id": 107,
+      "addr": "0xffef2639b2ee39f9c284d0107e567dd2f7b20613",
+      "name": "WASP@moonriver",
+      "symbol": "WASP.m",
+      "decimals": "18"
+    },
+    "0x28e375290fff26848eb2df310ad9fde500be581a": {
+      "id": 120,
+      "addr": "0x28e375290fff26848eb2df310ad9fde500be581a",
+      "name": "GLMR@moonriver",
+      "symbol": "GLMR",
+      "decimals": "18"
+    },
+    "0xffffffff08220ad2e6e157f26ed8bd22a336a0a5": {
+      "id": 122,
+      "addr": "0xffffffff08220ad2e6e157f26ed8bd22a336a0a5",
+      "name": "Karura",
+      "symbol": "xcKAR",
+      "decimals": "12"
+    },
+    "0xffffffff1fcacbd218edc0eba20fc2308c778080": {
+      "id": 123,
+      "addr": "0xffffffff1fcacbd218edc0eba20fc2308c778080",
+      "name": "xcKSM",
+      "symbol": "xcKSM",
+      "decimals": "12"
+    },
+    "0xffffffff83f4f317d3cbf6ec6250aec3697b3ff2": {
+      "id": 124,
+      "addr": "0xffffffff83f4f317d3cbf6ec6250aec3697b3ff2",
+      "name": "Kintsugi Native Token",
+      "symbol": "xcKINT",
+      "decimals": "12"
+    },
+    "0xffffffff893264794d9d57e1e0e21e0042af5a0a": {
+      "id": 125,
+      "addr": "0xffffffff893264794d9d57e1e0e21e0042af5a0a",
+      "name": "xcRMRK",
+      "symbol": "xcRMRK",
+      "decimals": "10"
+    },
+    "0xfffffffff075423be54811ecb478e911f22dde7d": {
+      "id": 127,
+      "addr": "0xfffffffff075423be54811ecb478e911f22dde7d",
+      "name": "xcBNC",
+      "symbol": "xcBNC",
+      "decimals": "12"
+    },
+    "0xfffffffff6e528ad57184579beee00c5d5e646f0": {
+      "id": 128,
+      "addr": "0xfffffffff6e528ad57184579beee00c5d5e646f0",
+      "name": "Kintsugi Wrapped BTC",
+      "symbol": "xcKBTC",
+      "decimals": "8"
+    },
+    "0x9a92b5ebf1f6f6f7d93696fcd44e5cf75035a756": {
+      "id": 178,
+      "addr": "0x9a92b5ebf1f6f6f7d93696fcd44e5cf75035a756",
+      "name": "FINN Token",
+      "symbol": "FINN",
+      "decimals": "18"
+    }
+  },
+  "1073741826": {
+    "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9": {
+      "id": 191,
+      "addr": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+      "name": "USD₮0",
+      "symbol": "USD₮0",
+      "decimals": "6"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 319,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "ETH",
+      "symbol": "ETH",
+      "decimals": "18"
+    },
+    "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8": {
+      "id": 380,
+      "addr": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+      "name": "USD Coin (Arb1)",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f": {
+      "id": 781,
+      "addr": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": "8"
+    },
+    "0x30b8d9e757595b5cbaecdfd81e9eeccf4b31e53d": {
+      "id": 914,
+      "addr": "0x30b8d9e757595b5cbaecdfd81e9eeccf4b31e53d",
+      "name": "MNT@arbitrum",
+      "symbol": "MNT",
+      "decimals": "6"
+    },
+    "0x607ba7209e2810687847bd3688c35f0910667eb3": {
+      "id": 959,
+      "addr": "0x607ba7209e2810687847bd3688c35f0910667eb3",
+      "name": "HOSKY@arbitrum",
+      "symbol": "HOSKY",
+      "decimals": "0"
+    },
+    "0xaf88d065e77c8cc2239327c5edb3a432268e5831": {
+      "id": 453,
+      "addr": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0x783353136e8b4b1eb14539422c36121af400ca6c": {
+      "id": 66,
+      "addr": "0x783353136e8b4b1eb14539422c36121af400ca6c",
+      "name": "USD₮0",
+      "symbol": "USD₮0",
+      "decimals": "6"
+    },
+    "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1": {
+      "id": 567,
+      "addr": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+      "name": "Dai Stablecoin",
+      "symbol": "DAI",
+      "decimals": "18"
+    },
+    "0x4a8f986ce9f7a30b2e81fb0c99b98da988d6e0cf": {
+      "id": 886,
+      "addr": "0x4a8f986ce9f7a30b2e81fb0c99b98da988d6e0cf",
+      "name": "AZVADA@arbitrum",
+      "symbol": "AZVADA",
+      "decimals": "15"
+    },
+    "0xf197ffc28c23e0309b5559e7a166f2c6164c80aa": {
+      "id": 1191,
+      "addr": "0xf197ffc28c23e0309b5559e7a166f2c6164c80aa",
+      "name": "MXNB",
+      "symbol": "MXNB",
+      "decimals": "6"
+    }
+  },
+  "1073741828": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 118,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "GLMR",
+      "symbol": "GLMR",
+      "decimals": "18"
+    },
+    "0x5f0061d84ee2f507c29aa87471e58f9d75d52776": {
+      "id": 119,
+      "addr": "0x5f0061d84ee2f507c29aa87471e58f9d75d52776",
+      "name": "MOVR@moonbeam",
+      "symbol": "MOVR",
+      "decimals": "18"
+    },
+    "0xcd6f474afb8304aa025ab19b89394e35a2b2dedd": {
+      "id": 122,
+      "addr": "0xcd6f474afb8304aa025ab19b89394e35a2b2dedd",
+      "name": "xcKAR@moonbeam",
+      "symbol": "xcKAR",
+      "decimals": "12"
+    },
+    "0x283ad86af3e6e96cef7845a6bcbf313019812d09": {
+      "id": 123,
+      "addr": "0x283ad86af3e6e96cef7845a6bcbf313019812d09",
+      "name": "xcKSM@moonbeam",
+      "symbol": "xcKSM",
+      "decimals": "12"
+    },
+    "0xb436452915e19f36cdd4d9f6c4fd83484b7f2c36": {
+      "id": 124,
+      "addr": "0xb436452915e19f36cdd4d9f6c4fd83484b7f2c36",
+      "name": "xcKINT@moonbeam",
+      "symbol": "xcKINT",
+      "decimals": "12"
+    },
+    "0x30950e8705d9345a8ddf25caaab038df1dbbbc27": {
+      "id": 125,
+      "addr": "0x30950e8705d9345a8ddf25caaab038df1dbbbc27",
+      "name": "xcRMRK@moonbeam",
+      "symbol": "xcRMRK",
+      "decimals": "10"
+    },
+    "0x5331141912a84875beb757e175d991a2c6c89ef4": {
+      "id": 126,
+      "addr": "0x5331141912a84875beb757e175d991a2c6c89ef4",
+      "name": "DOT@moonbeam",
+      "symbol": "DOT",
+      "decimals": "10"
+    },
+    "0x455febd10a12772c8358f53ff3dee86472878d90": {
+      "id": 127,
+      "addr": "0x455febd10a12772c8358f53ff3dee86472878d90",
+      "name": "xcBNC@moonbeam",
+      "symbol": "xcBNC",
+      "decimals": "12"
+    },
+    "0x935ad14b4cc1d7bd3efdf42c1a6f0bdce63a93bb": {
+      "id": 128,
+      "addr": "0x935ad14b4cc1d7bd3efdf42c1a6f0bdce63a93bb",
+      "name": "xcKBTC@moonbeam",
+      "symbol": "xcKBTC",
+      "decimals": "8"
+    }
+  },
+  "1073741829": {
+    "0xd557cc89ca98db85ef5ad09afba7c22583fe727e": {
+      "id": 173,
+      "addr": "0xd557cc89ca98db85ef5ad09afba7c22583fe727e",
+      "name": "USDT@clover",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "0x1bbc16260d5d052f1493b8f2aeee7888fed1e9ab": {
+      "id": 174,
+      "addr": "0x1bbc16260d5d052f1493b8f2aeee7888fed1e9ab",
+      "name": "USDC@clover",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0x733f1c637f9646ae681be0d8084a66e42c3bdf63": {
+      "id": 177,
+      "addr": "0x733f1c637f9646ae681be0d8084a66e42c3bdf63",
+      "name": "WAN@clover",
+      "symbol": "WAN",
+      "decimals": "18"
+    },
+    "0xbd4191828aeff23fb9e0249a5ae583a4b9425e49": {
+      "id": 178,
+      "addr": "0xbd4191828aeff23fb9e0249a5ae583a4b9425e49",
+      "name": "FINN Token",
+      "symbol": "FINN",
+      "decimals": "18"
+    }
+  },
+  "1073741830": {
+    "0x2055ae7250f814995ab41499ba1963f2c2f58a3a": {
+      "id": 396,
+      "addr": "0x2055ae7250f814995ab41499ba1963f2c2f58a3a",
+      "name": "WAN@fx",
+      "symbol": "WAN",
+      "decimals": "18"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 397,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "FX",
+      "symbol": "FX",
+      "decimals": "18"
+    },
+    "0xbcc7ac1bd0204d492335b38d9877b627a2c04bfd": {
+      "id": 398,
+      "addr": "0xbcc7ac1bd0204d492335b38d9877b627a2c04bfd",
+      "name": "XRP@fx",
+      "symbol": "XRP",
+      "decimals": "6"
+    },
+    "0xd567b3d7b8fe3c79a1ad8da978812cfc4fa05e75": {
+      "id": 400,
+      "addr": "0xd567b3d7b8fe3c79a1ad8da978812cfc4fa05e75",
+      "name": "Pundi X Token",
+      "symbol": "PUNDIX",
+      "decimals": "18"
+    },
+    "0xebd3b8b345a325b0fce339aeea9996a6a5a947dc": {
+      "id": 407,
+      "addr": "0xebd3b8b345a325b0fce339aeea9996a6a5a947dc",
+      "name": "FoxGaming",
+      "symbol": "FXG",
+      "decimals": "18"
+    }
+  },
+  "1073741833": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 410,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "Gather",
+      "symbol": "GTH",
+      "decimals": "18"
+    }
+  },
+  "1073741834": {
+    "0xbb06dca3ae6887fabf931640f67cab3e3a16f4dc": {
+      "id": 424,
+      "addr": "0xbb06dca3ae6887fabf931640f67cab3e3a16f4dc",
+      "name": "USDT Token",
+      "symbol": "m.USDT",
+      "decimals": "6"
+    },
+    "0xea32a96608495e54156ae48931a7c20f0dcc1a21": {
+      "id": 433,
+      "addr": "0xea32a96608495e54156ae48931a7c20f0dcc1a21",
+      "name": "USDC Token",
+      "symbol": "m.USDC",
+      "decimals": "6"
+    },
+    "0x420000000000000000000000000000000000000a": {
+      "id": 441,
+      "addr": "0x420000000000000000000000000000000000000a",
+      "name": "Ether",
+      "symbol": "WETH",
+      "decimals": "18"
+    },
+    "0x433e43047b95cb83517abd7c9978bdf7005e9938": {
+      "id": 545,
+      "addr": "0x433e43047b95cb83517abd7c9978bdf7005e9938",
+      "name": "WBTC Token",
+      "symbol": "m.WBTC",
+      "decimals": "8"
+    }
+  },
+  "1073741835": {
+    "0x1e4a5963abfd975d8c9021ce480b42188849d41d": {
+      "id": 444,
+      "addr": "0x1e4a5963abfd975d8c9021ce480b42188849d41d",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "0x10acbe3b9e6a2ff7f341e5cbf4b6617741ff44aa": {
+      "id": 715,
+      "addr": "0x10acbe3b9e6a2ff7f341e5cbf4b6617741ff44aa",
+      "name": "HMT@xlayer",
+      "symbol": "HMT",
+      "decimals": "18"
+    },
+    "0x74b7f16337b8972027f6196a17a631ac6de26d22": {
+      "id": 831,
+      "addr": "0x74b7f16337b8972027f6196a17a631ac6de26d22",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 639,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "OKB",
+      "symbol": "OKB",
+      "decimals": "18"
+    }
+  },
+  "1073741836": {
+    "0x9a27a8950c256921b0afbe26823be717d612b447": {
+      "id": 456,
+      "addr": "0x9a27a8950c256921b0afbe26823be717d612b447",
+      "name": "USDT@Songbird",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "0xf47002e6151e06554b8f16e9cc704edd3fc078b8": {
+      "id": 463,
+      "addr": "0xf47002e6151e06554b8f16e9cc704edd3fc078b8",
+      "name": "ETH@Songbird",
+      "symbol": "ETH",
+      "decimals": "18"
+    },
+    "0x9c5ebb12d1d26465523e04381aaa192a69a565cf": {
+      "id": 459,
+      "addr": "0x9c5ebb12d1d26465523e04381aaa192a69a565cf",
+      "name": "BTC@Songbird",
+      "symbol": "BTC",
+      "decimals": "8"
+    },
+    "0x3cc97934f6770b649ef27682c6b9369b073c1058": {
+      "id": 465,
+      "addr": "0x3cc97934f6770b649ef27682c6b9369b073c1058",
+      "name": "XRP@Songbird",
+      "symbol": "XRP",
+      "decimals": "6"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 467,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "SGB",
+      "symbol": "SGB",
+      "decimals": "18"
+    },
+    "0xd7565b16b65376e2ddb6c71e7971c7185a7ff3ff": {
+      "id": 468,
+      "addr": "0xd7565b16b65376e2ddb6c71e7971c7185a7ff3ff",
+      "name": "OracleSwap.io",
+      "symbol": "ORACLE",
+      "decimals": "18"
+    },
+    "0x4a8f986ce9f7a30b2e81fb0c99b98da988d6e0cf": {
+      "id": 821,
+      "addr": "0x4a8f986ce9f7a30b2e81fb0c99b98da988d6e0cf",
+      "name": "NEXU@songbird",
+      "symbol": "NEXU",
+      "decimals": "18"
+    }
+  },
+  "1073741837": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 484,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "ethereum",
+      "symbol": "ETH",
+      "decimals": "18"
+    }
+  },
+  "1073741838": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 549,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "ethereum",
+      "symbol": "ETH",
+      "decimals": "18"
+    }
+  },
+  "1073741839": {
+    "0x73be9e99faa2df5f504252bbfcd86ab7bd362457": {
+      "id": 604,
+      "addr": "0x73be9e99faa2df5f504252bbfcd86ab7bd362457",
+      "name": "ETH@Horizen EON",
+      "symbol": "ETH",
+      "decimals": "18"
+    },
+    "0x592de30bebff484b5a43a6e8e3ec1a814902e0b6": {
+      "id": 605,
+      "addr": "0x592de30bebff484b5a43a6e8e3ec1a814902e0b6",
+      "name": "BTC@Horizen EON",
+      "symbol": "BTC",
+      "decimals": "8"
+    },
+    "0x45463b2d973bd3304a2cad1f9765b098ece4afce": {
+      "id": 606,
+      "addr": "0x45463b2d973bd3304a2cad1f9765b098ece4afce",
+      "name": "USDC@Horizen EON",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0x93af551be52e3554e57a3cef2ff89f96f32dcb33": {
+      "id": 607,
+      "addr": "0x93af551be52e3554e57a3cef2ff89f96f32dcb33",
+      "name": "USDT@Horizen EON",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "0x69120197b77b51d32ffa5eafe16b3d78115640c6": {
+      "id": 608,
+      "addr": "0x69120197b77b51d32ffa5eafe16b3d78115640c6",
+      "name": "DAI@Horizen EON",
+      "symbol": "DAI",
+      "decimals": "18"
+    },
+    "0x329f162550e3d5d9898a0aae05e21bfcd5f1cf83": {
+      "id": 488,
+      "addr": "0x329f162550e3d5d9898a0aae05e21bfcd5f1cf83",
+      "name": "WAN@Horizen EON",
+      "symbol": "WAN",
+      "decimals": "18"
+    },
+    "0x372d0695e75563d9180f8ce31c9924d7e8aaac47": {
+      "id": 490,
+      "addr": "0x372d0695e75563d9180f8ce31c9924d7e8aaac47",
+      "name": "LTC@Horizen EON",
+      "symbol": "LTC",
+      "decimals": "8"
+    },
+    "0xb2c6979890fbad83a6a5266d41b7d50dbe24a87a": {
+      "id": 491,
+      "addr": "0xb2c6979890fbad83a6a5266d41b7d50dbe24a87a",
+      "name": "XRP@Horizen EON",
+      "symbol": "XRP",
+      "decimals": "6"
+    }
+  },
+  "1073741840": {
+    "0x00c1e515ea9579856304198efb15f525a0bb50f6": {
+      "id": 527,
+      "addr": "0x00c1e515ea9579856304198efb15f525a0bb50f6",
+      "name": "Vita Inu",
+      "symbol": "VINU",
+      "decimals": "18"
+    },
+    "0x9c0e23e1c597da8024eb62cd4e3c95e3d2478408": {
+      "id": 533,
+      "addr": "0x9c0e23e1c597da8024eb62cd4e3c95e3d2478408",
+      "name": "USDC@VinuChain",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0xc0264277fcca5fcfabd41a8bc01c1fcaf8383e41": {
+      "id": 537,
+      "addr": "0xc0264277fcca5fcfabd41a8bc01c1fcaf8383e41",
+      "name": "USDT@VinuChain",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "0xdd4b9b3ce03faaba4a3839c8b5023b7792be6e2c": {
+      "id": 540,
+      "addr": "0xdd4b9b3ce03faaba4a3839c8b5023b7792be6e2c",
+      "name": "ETH@VinuChain",
+      "symbol": "ETH",
+      "decimals": "18"
+    },
+    "0x69120197b77b51d32ffa5eafe16b3d78115640c6": {
+      "id": 794,
+      "addr": "0x69120197b77b51d32ffa5eafe16b3d78115640c6",
+      "name": "BTC@VinuChain",
+      "symbol": "BTC",
+      "decimals": "8"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 601,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "VC",
+      "symbol": "VC",
+      "decimals": "18"
+    },
+    "0xaecbf30602caf42467e7120c04271edcc843f3c7": {
+      "id": 843,
+      "addr": "0xaecbf30602caf42467e7120c04271edcc843f3c7",
+      "name": "SOL@VinuChain",
+      "symbol": "SOL",
+      "decimals": "9"
+    }
+  },
+  "1073741841": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 591,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "ethereum",
+      "symbol": "ETH",
+      "decimals": "18"
+    },
+    "0x72ccf64ee5e2c7629ee4eee3e6ad6990289178ae": {
+      "id": 744,
+      "addr": "0x72ccf64ee5e2c7629ee4eee3e6ad6990289178ae",
+      "name": "VINU@base",
+      "symbol": "VINU",
+      "decimals": "18"
+    },
+    "0x3bb87041edf93eaea82f47f2b495e5859085e3ee": {
+      "id": 776,
+      "addr": "0x3bb87041edf93eaea82f47f2b495e5859085e3ee",
+      "name": "EPIC@base",
+      "symbol": "EPIC",
+      "decimals": "0"
+    },
+    "0xc5cd7e7ecc39eceaeeee089f98c3d351d93810c2": {
+      "id": 917,
+      "addr": "0xc5cd7e7ecc39eceaeeee089f98c3d351d93810c2",
+      "name": "MNT@base",
+      "symbol": "MNT",
+      "decimals": "6"
+    },
+    "0x73d9230f580eab929cde18873e4879785462728c": {
+      "id": 964,
+      "addr": "0x73d9230f580eab929cde18873e4879785462728c",
+      "name": "HOSKY@base",
+      "symbol": "HOSKY",
+      "decimals": "0"
+    },
+    "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913": {
+      "id": 598,
+      "addr": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0xb30778550a959c207601d77ff13fe38a5abb2546": {
+      "id": 742,
+      "addr": "0xb30778550a959c207601d77ff13fe38a5abb2546",
+      "name": "LOUEY@base",
+      "symbol": "LOUEY",
+      "decimals": "0"
+    },
+    "0x1e7e46945e50bbe7df7014c086b642e6b7b4a625": {
+      "id": 819,
+      "addr": "0x1e7e46945e50bbe7df7014c086b642e6b7b4a625",
+      "name": "SKILL@base",
+      "symbol": "SKILL",
+      "decimals": "6"
+    },
+    "0xb1f19e492401545c1b060c4b18688f9178325b4d": {
+      "id": 823,
+      "addr": "0xb1f19e492401545c1b060c4b18688f9178325b4d",
+      "name": "INDY@base",
+      "symbol": "INDY",
+      "decimals": "6"
+    },
+    "0x60a3e35cc302bfa44cb288bc5a4f316fdb1adb42": {
+      "id": 865,
+      "addr": "0x60a3e35cc302bfa44cb288bc5a4f316fdb1adb42",
+      "name": "EURC",
+      "symbol": "EURC",
+      "decimals": "6"
+    },
+    "0x05e0302e690632b33b831c61a847f159ae010282": {
+      "id": 896,
+      "addr": "0x05e0302e690632b33b831c61a847f159ae010282",
+      "name": "LIAR@base",
+      "symbol": "LIAR",
+      "decimals": "0"
+    },
+    "0xe0cf5a329b861fe83814844d2382d0aa483a5e01": {
+      "id": 999,
+      "addr": "0xe0cf5a329b861fe83814844d2382d0aa483a5e01",
+      "name": "iCharl@base",
+      "symbol": "iCharl",
+      "decimals": "0"
+    },
+    "0xd7466f2600563da9ef462b5f3b6ca9506aa34c69": {
+      "id": 1004,
+      "addr": "0xd7466f2600563da9ef462b5f3b6ca9506aa34c69",
+      "name": "TALOS@base",
+      "symbol": "TALOS",
+      "decimals": "0"
+    },
+    "0x4b1690f6596574fcb0c1b7681e7fa0cea00fc95e": {
+      "id": 1013,
+      "addr": "0x4b1690f6596574fcb0c1b7681e7fa0cea00fc95e",
+      "name": "AGENTIC@base",
+      "symbol": "AGENTIC",
+      "decimals": "0"
+    },
+    "0x7e5fe1e587a5c38b4a4a9ba38a35096f8ea35aac": {
+      "id": 1025,
+      "addr": "0x7e5fe1e587a5c38b4a4a9ba38a35096f8ea35aac",
+      "name": "AGENT@base",
+      "symbol": "AGENT",
+      "decimals": "0"
+    },
+    "0xcbada732173e39521cdbe8bf59a6dc85a9fc7b8c": {
+      "id": 1237,
+      "addr": "0xcbada732173e39521cdbe8bf59a6dc85a9fc7b8c",
+      "name": "Coinbase Wrapped ADA",
+      "symbol": "cbADA",
+      "decimals": "6"
+    }
+  },
+  "1073741842": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 616,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "ethereum",
+      "symbol": "ETH",
+      "decimals": "18"
+    }
+  },
+  "1073741844": {
+    "0x7575736463": {
+      "id": 903,
+      "addr": "0x7575736463",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    }
+  },
+  "1073741845": {
+    "0x7c6b91d9be155a6db01f749217d76ff02a7227f2": {
+      "id": 671,
+      "addr": "0x7c6b91d9be155a6db01f749217d76ff02a7227f2",
+      "name": "BTCB Token",
+      "symbol": "BTCB",
+      "decimals": "18"
+    },
+    "0xe7798f023fc62146e8aa1b36da45fb70855a77ea": {
+      "id": 676,
+      "addr": "0xe7798f023fc62146e8aa1b36da45fb70855a77ea",
+      "name": "Ethereum Token",
+      "symbol": "ETH",
+      "decimals": "18"
+    },
+    "0x9e5aac1ba1a2e6aed6b32689dfcf62a509ca96f3": {
+      "id": 684,
+      "addr": "0x9e5aac1ba1a2e6aed6b32689dfcf62a509ca96f3",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": "18"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 666,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "BNB",
+      "symbol": "BNB",
+      "decimals": "18"
+    }
+  },
+  "1073741846": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 727,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "ethereum",
+      "symbol": "ETH",
+      "decimals": "18"
+    }
+  },
+  "1073741848": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 1008,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "DIONE",
+      "symbol": "DIONE",
+      "decimals": "18"
+    }
+  },
+  "1073741849": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 1009,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "PLYR",
+      "symbol": "PLYR",
+      "decimals": "18"
+    }
+  },
+  "1073741850": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 1011,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "EDX",
+      "symbol": "EDX",
+      "decimals": "18"
+    }
+  },
+  "1073741851": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 824,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "WATER",
+      "symbol": "WATER",
+      "decimals": "18"
+    }
+  },
+  "1073741853": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 1010,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "5IRE",
+      "symbol": "5IRE",
+      "decimals": "18"
+    }
+  },
+  "1073741856": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 1027,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "SHIDO",
+      "symbol": "SHIDO",
+      "decimals": "18"
+    }
+  },
+  "1073741857": {
+    "0x79a02482a880bce3f13e09da970dc34db4cd24d1": {
+      "id": 1065,
+      "addr": "0x79a02482a880bce3f13e09da970dc34db4cd24d1",
+      "name": "USDC",
+      "symbol": "USDC",
+      "decimals": "6"
+    }
+  },
+  "1073741858": {
+    "0x078d782b760474a361dda0af3839290b0ef57ad6": {
+      "id": 1100,
+      "addr": "0x078d782b760474a361dda0af3839290b0ef57ad6",
+      "name": "USDC",
+      "symbol": "USDC",
+      "decimals": "6"
+    }
+  },
+  "1073741859": {
+    "0xdc3ab620dde7b206b421dcbad5ff286f7b3a0a9e": {
+      "id": 1193,
+      "addr": "0xdc3ab620dde7b206b421dcbad5ff286f7b3a0a9e",
+      "name": "GIMO Token",
+      "symbol": "GIMO",
+      "decimals": "18"
+    }
+  },
+  "2147483648": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 14,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "decimals": "8"
+    }
+  },
+  "2147483650": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 37,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "LTC",
+      "symbol": "LTC",
+      "decimals": "8"
+    }
+  },
+  "2147483651": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 346,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "DOGE",
+      "symbol": "DOGE",
+      "decimals": "8"
+    }
+  },
+  "2147483708": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 1,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "ethereum",
+      "symbol": "ETH",
+      "decimals": "18"
+    },
+    "0x135b810e48e4307ab2a59ea294a6f1724781bd3c": {
+      "id": 2,
+      "addr": "0x135b810e48e4307ab2a59ea294a6f1724781bd3c",
+      "name": "WAN@ethereum",
+      "symbol": "WAN",
+      "decimals": "18"
+    },
+    "0x514910771af9ca656af840dff83e8264ecf986ca": {
+      "id": 3,
+      "addr": "0x514910771af9ca656af840dff83e8264ecf986ca",
+      "name": "ChainLink Token",
+      "symbol": "LINK",
+      "decimals": "18"
+    },
+    "0x058a55925627980dbb6d6d39f8dad5de5be16764": {
+      "id": 5,
+      "addr": "0x058a55925627980dbb6d6d39f8dad5de5be16764",
+      "name": "wanBTC@ethereum",
+      "symbol": "wanBTC",
+      "decimals": "8"
+    },
+    "0x11167f7889ae34e2c6b15c9226d0b320c45d629d": {
+      "id": 6,
+      "addr": "0x11167f7889ae34e2c6b15c9226d0b320c45d629d",
+      "name": "wanEOS@ethereum",
+      "symbol": "wanEOS",
+      "decimals": "4"
+    },
+    "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2": {
+      "id": 7,
+      "addr": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+      "name": "Maker",
+      "symbol": "MKR",
+      "decimals": "18"
+    },
+    "0x83e2be8d114f9661221384b3a50d24b96a5653f5": {
+      "id": 8,
+      "addr": "0x83e2be8d114f9661221384b3a50d24b96a5653f5",
+      "name": " ",
+      "symbol": "ZXC",
+      "decimals": "18"
+    },
+    "0xdb25f211ab05b1c97d595516f45794528a807ad8": {
+      "id": 9,
+      "addr": "0xdb25f211ab05b1c97d595516f45794528a807ad8",
+      "name": "STASIS EURS Token",
+      "symbol": "EURS",
+      "decimals": "2"
+    },
+    "0xdac17f958d2ee523a2206206994597c13d831ec7": {
+      "id": 10,
+      "addr": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "0x0000000000085d4780b73119b644ae5ecd22b376": {
+      "id": 11,
+      "addr": "0x0000000000085d4780b73119b644ae5ecd22b376",
+      "name": "TrueUSD",
+      "symbol": "TUSD",
+      "decimals": "18"
+    },
+    "0x056fd409e1d7a124bd7017459dfea2f387b6d5cd": {
+      "id": 12,
+      "addr": "0x056fd409e1d7a124bd7017459dfea2f387b6d5cd",
+      "name": "Gemini dollar",
+      "symbol": "GUSD",
+      "decimals": "2"
+    },
+    "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+      "id": 13,
+      "addr": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984": {
+      "id": 16,
+      "addr": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "name": "Uniswap",
+      "symbol": "UNI",
+      "decimals": "18"
+    },
+    "0xef5c6a88710a3c857105058f947d249bc490909d": {
+      "id": 17,
+      "addr": "0xef5c6a88710a3c857105058f947d249bc490909d",
+      "name": "wanWASP@ethereum",
+      "symbol": "wanWASP",
+      "decimals": "18"
+    },
+    "0x4917a9a03bdf9be520e0b342da8c3c8787237302": {
+      "id": 19,
+      "addr": "0x4917a9a03bdf9be520e0b342da8c3c8787237302",
+      "name": "wanXRP@ethereum",
+      "symbol": "wanXRP",
+      "decimals": "6"
+    },
+    "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2": {
+      "id": 21,
+      "addr": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
+      "name": "SushiToken",
+      "symbol": "SUSHI",
+      "decimals": "18"
+    },
+    "0xb9ef770b6a5e12e45983c5d80545258aa38f3b78": {
+      "id": 22,
+      "addr": "0xb9ef770b6a5e12e45983c5d80545258aa38f3b78",
+      "name": "0chain",
+      "symbol": "ZCN",
+      "decimals": "10"
+    },
+    "0xe8ff5c9c75deb346acac493c463c8950be03dfba": {
+      "id": 23,
+      "addr": "0xe8ff5c9c75deb346acac493c463c8950be03dfba",
+      "name": "Vibe Coin",
+      "symbol": "VIBE",
+      "decimals": "18"
+    },
+    "0xef9cd7882c067686691b6ff49e650b43afbbcc6b": {
+      "id": 24,
+      "addr": "0xef9cd7882c067686691b6ff49e650b43afbbcc6b",
+      "name": "FinNexus",
+      "symbol": "FNX",
+      "decimals": "18"
+    },
+    "0x967da4048cd07ab37855c090aaf366e4ce1b9f48": {
+      "id": 28,
+      "addr": "0x967da4048cd07ab37855c090aaf366e4ce1b9f48",
+      "name": "Ocean Token",
+      "symbol": "OCEAN",
+      "decimals": "18"
+    },
+    "0xaec65404ddc3af3c897ad89571d5772c1a695f22": {
+      "id": 31,
+      "addr": "0xaec65404ddc3af3c897ad89571d5772c1a695f22",
+      "name": "Phoenix Token",
+      "symbol": "PHX",
+      "decimals": "18"
+    },
+    "0xbdd50c7b6c871d9afb278445d5b74fdc4705a234": {
+      "id": 34,
+      "addr": "0xbdd50c7b6c871d9afb278445d5b74fdc4705a234",
+      "name": "Convertible Phoenix Token",
+      "symbol": "cPHX",
+      "decimals": "18"
+    },
+    "0x6ec534cc08e7318c35220daf2b2bd8ae63878385": {
+      "id": 37,
+      "addr": "0x6ec534cc08e7318c35220daf2b2bd8ae63878385",
+      "name": "wanLTC@ethereum",
+      "symbol": "wanLTC",
+      "decimals": "8"
+    },
+    "0x9c9ec2790a654528762d14a44c09f3083f7d7d79": {
+      "id": 48,
+      "addr": "0x9c9ec2790a654528762d14a44c09f3083f7d7d79",
+      "name": "wanDOT@ethereum",
+      "symbol": "wanDOT",
+      "decimals": "10"
+    },
+    "0x63b4f3e3fa4e438698ce330e365e831f7ccd1ef4": {
+      "id": 62,
+      "addr": "0x63b4f3e3fa4e438698ce330e365e831f7ccd1ef4",
+      "name": "CyberFi Token",
+      "symbol": "CFi",
+      "decimals": "18"
+    },
+    "0x67b6d479c7bb412c54e03dca8e1bc6740ce6b99c": {
+      "id": 64,
+      "addr": "0x67b6d479c7bb412c54e03dca8e1bc6740ce6b99c",
+      "name": "Kylin Network",
+      "symbol": "KYL",
+      "decimals": "18"
+    },
+    "0x62de7d65739d2ac81c12cc30bbb1223c88753c23": {
+      "id": 65,
+      "addr": "0x62de7d65739d2ac81c12cc30bbb1223c88753c23",
+      "name": "Epicenter Token",
+      "symbol": "ECR",
+      "decimals": "18"
+    },
+    "0x9559aaa82d9649c7a7b220e7c461d2e74c9a3593": {
+      "id": 67,
+      "addr": "0x9559aaa82d9649c7a7b220e7c461d2e74c9a3593",
+      "name": "StaFi",
+      "symbol": "rETH",
+      "decimals": "18"
+    },
+    "0x603be493e0b0e5181c5f0799afb003bd8ed076a5": {
+      "id": 73,
+      "addr": "0x603be493e0b0e5181c5f0799afb003bd8ed076a5",
+      "name": "wanMOVR@ethereum",
+      "symbol": "wanMOVR",
+      "decimals": "18"
+    },
+    "0x3709e8615e02c15b096f8a9b460ccb8ca8194e86": {
+      "id": 74,
+      "addr": "0x3709e8615e02c15b096f8a9b460ccb8ca8194e86",
+      "name": "Vee",
+      "symbol": "VEE",
+      "decimals": "18"
+    },
+    "0x7b35ce522cb72e4077baeb96cb923a5529764a00": {
+      "id": 86,
+      "addr": "0x7b35ce522cb72e4077baeb96cb923a5529764a00",
+      "name": "Impermax",
+      "symbol": "IMX",
+      "decimals": "18"
+    },
+    "0x12d102f06da35cc0111eb58017fd2cd28537d0e1": {
+      "id": 87,
+      "addr": "0x12d102f06da35cc0111eb58017fd2cd28537d0e1",
+      "name": "Vox.Finance",
+      "symbol": "VOX",
+      "decimals": "18"
+    },
+    "0x6c5ba91642f10282b576d91922ae6448c9d52f4e": {
+      "id": 93,
+      "addr": "0x6c5ba91642f10282b576d91922ae6448c9d52f4e",
+      "name": "Phala",
+      "symbol": "PHA",
+      "decimals": "18"
+    },
+    "0xba100000625a3754423978a60c9317c58a424e3d": {
+      "id": 113,
+      "addr": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "name": "Balancer",
+      "symbol": "BAL",
+      "decimals": "18"
+    },
+    "0xf8f3d2a9ac19b1835faba9252ca5a101667e7c7a": {
+      "id": 143,
+      "addr": "0xf8f3d2a9ac19b1835faba9252ca5a101667e7c7a",
+      "name": "BLET@ethereum",
+      "symbol": "eBLET",
+      "decimals": "18"
+    },
+    "0x63c5acc9bd1cfc14582a5520415480c33734f18f": {
+      "id": 144,
+      "addr": "0x63c5acc9bd1cfc14582a5520415480c33734f18f",
+      "name": "OKT@ethereum",
+      "symbol": "OKT",
+      "decimals": "18"
+    },
+    "0x6b175474e89094c44da98b954eedeac495271d0f": {
+      "id": 159,
+      "addr": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "name": "Dai Stablecoin",
+      "symbol": "DAI",
+      "decimals": "18"
+    },
+    "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9": {
+      "id": 160,
+      "addr": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+      "name": "Aave Token",
+      "symbol": "AAVE",
+      "decimals": "18"
+    },
+    "0xd533a949740bb3306d119cc777fa900ba034cd52": {
+      "id": 161,
+      "addr": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "name": "Curve DAO Token",
+      "symbol": "CRV",
+      "decimals": "18"
+    },
+    "0x70e8de73ce538da2beed35d14187f6959a8eca96": {
+      "id": 179,
+      "addr": "0x70e8de73ce538da2beed35d14187f6959a8eca96",
+      "name": "XSGD",
+      "symbol": "XSGD",
+      "decimals": "6"
+    },
+    "0x1abaea1f7c830bd89acc67ec4af516284b1bc33c": {
+      "id": 195,
+      "addr": "0x1abaea1f7c830bd89acc67ec4af516284b1bc33c",
+      "name": "Euro Coin",
+      "symbol": "EURC",
+      "decimals": "6"
+    },
+    "0x8d508595f094c42ade6d3625a206abe9551c5858": {
+      "id": 207,
+      "addr": "0x8d508595f094c42ade6d3625a206abe9551c5858",
+      "name": "GZX@ethereum",
+      "symbol": "GZX",
+      "decimals": "15"
+    },
+    "0x7cfea0dd176651e7b5a1ced9c4faf8ee295315fd": {
+      "id": 224,
+      "addr": "0x7cfea0dd176651e7b5a1ced9c4faf8ee295315fd",
+      "name": "PrimeNumbers",
+      "symbol": "PRNT",
+      "decimals": "18"
+    },
+    "0x495f947276749ce646f68ac8c248420045cb7b5e": {
+      "id": 231,
+      "addr": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "name": "OpenSea Shared Storefront",
+      "symbol": "OPENSTORE",
+      "decimals": ""
+    },
+    "0x412bdecdc3e9c2922e92692c0a8961dee0c793c1": {
+      "id": 239,
+      "addr": "0x412bdecdc3e9c2922e92692c0a8961dee0c793c1",
+      "name": "XLIST@ethereum",
+      "symbol": "XLIST",
+      "decimals": "15"
+    },
+    "0xd45f893c97999aaf068d5a5713650ee962364e25": {
+      "id": 250,
+      "addr": "0xd45f893c97999aaf068d5a5713650ee962364e25",
+      "name": "XNFT@ethereum",
+      "symbol": "XNFT",
+      "decimals": ""
+    },
+    "0x0491bfb386f7ffb546a8a2e620590e3af02e9ee0": {
+      "id": 253,
+      "addr": "0x0491bfb386f7ffb546a8a2e620590e3af02e9ee0",
+      "name": "ZooGenes",
+      "symbol": "ZooGenes",
+      "decimals": "ERC721"
+    },
+    "0x9fad67533babbcc19633d17978702b7b1a27ac74": {
+      "id": 254,
+      "addr": "0x9fad67533babbcc19633d17978702b7b1a27ac74",
+      "name": "XSP@ethereum",
+      "symbol": "XSP",
+      "decimals": "18"
+    },
+    "0x783353136e8b4b1eb14539422c36121af400ca6c": {
+      "id": 268,
+      "addr": "0x783353136e8b4b1eb14539422c36121af400ca6c",
+      "name": "xNVL@ethereum",
+      "symbol": "xNVL",
+      "decimals": "15"
+    },
+    "0x2055ae7250f814995ab41499ba1963f2c2f58a3a": {
+      "id": 269,
+      "addr": "0x2055ae7250f814995ab41499ba1963f2c2f58a3a",
+      "name": "XDSea Marketplace",
+      "symbol": "XDSea Token",
+      "decimals": ""
+    },
+    "0x733f1c637f9646ae681be0d8084a66e42c3bdf63": {
+      "id": 287,
+      "addr": "0x733f1c637f9646ae681be0d8084a66e42c3bdf63",
+      "name": "GMPD Bots",
+      "symbol": "GMPD",
+      "decimals": ""
+    },
+    "0xbcc7ac1bd0204d492335b38d9877b627a2c04bfd": {
+      "id": 289,
+      "addr": "0xbcc7ac1bd0204d492335b38d9877b627a2c04bfd",
+      "name": "BLP@ethereum",
+      "symbol": "BLP",
+      "decimals": "18"
+    },
+    "0xd557cc89ca98db85ef5ad09afba7c22583fe727e": {
+      "id": 295,
+      "addr": "0xd557cc89ca98db85ef5ad09afba7c22583fe727e",
+      "name": "GMPD@ethereum",
+      "symbol": "GMPD",
+      "decimals": "18"
+    },
+    "0x981dc247745800bd2ca28a4bf147f0385eaa0bc0": {
+      "id": 300,
+      "addr": "0x981dc247745800bd2ca28a4bf147f0385eaa0bc0",
+      "name": "NutsDAO",
+      "symbol": "NUTS",
+      "decimals": "18"
+    },
+    "0xafcdd4f666c84fed1d8bd825aa762e3714f652c9": {
+      "id": 302,
+      "addr": "0xafcdd4f666c84fed1d8bd825aa762e3714f652c9",
+      "name": "Vita Inu",
+      "symbol": "VINU",
+      "decimals": "18"
+    },
+    "0x794b28afe37b2ba54fdcc2833ab632cfc761a24b": {
+      "id": 408,
+      "addr": "0x794b28afe37b2ba54fdcc2833ab632cfc761a24b",
+      "name": "VGC@ethereum",
+      "symbol": "VGC",
+      "decimals": "15"
+    },
+    "0xeb986da994e4a118d5956b02d8b7c3c7ce373674": {
+      "id": 410,
+      "addr": "0xeb986da994e4a118d5956b02d8b7c3c7ce373674",
+      "name": "Gather",
+      "symbol": "GTH",
+      "decimals": "18"
+    },
+    "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599": {
+      "id": 416,
+      "addr": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": "8"
+    },
+    "0x474999877e40db4a7e3211b0889b76131e35ea04": {
+      "id": 523,
+      "addr": "0x474999877e40db4a7e3211b0889b76131e35ea04",
+      "name": "ADA@ethereum",
+      "symbol": "ADA",
+      "decimals": "6"
+    },
+    "0x977f7001815cf13ed1f0548ec68bec4ea561e3d6": {
+      "id": 553,
+      "addr": "0x977f7001815cf13ed1f0548ec68bec4ea561e3d6",
+      "name": "GEROV2",
+      "symbol": "GEROV2",
+      "decimals": "18"
+    },
+    "0x5b52bfb8062ce664d74bbcd4cd6dc7df53fd7233": {
+      "id": 556,
+      "addr": "0x5b52bfb8062ce664d74bbcd4cd6dc7df53fd7233",
+      "name": "ZENIQ",
+      "symbol": "ZENIQ",
+      "decimals": "18"
+    },
+    "0x555cf9c9d1bcdbe75e0ee6536fac65c8a69cd6a3": {
+      "id": 575,
+      "addr": "0x555cf9c9d1bcdbe75e0ee6536fac65c8a69cd6a3",
+      "name": "COCK@ethereum",
+      "symbol": "COCK",
+      "decimals": "0"
+    },
+    "0xeaa260c1d247135cec29ec10fb6acedf2a55dc6b": {
+      "id": 610,
+      "addr": "0xeaa260c1d247135cec29ec10fb6acedf2a55dc6b",
+      "name": "TheADA",
+      "symbol": "TADA",
+      "decimals": "9"
+    },
+    "0xfecf60cc47509e842d28f737377d48bc70ca7b6f": {
+      "id": 626,
+      "addr": "0xfecf60cc47509e842d28f737377d48bc70ca7b6f",
+      "name": "Cards V2",
+      "symbol": "CARDSV2",
+      "decimals": "18"
+    },
+    "0x9200dac087af02cea91ed0685a2f89610aacf02f": {
+      "id": 660,
+      "addr": "0x9200dac087af02cea91ed0685a2f89610aacf02f",
+      "name": "WMT Placeholder",
+      "symbol": "WMT",
+      "decimals": "18"
+    },
+    "0x4b1690f6596574fcb0c1b7681e7fa0cea00fc95e": {
+      "id": 667,
+      "addr": "0x4b1690f6596574fcb0c1b7681e7fa0cea00fc95e",
+      "name": "CATSKY@ethereum",
+      "symbol": "CATSKY",
+      "decimals": "0"
+    },
+    "0x8b9f9f4aa70b1b0d586be8adfb19c1ac38e05e9a": {
+      "id": 694,
+      "addr": "0x8b9f9f4aa70b1b0d586be8adfb19c1ac38e05e9a",
+      "name": "DIMO@ethereum",
+      "symbol": "DIMO",
+      "decimals": "18"
+    },
+    "0xd1ba9bac957322d6e8c07a160a3a8da11a0d2867": {
+      "id": 715,
+      "addr": "0xd1ba9bac957322d6e8c07a160a3a8da11a0d2867",
+      "name": "Human Token",
+      "symbol": "HMT",
+      "decimals": "18"
+    },
+    "0xf3096b5cb3770d9e13979729e66227a34463df20": {
+      "id": 721,
+      "addr": "0xf3096b5cb3770d9e13979729e66227a34463df20",
+      "name": "Cards V2",
+      "symbol": "CARDSV2",
+      "decimals": "18"
+    },
+    "0x25d29fa7cf5cd5a11102b793f1a0149546e026e4": {
+      "id": 753,
+      "addr": "0x25d29fa7cf5cd5a11102b793f1a0149546e026e4",
+      "name": "ZON ",
+      "symbol": "ZON",
+      "decimals": "18"
+    },
+    "0xa12bb596f477200ecfb5aba03b6ba84d0b2c5895": {
+      "id": 772,
+      "addr": "0xa12bb596f477200ecfb5aba03b6ba84d0b2c5895",
+      "name": "EPIC@ethereum",
+      "symbol": "EPIC",
+      "decimals": "0"
+    },
+    "0x68749665ff8d2d112fa859aa293f07a622782f38": {
+      "id": 777,
+      "addr": "0x68749665ff8d2d112fa859aa293f07a622782f38",
+      "name": "Tether Gold",
+      "symbol": "XAUt",
+      "decimals": "6"
+    },
+    "0x97aee01ed2aabad9f54692f94461ae761d225f17": {
+      "id": 802,
+      "addr": "0x97aee01ed2aabad9f54692f94461ae761d225f17",
+      "name": "DEGA",
+      "symbol": "DEGA",
+      "decimals": "18"
+    },
+    "0x6c3ea9036406852006290770bedfcaba0e23a0e8": {
+      "id": 898,
+      "addr": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
+      "name": "PayPal USD",
+      "symbol": "PYUSD",
+      "decimals": "6"
+    },
+    "0xce65cdbd29e198cf75152e466d55a93ec7c79f35": {
+      "id": 911,
+      "addr": "0xce65cdbd29e198cf75152e466d55a93ec7c79f35",
+      "name": "MNT@ethereum",
+      "symbol": "MNT",
+      "decimals": "6"
+    },
+    "0xea7b7dc089c9a4a916b5a7a37617f59fd54e37e4": {
+      "id": 949,
+      "addr": "0xea7b7dc089c9a4a916b5a7a37617f59fd54e37e4",
+      "name": "HyperCycle Token",
+      "symbol": "HyPC",
+      "decimals": "6"
+    },
+    "0x237e7fc6319bf62b936a1803bde7e8a7d056d62e": {
+      "id": 955,
+      "addr": "0x237e7fc6319bf62b936a1803bde7e8a7d056d62e",
+      "name": "HOSKY@ethereum",
+      "symbol": "HOSKY",
+      "decimals": "0"
+    },
+    "0xcd851e79d9ace83042dc34570f1642f95a65e2e4": {
+      "id": 977,
+      "addr": "0xcd851e79d9ace83042dc34570f1642f95a65e2e4",
+      "name": "VET@ethereum",
+      "symbol": "VET",
+      "decimals": "18"
+    },
+    "0x49f6ee5f458841cb7a9a10a7833b58045523648e": {
+      "id": 978,
+      "addr": "0x49f6ee5f458841cb7a9a10a7833b58045523648e",
+      "name": "VTHO@ethereum",
+      "symbol": "VTHO",
+      "decimals": "18"
+    },
+    "0x03baca465cbea8150b996e53ee961fadfe23a8c5": {
+      "id": 979,
+      "addr": "0x03baca465cbea8150b996e53ee961fadfe23a8c5",
+      "name": "B3TR@ethereum",
+      "symbol": "B3TR",
+      "decimals": "18"
+    },
+    "0xd41724d830fb3b8f1da2a1d2b046f9f6938b36bc": {
+      "id": 1154,
+      "addr": "0xd41724d830fb3b8f1da2a1d2b046f9f6938b36bc",
+      "name": "XER@ethereum",
+      "symbol": "XER",
+      "decimals": "18"
+    },
+    "0xf197ffc28c23e0309b5559e7a166f2c6164c80aa": {
+      "id": 1190,
+      "addr": "0xf197ffc28c23e0309b5559e7a166f2c6164c80aa",
+      "name": "MXNB",
+      "symbol": "MXNB",
+      "decimals": "6"
+    }
+  },
+  "2147483792": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 19,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "XRP",
+      "symbol": "XRP",
+      "decimals": "6"
+    },
+    "0x724e67736f436b366d6a4271356a637169744270673167646659684b616a58734d323a475a58": {
+      "id": 207,
+      "addr": "0x724e67736f436b366d6a4271356a637169744270673167646659684b616a58734d323a475a58",
+      "name": "rNgsoCk6mjBq5jcqitBpg1gdfYhKajXsM2",
+      "symbol": "GZX",
+      "decimals": "15"
+    },
+    "0x724e79386846586f5845614a776b6954365536454435435773665a48454c4e636e723a35383443343935333534303030303030303030303030303030303030303030303030303030303030": {
+      "id": 239,
+      "addr": "0x724e79386846586f5845614a776b6954365536454435435773665a48454c4e636e723a35383443343935333534303030303030303030303030303030303030303030303030303030303030",
+      "name": "rNy8hFXoXEaJwkiT6U6ED5CWsfZHELNcnr",
+      "symbol": "584C495354000000000000000000000000000000",
+      "decimals": "15"
+    },
+    "0x72554b713375644a6a6a71666e69725643794372546d4b336b4b323172667543686e3a37383445353634433030303030303030303030303030303030303030303030303030303030303030": {
+      "id": 268,
+      "addr": "0x72554b713375644a6a6a71666e69725643794372546d4b336b4b323172667543686e3a37383445353634433030303030303030303030303030303030303030303030303030303030303030",
+      "name": "rUKq3udJjjqfnirVCyCrTmK3kK21rfuChn",
+      "symbol": "784E564C00000000000000000000000000000000",
+      "decimals": "15"
+    },
+    "0x72774269517874506f377a6b6953477034506f6973714e376a42776f744d5268334a3a564743": {
+      "id": 408,
+      "addr": "0x72774269517874506f377a6b6953477034506f6973714e376a42776f744d5268334a3a564743",
+      "name": "rwBiQxtPo7zkiSGp4PoisqN7jBwotMRh3J",
+      "symbol": "VGC",
+      "decimals": "15"
+    },
+    "0x7255654b6f686e4255696f484d505633587074656d335366693658466a58574348783a424554": {
+      "id": 260,
+      "addr": "0x7255654b6f686e4255696f484d505633587074656d335366693658466a58574348783a424554",
+      "name": "rUeKohnBUioHMPV3Xptem3Sfi6XFjXWCHx",
+      "symbol": "BET",
+      "decimals": "15"
+    },
+    "0x72336a517a71664756616773574e6253784d4a70515638564b376a48486d6476356a3a4f564f": {
+      "id": 324,
+      "addr": "0x72336a517a71664756616773574e6253784d4a70515638564b376a48486d6476356a3a4f564f",
+      "name": "r3jQzqfGVagsWNbSxMJpQV8VK7jHHmdv5j",
+      "symbol": "OVO",
+      "decimals": "15"
+    },
+    "0x726e5258416e565a54796174745a5845704b7067547976646d313744706a727a535a3a35333638363936323631344534363534303030303030303030303030303030303030303030303030": {
+      "id": 331,
+      "addr": "0x726e5258416e565a54796174745a5845704b7067547976646d313744706a727a535a3a35333638363936323631344534363534303030303030303030303030303030303030303030303030",
+      "name": "rnRXAnVZTyattZXEpKpgTyvdm17DpjrzSZ",
+      "symbol": "53686962614E4654000000000000000000000000",
+      "decimals": "15"
+    },
+    "0x7255775a7a68444b464c63674b38376a654a756d793573664c6b3358584b554457683a35313541363936433643363130303030303030303030303030303030303030303030303030303030": {
+      "id": 937,
+      "addr": "0x7255775a7a68444b464c63674b38376a654a756d793573664c6b3358584b554457683a35313541363936433643363130303030303030303030303030303030303030303030303030303030",
+      "name": "rUwZzhDKFLcgK87jeJumy5sfLk3XXKUDWh",
+      "symbol": "515A696C6C610000000000000000000000000000",
+      "decimals": "15"
+    },
+    "0x726e48396f367164796d33344b323933507133465a70354b6f3753705a78456265473a37383432343934323443373830303030303030303030303030303030303030303030303030303030": {
+      "id": 210,
+      "addr": "0x726e48396f367164796d33344b323933507133465a70354b6f3753705a78456265473a37383432343934323443373830303030303030303030303030303030303030303030303030303030",
+      "name": "rnH9o6qdym34K293Pq3FZp5Ko7SpZxEbeG",
+      "symbol": "784249424C780000000000000000000000000000",
+      "decimals": "15"
+    },
+    "0x723435384a7653456d6d507772526245746d724876577347715a6a71386a4b3661453a4e564c": {
+      "id": 214,
+      "addr": "0x723435384a7653456d6d507772526245746d724876577347715a6a71386a4b3661453a4e564c",
+      "name": "r458JvSEmmPwrRbEtmrHvWsGqZjq8jK6aE",
+      "symbol": "NVL",
+      "decimals": "15"
+    },
+    "0x726e5557426d39746e4576417a687045476b7436756f366f344161665850434a61523a47454d": {
+      "id": 285,
+      "addr": "0x726e5557426d39746e4576417a687045476b7436756f366f344161665850434a61523a47454d",
+      "name": "rnUWBm9tnEvAzhpEGkt6uo6o4AafXPCJaR",
+      "symbol": "GEM",
+      "decimals": "15"
+    },
+    "0x72685762766551734569344e4471333639754553534146666f68464342553252394b3a37383534373736353635373430303030303030303030303030303030303030303030303030303030": {
+      "id": 762,
+      "addr": "0x72685762766551734569344e4471333639754553534146666f68464342553252394b3a37383534373736353635373430303030303030303030303030303030303030303030303030303030",
+      "name": "rhWbveQsEi4NDq369uESSAFfohFCBU2R9K",
+      "symbol": "7854776565740000000000000000000000000000",
+      "decimals": "15"
+    },
+    "0x724a6d3878686f36676774397a5570364e736b7036474a53427336576878354d61453a34313541353634313434343130303030303030303030303030303030303030303030303030303030": {
+      "id": 780,
+      "addr": "0x724a6d3878686f36676774397a5570364e736b7036474a53427336576878354d61453a34313541353634313434343130303030303030303030303030303030303030303030303030303030",
+      "name": "rJm8xho6ggt9zUp6Nskp6GJSBs6Whx5MaE",
+      "symbol": "415A564144410000000000000000000000000000",
+      "decimals": "15"
+    },
+    "0x72476d3757435670396762346a5a485754457447557234646437347a3258755768453a35353533343434333030303030303030303030303030303030303030303030303030303030303030": {
+      "id": 1150,
+      "addr": "0x72476d3757435670396762346a5a485754457447557234646437347a3258755768453a35353533343434333030303030303030303030303030303030303030303030303030303030303030",
+      "name": "rGm7WCVp9gb4jZHWTEtGUr4dd74z2XuWhE",
+      "symbol": "5553444300000000000000000000000000000000",
+      "decimals": "6"
+    }
+  },
+  "2147483843": {
+    "0xa614f803b6fd780986a42c78ec9c7f77e6ded13c": {
+      "id": 273,
+      "addr": "0xa614f803b6fd780986a42c78ec9c7f77e6ded13c",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": 6
+    },
+    "0x3487b63d30b5b2c87fb7ffa8bcfade38eaac1abe": {
+      "id": 280,
+      "addr": "0x3487b63d30b5b2c87fb7ffa8bcfade38eaac1abe",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "0x9ae044df90b721b36929e48211f266b868878e2e": {
+      "id": 926,
+      "addr": "0x9ae044df90b721b36929e48211f266b868878e2e",
+      "name": "MNT@trx",
+      "symbol": "MNT",
+      "decimals": 6
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 350,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "TRX",
+      "symbol": "TRX",
+      "decimals": "6"
+    },
+    "0x97a41a72ad33da5d7db36dd911dc41419c49a6ca": {
+      "id": 311,
+      "addr": "0x97a41a72ad33da5d7db36dd911dc41419c49a6ca",
+      "name": "GZX@tron",
+      "symbol": "GZX",
+      "decimals": 15
+    }
+  },
+  "2147484002": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 48,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "DOT",
+      "symbol": "DOT",
+      "decimals": "10"
+    }
+  },
+  "2147484107": {
+    "0x65726332302f7465746865722f75736474": {
+      "id": 1054,
+      "addr": "0x65726332302f7465746865722f75736474",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    }
+  },
+  "2147484149": {
+    "0x457339764d46727a614345526d4a667246344832465944344b436f4e6b5931314d6343653842656e774e5942": {
+      "id": 852,
+      "addr": "0x457339764d46727a614345526d4a667246344832465944344b436f4e6b5931314d6343653842656e774e5942",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    },
+    "0x3262316b5636446b50416e7864356978666e7843706a786d4b77716a6a61596d435a6648734675323447586f": {
+      "id": 899,
+      "addr": "0x3262316b5636446b50416e7864356978666e7843706a786d4b77716a6a61596d435a6648734675323447586f",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    },
+    "0x4845435a677337756e4a744a323632366131465634426e6d567235427068755a576f62566176646d70596e59": {
+      "id": 907,
+      "addr": "0x4845435a677337756e4a744a323632366131465634426e6d567235427068755a576f62566176646d70596e59",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    },
+    "0x373935584e63663550783175713173654b416341344447536b79513855555654513865323779775359665647": {
+      "id": 923,
+      "addr": "0x373935584e63663550783175713173654b416341344447536b79513855555654513865323779775359665647",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    },
+    "0x395064464743445153366646686e6f503146703966564a445567546b3464703438767971396d7a7768716577": {
+      "id": 973,
+      "addr": "0x395064464743445153366646686e6f503146703966564a445567546b3464703438767971396d7a7768716577",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    },
+    "0x45506a465764643541756671535371654d32714e31787a7962617043384734774547476b5a77795444743176": {
+      "id": 847,
+      "addr": "0x45506a465764643541756671535371654d32714e31787a7962617043384734774547476b5a77795444743176",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 830,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "SOL",
+      "symbol": "SOL",
+      "decimals": "9"
+    },
+    "0x487a7771624b5a773848784d4e3662463279465a4e7268743363326958587a704b63467537754245444b7472": {
+      "id": 866,
+      "addr": "0x487a7771624b5a773848784d4e3662463279465a4e7268743363326958587a704b63467537754245444b7472",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    },
+    "0x3858474232444b696265366b6a4d44504171355664505064764c52724b6877624b6373516e57635075757437": {
+      "id": 895,
+      "addr": "0x3858474232444b696265366b6a4d44504171355664505064764c52724b6877624b6373516e57635075757437",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    },
+    "0x446a5246536539416b4778483465795a796376647057666f6843786d6742796a6b784e624c70785a4e363271": {
+      "id": 940,
+      "addr": "0x446a5246536539416b4778483465795a796376647057666f6843786d6742796a6b784e624c70785a4e363271",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    },
+    "0x646f67317669776262327657447045523546724a3459464736677136587579466f6855653954584e363575": {
+      "id": 996,
+      "addr": "0x646f67317669776262327657447045523546724a3459464736677136587579466f6855653954584e363575",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    },
+    "0x3545423942527243516175376251714154597262415057317879565246624a6546666b733171543551367959": {
+      "id": 997,
+      "addr": "0x3545423942527243516175376251714154597262415057317879565246624a6546666b733171543551367959",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    },
+    "0x45377a5753545746356f4c6841416f4537784c3856486965703166716a6b75383959586f33624d3455467936": {
+      "id": 1003,
+      "addr": "0x45377a5753545746356f4c6841416f4537784c3856486965703166716a6b75383959586f33624d3455467936",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    },
+    "0x32326463564e514a51533234744e6a43687862487a464d4666374852505743466e6a554864737a5632513642": {
+      "id": 1012,
+      "addr": "0x32326463564e514a51533234744e6a43687862487a464d4666374852505743466e6a554864737a5632513642",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    },
+    "0x43775a4e766a7461693645337a386d54483331774e4c716a6444666570645159707059567273567045374279": {
+      "id": 1024,
+      "addr": "0x43775a4e766a7461693645337a386d54483331774e4c716a6444666570645159707059567273567045374279",
+      "name": "failed",
+      "symbol": "failed",
+      "decimals": "0"
+    }
+  },
+  "2147484198": {
+    "0xd4b5f10d61916bd6e0860144a91ac658de8a1437": {
+      "id": 133,
+      "addr": "0xd4b5f10d61916bd6e0860144a91ac658de8a1437",
+      "name": "USDT@xinfin",
+      "symbol": "xUSDT",
+      "decimals": "6"
+    },
+    "0x1289f70b8a16797cccbfcca8a845f36324ac9f8b": {
+      "id": 135,
+      "addr": "0x1289f70b8a16797cccbfcca8a845f36324ac9f8b",
+      "name": "ETH@xinfin",
+      "symbol": "xETH",
+      "decimals": "18"
+    },
+    "0xc6ae1db6c66d909f7bfeeeb24f9adb8620bf9dbf": {
+      "id": 136,
+      "addr": "0xc6ae1db6c66d909f7bfeeeb24f9adb8620bf9dbf",
+      "name": "USDC@xinfin",
+      "symbol": "xUSDC",
+      "decimals": "6"
+    },
+    "0x011754d9a4661d914141a96a03684f147e5b2a06": {
+      "id": 195,
+      "addr": "0x011754d9a4661d914141a96a03684f147e5b2a06",
+      "name": "EURC@xinfin",
+      "symbol": "EURC",
+      "decimals": "6"
+    },
+    "0x0e11710aad67e7427cfbc12c353284c2e335f62c": {
+      "id": 228,
+      "addr": "0x0e11710aad67e7427cfbc12c353284c2e335f62c",
+      "name": "PrimeNumbers Token",
+      "symbol": "PRNT",
+      "decimals": "18"
+    },
+    "0x2385bd067826f0ac6ad4727cd07d22b84e7af7e8": {
+      "id": 250,
+      "addr": "0x2385bd067826f0ac6ad4727cd07d22b84e7af7e8",
+      "name": "XDCNFT",
+      "symbol": "XNFT",
+      "decimals": ""
+    },
+    "0x36726235dadbdb4658d33e62a249dca7c4b2bc68": {
+      "id": 254,
+      "addr": "0x36726235dadbdb4658d33e62a249dca7c4b2bc68",
+      "name": "XSP Token",
+      "symbol": "XSP",
+      "decimals": "18"
+    },
+    "0x85d216d87c993c250a7725af8f6c161d0504c32b": {
+      "id": 269,
+      "addr": "0x85d216d87c993c250a7725af8f6c161d0504c32b",
+      "name": "XDSea Marketplace",
+      "symbol": "XDSea Token",
+      "decimals": ""
+    },
+    "0x473e5f3ce1cc54dfbe63788d3da2849a4227d3b2": {
+      "id": 556,
+      "addr": "0x473e5f3ce1cc54dfbe63788d3da2849a4227d3b2",
+      "name": "ZENIQ@XDC Network",
+      "symbol": "ZENIQ",
+      "decimals": "18"
+    },
+    "0xc73869475a500d5a89fd891b40ae6b9a38a18ac9": {
+      "id": 720,
+      "addr": "0xc73869475a500d5a89fd891b40ae6b9a38a18ac9",
+      "name": "DIMO@xinfin",
+      "symbol": "DIMO",
+      "decimals": "18"
+    },
+    "0x79d745178bc271a1f29f8fbe9251dfc512db842c": {
+      "id": 754,
+      "addr": "0x79d745178bc271a1f29f8fbe9251dfc512db842c",
+      "name": "ZON@xinfin",
+      "symbol": "ZON",
+      "decimals": "18"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 116,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "XDC",
+      "symbol": "XDC",
+      "decimals": "18"
+    },
+    "0x2d920d80732eb2ad7d33705b3d13ee0c221d6ce3": {
+      "id": 262,
+      "addr": "0x2d920d80732eb2ad7d33705b3d13ee0c221d6ce3",
+      "name": "BET@xinfin",
+      "symbol": "xBET",
+      "decimals": "15"
+    },
+    "0x32bbacefba31d49af30a827fa2783d5bbcfd78a6": {
+      "id": 326,
+      "addr": "0x32bbacefba31d49af30a827fa2783d5bbcfd78a6",
+      "name": "OVO@xinfin",
+      "symbol": "OVO",
+      "decimals": "15"
+    },
+    "0x0c78f442bc7c4c07a67d7f0e2f2f834713e4ec95": {
+      "id": 335,
+      "addr": "0x0c78f442bc7c4c07a67d7f0e2f2f834713e4ec95",
+      "name": "ShibaNFT@xinfin",
+      "symbol": "ShibaNFT",
+      "decimals": "15"
+    },
+    "0xbe5187c2a7eb776c1caeed2c37e7599fb05000d3": {
+      "id": 140,
+      "addr": "0xbe5187c2a7eb776c1caeed2c37e7599fb05000d3",
+      "name": "WAN@xinfin",
+      "symbol": "WAN",
+      "decimals": "18"
+    },
+    "0xf1080029db591c013f4177f9289c1d85d73f601d": {
+      "id": 146,
+      "addr": "0xf1080029db591c013f4177f9289c1d85d73f601d",
+      "name": "OKT@xinfin",
+      "symbol": "OKT",
+      "decimals": "18"
+    },
+    "0x4e35a02b12d7bd010e235da055b6d03e89601264": {
+      "id": 171,
+      "addr": "0x4e35a02b12d7bd010e235da055b6d03e89601264",
+      "name": "XRP@xinfin",
+      "symbol": "xXRP",
+      "decimals": "6"
+    },
+    "0x71f7f49ff81e9be77c9175611212ecb199ba0824": {
+      "id": 172,
+      "addr": "0x71f7f49ff81e9be77c9175611212ecb199ba0824",
+      "name": "BTC@xinfin",
+      "symbol": "xBTC",
+      "decimals": "8"
+    },
+    "0x16b8ca1c5b0214c1fb1f37fba7ed3a7e63833c59": {
+      "id": 209,
+      "addr": "0x16b8ca1c5b0214c1fb1f37fba7ed3a7e63833c59",
+      "name": "GZX@xinfin",
+      "symbol": "xGZX",
+      "decimals": "15"
+    },
+    "0x3906d89e4d29ecb47db33ca72d356246b7a7cbec": {
+      "id": 211,
+      "addr": "0x3906d89e4d29ecb47db33ca72d356246b7a7cbec",
+      "name": "xBIBLx@xinfin",
+      "symbol": "xxBIBLx",
+      "decimals": "15"
+    },
+    "0x1bc20d6b6a4f0d768e1b39d42575fc3cb008e865": {
+      "id": 213,
+      "addr": "0x1bc20d6b6a4f0d768e1b39d42575fc3cb008e865",
+      "name": "XLIST@xinfin",
+      "symbol": "xXLIST",
+      "decimals": "15"
+    },
+    "0xcfad8a6ed9b7075c5a3b42557cf2b343b266c472": {
+      "id": 215,
+      "addr": "0xcfad8a6ed9b7075c5a3b42557cf2b343b266c472",
+      "name": "NVL@xinfin",
+      "symbol": "xNVL",
+      "decimals": "15"
+    },
+    "0x18b348b07661d83d7cfa91cb0bf32b089bb5eaf7": {
+      "id": 267,
+      "addr": "0x18b348b07661d83d7cfa91cb0bf32b089bb5eaf7",
+      "name": "xNVL@xinfin",
+      "symbol": "xxNVL",
+      "decimals": "15"
+    },
+    "0x84fb1a5795858e7296780a7f55c43afa20e9a7ae": {
+      "id": 285,
+      "addr": "0x84fb1a5795858e7296780a7f55c43afa20e9a7ae",
+      "name": "GEM@xinfin",
+      "symbol": "GEM",
+      "decimals": "15"
+    },
+    "0x5dba089c731352e1a29eff084f7b4df6f0c88303": {
+      "id": 286,
+      "addr": "0x5dba089c731352e1a29eff084f7b4df6f0c88303",
+      "name": "THE FLAT COIN",
+      "symbol": "FLAT",
+      "decimals": "18"
+    },
+    "0x7e0195a43a5dd27c507a1f0b2371d543c9e4dfc9": {
+      "id": 467,
+      "addr": "0x7e0195a43a5dd27c507a1f0b2371d543c9e4dfc9",
+      "name": "SGB@XDC Network",
+      "symbol": "sSGB",
+      "decimals": "18"
+    },
+    "0x6957e0df854b8dc2cada2bac902544f2c34ebfbd": {
+      "id": 468,
+      "addr": "0x6957e0df854b8dc2cada2bac902544f2c34ebfbd",
+      "name": "ORACLE@XDC Network",
+      "symbol": "ORACLE",
+      "decimals": "18"
+    },
+    "0xe5f9ae9d32d93d3934007568b30b7a7ca489c486": {
+      "id": 748,
+      "addr": "0xe5f9ae9d32d93d3934007568b30b7a7ca489c486",
+      "name": "Circularity Finance",
+      "symbol": "CiFi",
+      "decimals": "18"
+    },
+    "0x6daf228391e388b05bbc682fea3cb1cc3e38c44e": {
+      "id": 821,
+      "addr": "0x6daf228391e388b05bbc682fea3cb1cc3e38c44e",
+      "name": "Nexus",
+      "symbol": "NEXU",
+      "decimals": "18"
+    },
+    "0xbc24f5f3f09ced3c12322db67effb55297816ef6": {
+      "id": 882,
+      "addr": "0xbc24f5f3f09ced3c12322db67effb55297816ef6",
+      "name": "REFI TOKEN",
+      "symbol": "REFI",
+      "decimals": "18"
+    },
+    "0x592de30bebff484b5a43a6e8e3ec1a814902e0b6": {
+      "id": 885,
+      "addr": "0x592de30bebff484b5a43a6e8e3ec1a814902e0b6",
+      "name": "AZVADA@xinfin",
+      "symbol": "AZVADA",
+      "decimals": "15"
+    },
+    "0xfa2958cb79b0491cc627c1557f441ef849ca8eb1": {
+      "id": 1187,
+      "addr": "0xfa2958cb79b0491cc627c1557f441ef849ca8eb1",
+      "name": "USDC",
+      "symbol": "USDC",
+      "decimals": "6"
+    }
+  },
+  "2147484262": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 328,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "ETH",
+      "symbol": "ETH",
+      "decimals": "18"
+    },
+    "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58": {
+      "id": 369,
+      "addr": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "0x7f5c764cbc14f9669b88837ca1490cca17c31607": {
+      "id": 387,
+      "addr": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0x68f180fcce6836688e9084f035309e29bf0a2095": {
+      "id": 786,
+      "addr": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": "8"
+    },
+    "0x0b2c639c533813f4aa9d7837caf62653d097ff85": {
+      "id": 560,
+      "addr": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1": {
+      "id": 565,
+      "addr": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+      "name": "Dai Stablecoin",
+      "symbol": "DAI",
+      "decimals": "18"
+    }
+  },
+  "2147484362": {
+    "0xdfd9e2a17596cad6295ecffda42d9b6f63f7b5d5": {
+      "id": 26,
+      "addr": "0xdfd9e2a17596cad6295ecffda42d9b6f63f7b5d5",
+      "name": "FinNexus",
+      "symbol": "FNX",
+      "decimals": "18"
+    },
+    "0xac86e5f9ba48d680516df50c72928c2ec50f3025": {
+      "id": 32,
+      "addr": "0xac86e5f9ba48d680516df50c72928c2ec50f3025",
+      "name": "Phoenix Token@BSC",
+      "symbol": "PHX",
+      "decimals": "18"
+    },
+    "0xd8fa6921b24ab1cd52ab553d1f99aaedc321e562": {
+      "id": 35,
+      "addr": "0xd8fa6921b24ab1cd52ab553d1f99aaedc321e562",
+      "name": "Convertible Phoenix Token@BSC",
+      "symbol": "cPHX",
+      "decimals": "18"
+    },
+    "0xea257af689abe1107578247ea558bf20d88a994f": {
+      "id": 68,
+      "addr": "0xea257af689abe1107578247ea558bf20d88a994f",
+      "name": "CFi@bsc",
+      "symbol": "bCFi",
+      "decimals": "18"
+    },
+    "0x32e1504a67826960245506706e0b129dc2a53b7f": {
+      "id": 75,
+      "addr": "0x32e1504a67826960245506706e0b129dc2a53b7f",
+      "name": "bKYL@bsc",
+      "symbol": "bKYL",
+      "decimals": "18"
+    },
+    "0x755a1c9b62126b289338733aa4d6e9669de2b989": {
+      "id": 143,
+      "addr": "0x755a1c9b62126b289338733aa4d6e9669de2b989",
+      "name": "Blockearth",
+      "symbol": "BLET",
+      "decimals": "18"
+    },
+    "0x55d398326f99059ff775485246999027b3197955": {
+      "id": 189,
+      "addr": "0x55d398326f99059ff775485246999027b3197955",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": "18"
+    },
+    "0x9f402f44684574f3535ea6f1bb5cfbffef42ee28": {
+      "id": 227,
+      "addr": "0x9f402f44684574f3535ea6f1bb5cfbffef42ee28",
+      "name": "PrimeNumbers",
+      "symbol": "PRNT",
+      "decimals": "18"
+    },
+    "0xba6d8783f454fc54c42e4f727bf604d7877f5d2f": {
+      "id": 231,
+      "addr": "0xba6d8783f454fc54c42e4f727bf604d7877f5d2f",
+      "name": "",
+      "symbol": "",
+      "decimals": ""
+    },
+    "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d": {
+      "id": 245,
+      "addr": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "18"
+    },
+    "0x7e5fe1e587a5c38b4a4a9ba38a35096f8ea35aac": {
+      "id": 256,
+      "addr": "0x7e5fe1e587a5c38b4a4a9ba38a35096f8ea35aac",
+      "name": "XSP@bsc",
+      "symbol": "XSP",
+      "decimals": "18"
+    },
+    "0x6c9ef421b37392b8fdf19e877588181aa551e87d": {
+      "id": 287,
+      "addr": "0x6c9ef421b37392b8fdf19e877588181aa551e87d",
+      "name": "GMPD Bots",
+      "symbol": "GMPD",
+      "decimals": ""
+    },
+    "0xfe1d7f7a8f0bda6e415593a2e4f82c64b446d404": {
+      "id": 289,
+      "addr": "0xfe1d7f7a8f0bda6e415593a2e4f82c64b446d404",
+      "name": "Bull Perks",
+      "symbol": "BLP",
+      "decimals": "18"
+    },
+    "0x9720ca160bbd4e7f3dd4bb3f8bd4227ca0342e63": {
+      "id": 295,
+      "addr": "0x9720ca160bbd4e7f3dd4bb3f8bd4227ca0342e63",
+      "name": "GMPD",
+      "symbol": "GMPD",
+      "decimals": "18"
+    },
+    "0xfebe8c1ed424dbf688551d4e2267e7a53698f0aa": {
+      "id": 305,
+      "addr": "0xfebe8c1ed424dbf688551d4e2267e7a53698f0aa",
+      "name": "Vita Inu",
+      "symbol": "VINU",
+      "decimals": "18"
+    },
+    "0xeb986da994e4a118d5956b02d8b7c3c7ce373674": {
+      "id": 413,
+      "addr": "0xeb986da994e4a118d5956b02d8b7c3c7ce373674",
+      "name": "Gather",
+      "symbol": "GTH",
+      "decimals": "18"
+    },
+    "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c": {
+      "id": 417,
+      "addr": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+      "name": "BTCB Token",
+      "symbol": "BTCB",
+      "decimals": "18"
+    },
+    "0x2170ed0880ac9a755fd29b2688956bd959f933f8": {
+      "id": 573,
+      "addr": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "name": "Ethereum Token",
+      "symbol": "ETH",
+      "decimals": "18"
+    },
+    "0x65f17bbfb1c2b8ef9165e2f936122b6d88106cc5": {
+      "id": 669,
+      "addr": "0x65f17bbfb1c2b8ef9165e2f936122b6d88106cc5",
+      "name": "CATSKY@bsc",
+      "symbol": "CATSKY",
+      "decimals": "0"
+    },
+    "0x76c51350705756030c70ccb82ef23345c2a4610e": {
+      "id": 695,
+      "addr": "0x76c51350705756030c70ccb82ef23345c2a4610e",
+      "name": "DIMO@bsc",
+      "symbol": "DIMO",
+      "decimals": "18"
+    },
+    "0x237e7fc6319bf62b936a1803bde7e8a7d056d62e": {
+      "id": 753,
+      "addr": "0x237e7fc6319bf62b936a1803bde7e8a7d056d62e",
+      "name": "ZON@bsc",
+      "symbol": "ZON",
+      "decimals": "18"
+    },
+    "0xb842192120a85d51840ab9ac67cf008b9fc3a6b2": {
+      "id": 760,
+      "addr": "0xb842192120a85d51840ab9ac67cf008b9fc3a6b2",
+      "name": "WAN@bsc",
+      "symbol": "WAN",
+      "decimals": "18"
+    },
+    "0xd45f54838dbfce0f976bd430be5f8678479e1510": {
+      "id": 774,
+      "addr": "0xd45f54838dbfce0f976bd430be5f8678479e1510",
+      "name": "EPIC@bsc",
+      "symbol": "EPIC",
+      "decimals": "0"
+    },
+    "0x8f8165fc9d56902e4b25898b0f2fb169bd27c490": {
+      "id": 927,
+      "addr": "0x8f8165fc9d56902e4b25898b0f2fb169bd27c490",
+      "name": "MNT@bsc",
+      "symbol": "MNT",
+      "decimals": "6"
+    },
+    "0xb97506dff5a262580c31ffa7870ec2eed241104f": {
+      "id": 968,
+      "addr": "0xb97506dff5a262580c31ffa7870ec2eed241104f",
+      "name": "HOSKY@bsc",
+      "symbol": "HOSKY",
+      "decimals": "0"
+    },
+    "0xdd4b9b3ce03faaba4a3839c8b5023b7792be6e2c": {
+      "id": 38,
+      "addr": "0xdd4b9b3ce03faaba4a3839c8b5023b7792be6e2c",
+      "name": "wanLTC@bsc",
+      "symbol": "wanLTC",
+      "decimals": "8"
+    },
+    "0x603be493e0b0e5181c5f0799afb003bd8ed076a5": {
+      "id": 69,
+      "addr": "0x603be493e0b0e5181c5f0799afb003bd8ed076a5",
+      "name": "ZOO@bsc",
+      "symbol": "ZOO",
+      "decimals": "18"
+    },
+    "0x9c9ec2790a654528762d14a44c09f3083f7d7d79": {
+      "id": 72,
+      "addr": "0x9c9ec2790a654528762d14a44c09f3083f7d7d79",
+      "name": "wanMOVR@bsc",
+      "symbol": "wanMOVR",
+      "decimals": "18"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 98,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "BNB",
+      "symbol": "BNB",
+      "decimals": "18"
+    },
+    "0x19e6bfc1a6e4b042fb20531244d47e252445df01": {
+      "id": 109,
+      "addr": "0x19e6bfc1a6e4b042fb20531244d47e252445df01",
+      "name": "Templar Token",
+      "symbol": "TEM",
+      "decimals": "9"
+    },
+    "0x3e7430a1decffa4756d8c651634de332940792d8": {
+      "id": 116,
+      "addr": "0x3e7430a1decffa4756d8c651634de332940792d8",
+      "name": "XDC@bsc",
+      "symbol": "XDC",
+      "decimals": "18"
+    },
+    "0x8818c74956ae90c6c7b317439373052073e62999": {
+      "id": 147,
+      "addr": "0x8818c74956ae90c6c7b317439373052073e62999",
+      "name": "OKT@bsc",
+      "symbol": "OKT",
+      "decimals": "18"
+    },
+    "0x63c5acc9bd1cfc14582a5520415480c33734f18f": {
+      "id": 208,
+      "addr": "0x63c5acc9bd1cfc14582a5520415480c33734f18f",
+      "name": "GZX@bsc",
+      "symbol": "GZX",
+      "decimals": "15"
+    },
+    "0x2216072a246a84f7b9ce0f1415dd239c9bf201ab": {
+      "id": 230,
+      "addr": "0x2216072a246a84f7b9ce0f1415dd239c9bf201ab",
+      "name": "XNFT@bsc",
+      "symbol": "XNFT",
+      "decimals": ""
+    },
+    "0xd45f893c97999aaf068d5a5713650ee962364e25": {
+      "id": 240,
+      "addr": "0xd45f893c97999aaf068d5a5713650ee962364e25",
+      "name": "XLIST@bsc",
+      "symbol": "XLIST",
+      "decimals": "15"
+    },
+    "0x412bdecdc3e9c2922e92692c0a8961dee0c793c1": {
+      "id": 260,
+      "addr": "0x412bdecdc3e9c2922e92692c0a8961dee0c793c1",
+      "name": "BET@bsc",
+      "symbol": "BET",
+      "decimals": "15"
+    },
+    "0x783353136e8b4b1eb14539422c36121af400ca6c": {
+      "id": 271,
+      "addr": "0x783353136e8b4b1eb14539422c36121af400ca6c",
+      "name": "XDSea Marketplace",
+      "symbol": "XDSea Token",
+      "decimals": ""
+    },
+    "0x1bbc16260d5d052f1493b8f2aeee7888fed1e9ab": {
+      "id": 324,
+      "addr": "0x1bbc16260d5d052f1493b8f2aeee7888fed1e9ab",
+      "name": "OVO@bsc",
+      "symbol": "OVO",
+      "decimals": "15"
+    },
+    "0xbcc7ac1bd0204d492335b38d9877b627a2c04bfd": {
+      "id": 331,
+      "addr": "0xbcc7ac1bd0204d492335b38d9877b627a2c04bfd",
+      "name": "ShibaNFT@bsc",
+      "symbol": "ShibaNFT",
+      "decimals": "15"
+    },
+    "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3": {
+      "id": 578,
+      "addr": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+      "name": "Dai Token",
+      "symbol": "DAI",
+      "decimals": "18"
+    },
+    "0x2bf83d080d8bc4715984e75e5b3d149805d11751": {
+      "id": 601,
+      "addr": "0x2bf83d080d8bc4715984e75e5b3d149805d11751",
+      "name": "VinuChain",
+      "symbol": "VC",
+      "decimals": "18"
+    },
+    "0x5f71371195cbd9a9ca60c11ee19c695aa852210e": {
+      "id": 609,
+      "addr": "0x5f71371195cbd9a9ca60c11ee19c695aa852210e",
+      "name": "LOUEY@bsc",
+      "symbol": "LOUEY",
+      "decimals": "0"
+    },
+    "0x69798671b1172371e49da4d74d00104cadd7ed15": {
+      "id": 655,
+      "addr": "0x69798671b1172371e49da4d74d00104cadd7ed15",
+      "name": "DEAN@BSC",
+      "symbol": "DEAN",
+      "decimals": "0"
+    },
+    "0x0d095f49d1145ad5f8fe73c91548f0433f7713ad": {
+      "id": 723,
+      "addr": "0x0d095f49d1145ad5f8fe73c91548f0433f7713ad",
+      "name": "TheADA",
+      "symbol": "TADA",
+      "decimals": "18"
+    },
+    "0x37d18db4870d84f101c56e8fc54d1378349b438c": {
+      "id": 937,
+      "addr": "0x37d18db4870d84f101c56e8fc54d1378349b438c",
+      "name": "QZILLA@bsc",
+      "symbol": "QZILLA",
+      "decimals": "15"
+    },
+    "0x3220816755e615a44896a481bfe6415bce270087": {
+      "id": 998,
+      "addr": "0x3220816755e615a44896a481bfe6415bce270087",
+      "name": "iCharl@bsc",
+      "symbol": "iCharl",
+      "decimals": "0"
+    },
+    "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47": {
+      "id": 1072,
+      "addr": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47",
+      "name": "Cardano Token",
+      "symbol": "ADA",
+      "decimals": "18"
+    },
+    "0x841c734e858f129c8008a7e84f3f0e0d82e86ab4": {
+      "id": 1193,
+      "addr": "0x841c734e858f129c8008a7e84f3f0e0d82e86ab4",
+      "name": "GIMO@bsc",
+      "symbol": "GIMO",
+      "decimals": "18"
+    },
+    "0xfe930c2d63aed9b82fc4dbc801920dd2c1a3224f": {
+      "id": 1240,
+      "addr": "0xfe930c2d63aed9b82fc4dbc801920dd2c1a3224f",
+      "name": "NIGHT",
+      "symbol": "NIGHT",
+      "decimals": "18"
+    },
+    "0x0c8382719ef242cae2247e4decb2891fbf699818": {
+      "id": 1241,
+      "addr": "0x0c8382719ef242cae2247e4decb2891fbf699818",
+      "name": "BDCA Token",
+      "symbol": "BDCA",
+      "decimals": "18"
+    }
+  },
+  "2147484432": {
+    "0x3078646261333436373265333063623036356231663933653361623535333138373638666436666566363663313539343263396637636238343665326639303065373a3a757364633a3a55534443": {
+      "id": 1015,
+      "addr": "0x3078646261333436373265333063623036356231663933653361623535333138373638666436666566363663313539343263396637636238343665326639303065373a3a757364633a3a55534443",
+      "name": "USDC",
+      "symbol": "USDC",
+      "decimals": "6"
+    }
+  },
+  "2147484458": {
+    "0xffffffff000000000000000000000001000007c0": {
+      "id": 315,
+      "addr": "0xffffffff000000000000000000000001000007c0",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": "6"
+    }
+  },
+  "2147484466": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 933,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "VET",
+      "symbol": "VET",
+      "decimals": "18"
+    },
+    "0x0000000000000000000000000000456e65726779": {
+      "id": 978,
+      "addr": "0x0000000000000000000000000000456e65726779",
+      "name": "VeThor",
+      "symbol": "VTHO",
+      "decimals": "18"
+    },
+    "0x5ef79995fe8a89e0812330e4378eb2660cede699": {
+      "id": 979,
+      "addr": "0x5ef79995fe8a89e0812330e4378eb2660cede699",
+      "name": "B3TR",
+      "symbol": "B3TR",
+      "decimals": "18"
+    },
+    "0x2076382cfee16ffc8155b59ef1836ad36b8a1df4": {
+      "id": 980,
+      "addr": "0x2076382cfee16ffc8155b59ef1836ad36b8a1df4",
+      "name": "ETH@vechain",
+      "symbol": "ETH",
+      "decimals": "18"
+    },
+    "0xc0c789a13a69859d3ae7bdb3fe4fa1625d20fd65": {
+      "id": 982,
+      "addr": "0xc0c789a13a69859d3ae7bdb3fe4fa1625d20fd65",
+      "name": "USDC@vechain",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0x88b08f4eb5c87e320780a253cd1baa387d04bfcc": {
+      "id": 985,
+      "addr": "0x88b08f4eb5c87e320780a253cd1baa387d04bfcc",
+      "name": "USDT@vechain",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "0x752e4e77d8d3a111f931edcd35cee944adc36cc5": {
+      "id": 988,
+      "addr": "0x752e4e77d8d3a111f931edcd35cee944adc36cc5",
+      "name": "BTC@vechain",
+      "symbol": "BTC",
+      "decimals": "8"
+    },
+    "0x1d828b239749c023aa561d442744d0e83f3fab66": {
+      "id": 990,
+      "addr": "0x1d828b239749c023aa561d442744d0e83f3fab66",
+      "name": "SOL@vechain",
+      "symbol": "SOL",
+      "decimals": "9"
+    },
+    "0xe6826a142b6c4b6070015a633e6cccca36586185": {
+      "id": 991,
+      "addr": "0xe6826a142b6c4b6070015a633e6cccca36586185",
+      "name": "XRP@vechain",
+      "symbol": "XRP",
+      "decimals": "6"
+    },
+    "0xdb01e0b2b8d8d8eea3eaf290bdb2ae05c317f2f1": {
+      "id": 992,
+      "addr": "0xdb01e0b2b8d8d8eea3eaf290bdb2ae05c317f2f1",
+      "name": "WAN@vechain",
+      "symbol": "WAN",
+      "decimals": "18"
+    }
+  },
+  "2147484614": {
+    "0xc2132d05d31c914a87c6611c10748aeb04b58e8f": {
+      "id": 190,
+      "addr": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+      "name": "(PoS) Tether USD",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "0x2791bca1f2de4661ed88a30c99a7a9449aa84174": {
+      "id": 247,
+      "addr": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+      "name": "USD Coin (PoS)",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0x990825c5d894385f1c5bd36b6427c5336d984e07": null,
+    "0x789acfd3525cc5523f95bcf45df263f17577d1a4": {
+      "id": 291,
+      "addr": "0x789acfd3525cc5523f95bcf45df263f17577d1a4",
+      "name": "BLP@polygon",
+      "symbol": "BLP",
+      "decimals": "18"
+    },
+    "0x4d14963528a62c6e90644bfc8a419cc41dc15588": {
+      "id": 297,
+      "addr": "0x4d14963528a62c6e90644bfc8a419cc41dc15588",
+      "name": "GMPD@polygon",
+      "symbol": "GMPD",
+      "decimals": "18"
+    },
+    "0xafcdd4f666c84fed1d8bd825aa762e3714f652c9": {
+      "id": 308,
+      "addr": "0xafcdd4f666c84fed1d8bd825aa762e3714f652c9",
+      "name": "Vita Inu",
+      "symbol": "VINU",
+      "decimals": "18"
+    },
+    "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619": {
+      "id": 320,
+      "addr": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": "18"
+    },
+    "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359": {
+      "id": 581,
+      "addr": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0xc748b2a084f8efc47e086ccddd9b7e67aeb571bf": {
+      "id": 717,
+      "addr": "0xc748b2a084f8efc47e086ccddd9b7e67aeb571bf",
+      "name": "Human Token (PoS)",
+      "symbol": "HMT",
+      "decimals": "18"
+    },
+    "0x70de793ace58a4bc16c9b5962073f39e05f75b68": {
+      "id": 920,
+      "addr": "0x70de793ace58a4bc16c9b5962073f39e05f75b68",
+      "name": "MNT@polygon",
+      "symbol": "MNT",
+      "decimals": "6"
+    },
+    "0x31b1644f8379a22d25f845a67f1ab346e76001aa": {
+      "id": 972,
+      "addr": "0x31b1644f8379a22d25f845a67f1ab346e76001aa",
+      "name": "HOSKY@polygon",
+      "symbol": "HOSKY",
+      "decimals": "0"
+    },
+    "0xa3f9e72d598e99a8eb135257a57b133fd41a6d89": {
+      "id": 327,
+      "addr": "0xa3f9e72d598e99a8eb135257a57b133fd41a6d89",
+      "name": "OVO@polygon",
+      "symbol": "OVO",
+      "decimals": "15"
+    },
+    "0x6dc2fc72584bffa35cc6d521a22081dd0217f3b6": {
+      "id": 334,
+      "addr": "0x6dc2fc72584bffa35cc6d521a22081dd0217f3b6",
+      "name": "ShibaNFT@polygon",
+      "symbol": "ShibaNFT",
+      "decimals": "15"
+    },
+    "0xcaed472112b2237db0538050bc2d76b518976ee0": {
+      "id": 938,
+      "addr": "0xcaed472112b2237db0538050bc2d76b518976ee0",
+      "name": "QZILLA@polygon",
+      "symbol": "QZILLA",
+      "decimals": "15"
+    },
+    "0xd557cc89ca98db85ef5ad09afba7c22583fe727e": {
+      "id": 66,
+      "addr": "0xd557cc89ca98db85ef5ad09afba7c22583fe727e",
+      "name": "(PoS) Tether USD",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "0x9a27a8950c256921b0afbe26823be717d612b447": {
+      "id": 117,
+      "addr": "0x9a27a8950c256921b0afbe26823be717d612b447",
+      "name": "XDC@polygon",
+      "symbol": "XDC",
+      "decimals": "18"
+    },
+    "0x599b4dc9f0d267ed76b9e2da9e4b3194a410c016": {
+      "id": 148,
+      "addr": "0x599b4dc9f0d267ed76b9e2da9e4b3194a410c016",
+      "name": "OKT@polygon",
+      "symbol": "OKT",
+      "decimals": "18"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 165,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "MATIC",
+      "symbol": "MATIC",
+      "decimals": "18"
+    },
+    "0xcfad8a6ed9b7075c5a3b42557cf2b343b266c472": {
+      "id": 251,
+      "addr": "0xcfad8a6ed9b7075c5a3b42557cf2b343b266c472",
+      "name": "XNFT@polygon",
+      "symbol": "XNFT",
+      "decimals": ""
+    },
+    "0xf6b9cd2e63f45c9b172ddfcdcf7eed5402fdf245": {
+      "id": 270,
+      "addr": "0xf6b9cd2e63f45c9b172ddfcdcf7eed5402fdf245",
+      "name": "XDSea Marketplace",
+      "symbol": "XDSea Token",
+      "decimals": ""
+    },
+    "0xa07c874323ab6ac31d7fa3dcfb92163f363f7113": {
+      "id": 286,
+      "addr": "0xa07c874323ab6ac31d7fa3dcfb92163f363f7113",
+      "name": "FLAT@polygon",
+      "symbol": "FLAT",
+      "decimals": "18"
+    },
+    "0x672255e73e9fcb8d8971b6e2622057baa84b5afe": {
+      "id": 395,
+      "addr": "0x672255e73e9fcb8d8971b6e2622057baa84b5afe",
+      "name": "Herocoin (PoS)",
+      "symbol": "PLAY",
+      "decimals": "18"
+    },
+    "0x51749dfb5fbfe1787e0de24696ece4288a375900": {
+      "id": 409,
+      "addr": "0x51749dfb5fbfe1787e0de24696ece4288a375900",
+      "name": "META NANOs",
+      "symbol": "NANOS",
+      "decimals": "ERC721"
+    },
+    "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063": {
+      "id": 576,
+      "addr": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+      "name": "(PoS) Dai Stablecoin",
+      "symbol": "DAI",
+      "decimals": "18"
+    },
+    "0x10acbe3b9e6a2ff7f341e5cbf4b6617741ff44aa": {
+      "id": 590,
+      "addr": "0x10acbe3b9e6a2ff7f341e5cbf4b6617741ff44aa",
+      "name": "NINJAZ@polygon",
+      "symbol": "NINJAZ",
+      "decimals": "6"
+    },
+    "0x3bb87041edf93eaea82f47f2b495e5859085e3ee": {
+      "id": 656,
+      "addr": "0x3bb87041edf93eaea82f47f2b495e5859085e3ee",
+      "name": "DEAN@Polygon",
+      "symbol": "DEAN",
+      "decimals": "0"
+    },
+    "0xe156987a81a9b841c1def6f111ea69bf817fb272": {
+      "id": 658,
+      "addr": "0xe156987a81a9b841c1def6f111ea69bf817fb272",
+      "name": "SHARDS@Polygon",
+      "symbol": "SHARDS",
+      "decimals": "6"
+    },
+    "0xb24eb50ccb3d07d1461a216f6c2979280a5849cf": {
+      "id": 664,
+      "addr": "0xb24eb50ccb3d07d1461a216f6c2979280a5849cf",
+      "name": "Uniswap V2",
+      "symbol": "UNI-V2",
+      "decimals": "18"
+    },
+    "0x34c8b806538bc6071ed628f2a408581160aca67b": {
+      "id": 748,
+      "addr": "0x34c8b806538bc6071ed628f2a408581160aca67b",
+      "name": "CIFI@polygon",
+      "symbol": "CIFI",
+      "decimals": "18"
+    },
+    "0x76c51350705756030c70ccb82ef23345c2a4610e": {
+      "id": 762,
+      "addr": "0x76c51350705756030c70ccb82ef23345c2a4610e",
+      "name": "xTweet@polygon",
+      "symbol": "xTweet",
+      "decimals": "15"
+    },
+    "0xff3c2f49c4558234aa490de1790087be5cae9008": {
+      "id": 780,
+      "addr": "0xff3c2f49c4558234aa490de1790087be5cae9008",
+      "name": "AZVADA@polygon",
+      "symbol": "AZVADA",
+      "decimals": "15"
+    },
+    "0xdbf42c26ac554a492ca76b808cd91e106865c391": {
+      "id": 882,
+      "addr": "0xdbf42c26ac554a492ca76b808cd91e106865c391",
+      "name": "REFI@polygon",
+      "symbol": "REFI",
+      "decimals": "18"
+    }
+  },
+  "2147484625": {
+    "0x9d81bf338cd16af0946c17405ddbf2063e54b3ea": {
+      "id": 342,
+      "addr": "0x9d81bf338cd16af0946c17405ddbf2063e54b3ea",
+      "name": "ETH@telos",
+      "symbol": "ETH",
+      "decimals": "18"
+    },
+    "0xae0b6751dcdde39895dfb687aec91eb6583bfd03": {
+      "id": 352,
+      "addr": "0xae0b6751dcdde39895dfb687aec91eb6583bfd03",
+      "name": "USDC@telos",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0x19fbf2afe29526b5b7591cc281e527398d2338dc": {
+      "id": 356,
+      "addr": "0x19fbf2afe29526b5b7591cc281e527398d2338dc",
+      "name": "USDT@telos",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "0x9e8aafd785f8cc9aebb4b6fbf817ee988e85fede": {
+      "id": 340,
+      "addr": "0x9e8aafd785f8cc9aebb4b6fbf817ee988e85fede",
+      "name": "BTC@telos",
+      "symbol": "BTC",
+      "decimals": "8"
+    },
+    "0x2193612b4fef2b27228b1e0f1d5a3ec37c020d3d": {
+      "id": 346,
+      "addr": "0x2193612b4fef2b27228b1e0f1d5a3ec37c020d3d",
+      "name": "DOGE@telos",
+      "symbol": "DOGE",
+      "decimals": "8"
+    },
+    "0xf04a2950dcb82ab1fa5feac43a0e192c749638cf": {
+      "id": 348,
+      "addr": "0xf04a2950dcb82ab1fa5feac43a0e192c749638cf",
+      "name": "DOT@telos",
+      "symbol": "DOT",
+      "decimals": "10"
+    },
+    "0xcb7ad56cc0d74c6317a58f394d00ac0f5dfe8b82": {
+      "id": 350,
+      "addr": "0xcb7ad56cc0d74c6317a58f394d00ac0f5dfe8b82",
+      "name": "TRX@telos",
+      "symbol": "TRX",
+      "decimals": "6"
+    }
+  },
+  "2147484644": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 144,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "OKT",
+      "symbol": "OKT",
+      "decimals": "18"
+    },
+    "0xf6b9cd2e63f45c9b172ddfcdcf7eed5402fdf245": {
+      "id": 149,
+      "addr": "0xf6b9cd2e63f45c9b172ddfcdcf7eed5402fdf245",
+      "name": "USDT@okc",
+      "symbol": "USDTw",
+      "decimals": "6"
+    },
+    "0xecafc7c6119d9e5c896517bbdcb178c762d27022": {
+      "id": 150,
+      "addr": "0xecafc7c6119d9e5c896517bbdcb178c762d27022",
+      "name": "USDC@okc",
+      "symbol": "USDCw",
+      "decimals": "6"
+    },
+    "0x4d14963528a62c6e90644bfc8a419cc41dc15588": {
+      "id": 151,
+      "addr": "0x4d14963528a62c6e90644bfc8a419cc41dc15588",
+      "name": "ETH@okc",
+      "symbol": "ETHw",
+      "decimals": "18"
+    },
+    "0x53d1276d7c1ccbf5186135476ecef4a96d3e9645": {
+      "id": 155,
+      "addr": "0x53d1276d7c1ccbf5186135476ecef4a96d3e9645",
+      "name": "LINK@okc",
+      "symbol": "LINKw",
+      "decimals": "18"
+    },
+    "0x6dc2fc72584bffa35cc6d521a22081dd0217f3b6": {
+      "id": 156,
+      "addr": "0x6dc2fc72584bffa35cc6d521a22081dd0217f3b6",
+      "name": "BAL@okc",
+      "symbol": "BALw",
+      "decimals": "18"
+    },
+    "0x18f902b9e2cef3d5aff8350bd032fe9a07515e7a": {
+      "id": 157,
+      "addr": "0x18f902b9e2cef3d5aff8350bd032fe9a07515e7a",
+      "name": "MKR@okc",
+      "symbol": "MKRw",
+      "decimals": "18"
+    },
+    "0x56705a3fb6f3d1236d1858112b5ec7aacba6634b": {
+      "id": 159,
+      "addr": "0x56705a3fb6f3d1236d1858112b5ec7aacba6634b",
+      "name": "DAI@okc",
+      "symbol": "DAIw",
+      "decimals": "18"
+    },
+    "0xa39ee04e8208c3309026f34007f036cbb03fa01d": {
+      "id": 160,
+      "addr": "0xa39ee04e8208c3309026f34007f036cbb03fa01d",
+      "name": "AAVE@okc",
+      "symbol": "AAVEw",
+      "decimals": "18"
+    },
+    "0x79faa40a8ae1214a091db9d68791dc2a8450ab1f": {
+      "id": 161,
+      "addr": "0x79faa40a8ae1214a091db9d68791dc2a8450ab1f",
+      "name": "CRV@okc",
+      "symbol": "CRVw",
+      "decimals": "18"
+    },
+    "0xcfad8a6ed9b7075c5a3b42557cf2b343b266c472": {
+      "id": 164,
+      "addr": "0xcfad8a6ed9b7075c5a3b42557cf2b343b266c472",
+      "name": "UNI@okc",
+      "symbol": "UNIw",
+      "decimals": "18"
+    },
+    "0xa14556d25757e72f7a473ef31036564673154c19": {
+      "id": 179,
+      "addr": "0xa14556d25757e72f7a473ef31036564673154c19",
+      "name": "XSGD@okc",
+      "symbol": "XSGD",
+      "decimals": "6"
+    },
+    "0x382bb369d343125bfb2117af9c149795c6c65c50": {
+      "id": 180,
+      "addr": "0x382bb369d343125bfb2117af9c149795c6c65c50",
+      "name": "USDT",
+      "symbol": "USDT",
+      "decimals": "18"
+    },
+    "0xafcdd4f666c84fed1d8bd825aa762e3714f652c9": {
+      "id": 302,
+      "addr": "0xafcdd4f666c84fed1d8bd825aa762e3714f652c9",
+      "name": "Vita Inu",
+      "symbol": "VINU",
+      "decimals": "18"
+    },
+    "0x539ebf940cbb6ac729fb762f8a0f29259076c518": {
+      "id": 167,
+      "addr": "0x539ebf940cbb6ac729fb762f8a0f29259076c518",
+      "name": "BNB@okc",
+      "symbol": "BNBw",
+      "decimals": "18"
+    },
+    "0x6a60b5099b68ac80b28f44eb30894c7d165a72f6": {
+      "id": 142,
+      "addr": "0x6a60b5099b68ac80b28f44eb30894c7d165a72f6",
+      "name": "WAN@okc",
+      "symbol": "WANw",
+      "decimals": "18"
+    },
+    "0xe0af59e9e1cc652bceffe538b406ff33b319558d": {
+      "id": 165,
+      "addr": "0xe0af59e9e1cc652bceffe538b406ff33b319558d",
+      "name": "MATIC@okc",
+      "symbol": "MATICw",
+      "decimals": "18"
+    },
+    "0xc791eb1d0a3db484aea29d424246c717be3c05c9": {
+      "id": 166,
+      "addr": "0xc791eb1d0a3db484aea29d424246c717be3c05c9",
+      "name": "XDC@okc",
+      "symbol": "XDCw",
+      "decimals": "18"
+    },
+    "0x74b438b2783b2e14eb912911433054897c253c56": {
+      "id": 168,
+      "addr": "0x74b438b2783b2e14eb912911433054897c253c56",
+      "name": "AVAX@okc",
+      "symbol": "AVAXw",
+      "decimals": "18"
+    },
+    "0xe5d2525d247cfb9a9aeb1fa223eacda6eee1d09a": {
+      "id": 193,
+      "addr": "0xe5d2525d247cfb9a9aeb1fa223eacda6eee1d09a",
+      "name": "XRP@okc",
+      "symbol": "XRPw",
+      "decimals": "6"
+    }
+  },
+  "2147484655": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 95,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "FTM",
+      "symbol": "FTM",
+      "decimals": "18"
+    },
+    "0xfa1fbb8ef55a4855e5688c0ee13ac3f202486286": {
+      "id": 106,
+      "addr": "0xfa1fbb8ef55a4855e5688c0ee13ac3f202486286",
+      "name": "Fantohm",
+      "symbol": "FHM",
+      "decimals": "9"
+    }
+  },
+  "2147485463": {
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3535353334343534": {
+      "id": 501,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3535353334343534",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "USDT",
+      "decimals": "6"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3535353334343433": {
+      "id": 510,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3535353334343433",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e343535343438": {
+      "id": 515,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e343535343438",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "ETH",
+      "decimals": "18"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e343235343433": {
+      "id": 520,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e343235343433",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "BTC",
+      "decimals": "8"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 523,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "ADA",
+      "symbol": "ADA",
+      "decimals": "6"
+    },
+    "0x31306134396239393665323430323236396166353533613861393666623865623930643739653965636137396532623432323330353762362e3437343535323466": {
+      "id": 553,
+      "addr": "0x31306134396239393665323430323236396166353533613861393666623865623930643739653965636137396532623432323330353762362e3437343535323466",
+      "name": "10a49b996e2402269af553a8a96fb8eb90d79e9eca79e2b4223057b6",
+      "symbol": "GERO",
+      "decimals": "6"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e343434313439": {
+      "id": 563,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e343434313439",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "DAI",
+      "decimals": "18"
+    },
+    "0x31616434663036386134396262663064346630353333356361646563613035313963656633346363316232626333356232653537333961652e3433346634333462": {
+      "id": 575,
+      "addr": "0x31616434663036386134396262663064346630353333356361646563613035313963656633346363316232626333356232653537333961652e3433346634333462",
+      "name": "1ad4f068a49bbf0d4f05335cadeca0519cef34cc1b2bc35b2e5739ae",
+      "symbol": "COCK",
+      "decimals": "0"
+    },
+    "0x39656165643366393966356339646131363935616361663235343263643662396633656631386262663934646433663737643137663963622e3534343134343431": {
+      "id": 610,
+      "addr": "0x39656165643366393966356339646131363935616361663235343263643662396633656631386262663934646433663737643137663963622e3534343134343431",
+      "name": "9eaed3f99f5c9da1695acaf2542cd6b9f3ef18bbf94dd3f77d17f9cb",
+      "symbol": "TADA",
+      "decimals": "0"
+    },
+    "0x31666332316339633764663364656361313664363939623264353463663561613437373537366164633435663763313334303133386131392e34333431353234343533": {
+      "id": 626,
+      "addr": "0x31666332316339633764663364656361313664363939623264353463663561613437373537366164633435663763313334303133386131392e34333431353234343533",
+      "name": "1fc21c9c7df3deca16d699b2d54cf5aa477576adc45f7c1340138a19",
+      "symbol": "CARDS",
+      "decimals": "6"
+    },
+    "0x31643766333362643233643835653161323564383764383666616334663139396333313937613266376166656236363261306633346531652e3737366637323663363436643666363236393663363537343666366236353665": {
+      "id": 660,
+      "addr": "0x31643766333362643233643835653161323564383764383666616334663139396333313937613266376166656236363261306633346531652e3737366637323663363436643666363236393663363537343666366236353665",
+      "name": "1d7f33bd23d85e1a25d87d86fac4f199c3197a2f7afeb662a0f34e1e",
+      "symbol": "worldmobiletoken",
+      "decimals": "6"
+    },
+    "0x39623432363932316132316635343630303731316461306265316131326230323637303361396264386562393834386430386339643932312e343334313534353334623539": {
+      "id": 667,
+      "addr": "0x39623432363932316132316635343630303731316461306265316131326230323637303361396264386562393834386430386339643932312e343334313534353334623539",
+      "name": "9b426921a21f54600711da0be1a12b026703a9bd8eb9848d08c9d921",
+      "symbol": "CATSKY",
+      "decimals": "0"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3435353535323433": {
+      "id": 763,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3435353535323433",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "EURC",
+      "decimals": "6"
+    },
+    "0x35623465663738653166376366653562333864326539633338326139633061623164393239333638613133636364366437373962616332372e3435353034393433": {
+      "id": 772,
+      "addr": "0x35623465663738653166376366653562333864326539633338326139633061623164393239333638613133636364366437373962616332372e3435353034393433",
+      "name": "5b4ef78e1f7cfe5b38d2e9c382a9c0ab1d929368a13ccd6d779bac27",
+      "symbol": "EPIC",
+      "decimals": "0"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3538343135353734": {
+      "id": 777,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3538343135353734",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "XAUt",
+      "decimals": "6"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3434343534373431": {
+      "id": 802,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3434343534373431",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "DEGA",
+      "decimals": "18"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e35303539353535333434": {
+      "id": 898,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e35303539353535333434",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "PYUSD",
+      "decimals": "6"
+    },
+    "0x34336230376434303337663064373565653130663938363330393734363366633032666633633062386237303561653631643963373562662e34643739366537343638323035343666366236353665": {
+      "id": 911,
+      "addr": "0x34336230376434303337663064373565653130663938363330393734363366633032666633633062386237303561653631643963373562662e34643739366537343638323035343666366236353665",
+      "name": "43b07d4037f0d75ee10f9863097463fc02ff3c0b8b705ae61d9c75bf",
+      "symbol": "Mynth Token",
+      "decimals": "6"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3438373935303433": {
+      "id": 949,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3438373935303433",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "HyPC",
+      "decimals": "6"
+    },
+    "0x61303032386633353061616162653035343566646362353662303339626662303865346262346438633464376333633764343831633233352e34383466353334623539": {
+      "id": 955,
+      "addr": "0x61303032386633353061616162653035343566646362353662303339626662303865346262346438633464376333633764343831633233352e34383466353334623539",
+      "name": "a0028f350aaabe0545fdcb56b039bfb08e4bb4d8c4d7c3c7d481c235",
+      "symbol": "HOSKY",
+      "decimals": "0"
+    },
+    "0x61633131613161303766303465633965666565346334366333353937323539323233373765633561343539366262656436373063633932302e34633666373536353739": {
+      "id": 609,
+      "addr": "0x61633131613161303766303465633965666565346334366333353937323539323233373765633561343539366262656436373063633932302e34633666373536353739",
+      "name": "ac11a1a07f04ec9efee4c46c359725922377ec5a4596bbed670cc920",
+      "symbol": "Louey",
+      "decimals": "0"
+    },
+    "0x66623065396130383361633636633831343534383030326362646663353435353765303634653463646635633636373565373264323262342e3434343534313465": {
+      "id": 655,
+      "addr": "0x66623065396130383361633636633831343534383030326362646663353435353765303634653463646635633636373565373264323262342e3434343534313465",
+      "name": "fb0e9a083ac66c814548002cbdfc54557e064e4cdf5c6675e72d22b4",
+      "symbol": "DEAN",
+      "decimals": "0"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e353734313465": {
+      "id": 761,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e353734313465",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "WAN",
+      "decimals": "18"
+    },
+    "0x64663164383530633436643663396431326362663631383163333564623932323561393162373763386136343662376636333666386165342e3030313464663130346534393465346134313561": {
+      "id": 590,
+      "addr": "0x64663164383530633436643663396431326362663631383163333564623932323561393162373763386136343662376636333666386165342e3030313464663130346534393465346134313561",
+      "name": "df1d850c46d6c9d12cbf6181c35db9225a91b77c8a646b7f636f8ae4",
+      "symbol": "\u0000\u0014ß\u0010NINJAZ",
+      "decimals": "6"
+    },
+    "0x65613135336235643438363461663135613130373961393461306532343836643633373666613238616166616432373264313562323433612e3030313464663130353336383631373236343733": {
+      "id": 657,
+      "addr": "0x65613135336235643438363461663135613130373961393461306532343836643633373666613238616166616432373264313562323433612e3030313464663130353336383631373236343733",
+      "name": "ea153b5d4864af15a1079a94a0e2486d6376fa28aafad272d15b243a",
+      "symbol": "\u0000\u0014ß\u0010Shards",
+      "decimals": "6"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e353334383431353234343533323035303666366337393637366636653230346335303230353436663662363536653733": {
+      "id": 664,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e353334383431353234343533323035303666366337393637366636653230346335303230353436663662363536653733",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "SHARDS Polygon LP Tokens",
+      "decimals": "18"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e343434663534": {
+      "id": 725,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e343434663534",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "DOT",
+      "decimals": "10"
+    },
+    "0x33376230336362633462316134666361666335346537306363333163363562343734376138393839383463353734623333393365303033632e35333462343934633463": {
+      "id": 819,
+      "addr": "0x33376230336362633462316134666361666335346537306363333163363562343734376138393839383463353734623333393365303033632e35333462343934633463",
+      "name": "37b03cbc4b1a4fcafc54e70cc31c65b4747a898984c574b3393e003c",
+      "symbol": "SKILL",
+      "decimals": "6"
+    },
+    "0x35333362623934613838353065653363636265343833313036343839333939313132623734633930353334326362313739326137393761302e3439346534343539": {
+      "id": 823,
+      "addr": "0x35333362623934613838353065653363636265343833313036343839333939313132623734633930353334326362313739326137393761302e3439346534343539",
+      "name": "533bb94a8850ee3ccbe483106489399112b74c905342cb1792a797a0",
+      "symbol": "INDY",
+      "decimals": "6"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e353334663463": {
+      "id": 848,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e353334663463",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "SOL",
+      "decimals": "9"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e343135613536343134343431": {
+      "id": 887,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e343135613536343134343431",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "AZVADA",
+      "decimals": "15"
+    },
+    "0x30633531663166623962323936306536343661326437386431383666326139356231333038636138633439623335613831373038656433392e34353463323036393733323036363666373232303463363936313732": {
+      "id": 895,
+      "addr": "0x30633531663166623962323936306536343661326437386431383666326139356231333038636138633439623335613831373038656433392e34353463323036393733323036363666373232303463363936313732",
+      "name": "0c51f1fb9b2960e646a2d78d186f2a95b1308ca8c49b35a81708ed39",
+      "symbol": "EL is for Liar",
+      "decimals": "0"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e353835323530": {
+      "id": 941,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e353835323530",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "XRP",
+      "decimals": "6"
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e343434663437": {
+      "id": 996,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e343434663437",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "DOG",
+      "decimals": "5"
+    },
+    "0x37333034383139646366626638616537326335353637386531373761376635653639653031396430626335663633363635363135613264632e363934333638363137323663": {
+      "id": 997,
+      "addr": "0x37333034383139646366626638616537326335353637386531373761376635653639653031396430626335663633363635363135613264632e363934333638363137323663",
+      "name": "7304819dcfbf8ae72c55678e177a7f5e69e019d0bc5f63665615a2dc",
+      "symbol": "iCharl",
+      "decimals": "0"
+    },
+    "0x39376262623764623062616566383963616566636536316238313037616337346337613733343031363662333964393036663137346265632e35343631366336663733": {
+      "id": 1003,
+      "addr": "0x39376262623764623062616566383963616566636536316238313037616337346337613733343031363662333964393036663137346265632e35343631366336663733",
+      "name": "97bbb7db0baef89caefce61b8107ac74c7a7340166b39d906f174bec",
+      "symbol": "Talos",
+      "decimals": "0"
+    },
+    "0x36643036353730646464373738656337633063636130396433383165636131393465393063386366666137353832383739373335646264652e353834353532": {
+      "id": 1154,
+      "addr": "0x36643036353730646464373738656337633063636130396433383165636131393465393063386366666137353832383739373335646264652e353834353532",
+      "name": "6d06570ddd778ec7c0cca09d381eca194e90c8cffa7582879735dbde",
+      "symbol": "XER",
+      "decimals": 15
+    },
+    "0x30363931623266656363613161633466353363623664666230306237303133653536316431663334343033623935376362623561663166612e34653439343734383534": {
+      "id": 1240,
+      "addr": "0x30363931623266656363613161633466353363623664666230306237303133653536316431663334343033623935376362623561663166612e34653439343734383534",
+      "name": "0691b2fecca1ac4f53cb6dfb00b7013e561d1f34403b957cbb5af1fa",
+      "symbol": "NIGHT",
+      "decimals": 6
+    },
+    "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3432343434333431": {
+      "id": 1241,
+      "addr": "0x32356335646535663562323836303733633539336564666437376234386162633761343865356134663364346364396434323866663933352e3432343434333431",
+      "name": "25c5de5f5b286073c593edfd77b48abc7a48e5a4f3d4cd9d428ff935",
+      "symbol": "BDCA",
+      "decimals": 6
+    }
+  },
+  "2147492648": {
+    "0x265fc66e84939f36d90ee38734afe4a770d2c114": {
+      "id": 42,
+      "addr": "0x265fc66e84939f36d90ee38734afe4a770d2c114",
+      "name": "ETH@avalanche",
+      "symbol": "ETH",
+      "decimals": "18"
+    },
+    "0xae110a0e6e5ddb0108f6d752f754b575d62b7534": {
+      "id": 74,
+      "addr": "0xae110a0e6e5ddb0108f6d752f754b575d62b7534",
+      "name": "Vee",
+      "symbol": "VEE",
+      "decimals": "18"
+    },
+    "0xea6887e4a9cda1b77e70129e5fba830cdb5cddef": {
+      "id": 86,
+      "addr": "0xea6887e4a9cda1b77e70129e5fba830cdb5cddef",
+      "name": "IMX@avalanche",
+      "symbol": "IMX.a",
+      "decimals": "18"
+    },
+    "0x9e529b128e3e3ffcb261ee35e10a3366f51448e5": {
+      "id": 87,
+      "addr": "0x9e529b128e3e3ffcb261ee35e10a3366f51448e5",
+      "name": "VOX@avalanche",
+      "symbol": "VOX.a",
+      "decimals": "18"
+    },
+    "0x398d9647ae6c5e64b0d1afbedfa2fd42bb43939e": {
+      "id": 113,
+      "addr": "0x398d9647ae6c5e64b0d1afbedfa2fd42bb43939e",
+      "name": "BAL@avalanche",
+      "symbol": "BAL",
+      "decimals": "18"
+    },
+    "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7": {
+      "id": 232,
+      "addr": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+      "name": "TetherToken",
+      "symbol": "USDt",
+      "decimals": "6"
+    },
+    "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e": {
+      "id": 241,
+      "addr": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": "6"
+    },
+    "0x412bdecdc3e9c2922e92692c0a8961dee0c793c1": {
+      "id": 300,
+      "addr": "0x412bdecdc3e9c2922e92692c0a8961dee0c793c1",
+      "name": "NUTS@avalanche",
+      "symbol": "NUTS",
+      "decimals": "18"
+    },
+    "0x152b9d0fdc40c096757f570a51e494bd4b943e50": {
+      "id": 418,
+      "addr": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+      "name": "Bitcoin",
+      "symbol": "BTC.b",
+      "decimals": "8"
+    },
+    "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab": {
+      "id": 572,
+      "addr": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+      "name": "Wrapped Ether",
+      "symbol": "WETH.e",
+      "decimals": "18"
+    },
+    "0xd45f893c97999aaf068d5a5713650ee962364e25": {
+      "id": 264,
+      "addr": "0xd45f893c97999aaf068d5a5713650ee962364e25",
+      "name": "BET@avalanche",
+      "symbol": "BET.a",
+      "decimals": "15"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 39,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "AVAX",
+      "symbol": "AVAX",
+      "decimals": "18"
+    },
+    "0xb58078cbe44fb2cb51cdf59e02fc35072139aeef": {
+      "id": 41,
+      "addr": "0xb58078cbe44fb2cb51cdf59e02fc35072139aeef",
+      "name": "BTC@avalanche",
+      "symbol": "BTC",
+      "decimals": "8"
+    },
+    "0xccf619a8a7a1557fbe3b61f551971309f4818e24": {
+      "id": 44,
+      "addr": "0xccf619a8a7a1557fbe3b61f551971309f4818e24",
+      "name": "WAN@avalanche",
+      "symbol": "WAN",
+      "decimals": "18"
+    },
+    "0xe0866edc0cc43ff07bfe126f3cb2f94a0803047f": {
+      "id": 45,
+      "addr": "0xe0866edc0cc43ff07bfe126f3cb2f94a0803047f",
+      "name": "LTC@avalanche",
+      "symbol": "LTC",
+      "decimals": "8"
+    },
+    "0x822c433922f80f905e4f6d052bda468389c8c379": {
+      "id": 46,
+      "addr": "0x822c433922f80f905e4f6d052bda468389c8c379",
+      "name": "XRP@avalanche",
+      "symbol": "XRP",
+      "decimals": "6"
+    },
+    "0xd38bfdbfe7002ca56a1e05606e75aef5c521fff9": {
+      "id": 47,
+      "addr": "0xd38bfdbfe7002ca56a1e05606e75aef5c521fff9",
+      "name": "DOT@avalanche",
+      "symbol": "DOT",
+      "decimals": "10"
+    },
+    "0x8d9dcc422407f40bf105d8c777ccb365aceb70b6": {
+      "id": 78,
+      "addr": "0x8d9dcc422407f40bf105d8c777ccb365aceb70b6",
+      "name": "DOGE@avalanche",
+      "symbol": "DOGE",
+      "decimals": "8"
+    },
+    "0xc73869475a500d5a89fd891b40ae6b9a38a18ac9": {
+      "id": 112,
+      "addr": "0xc73869475a500d5a89fd891b40ae6b9a38a18ac9",
+      "name": "vZOO@avalanche",
+      "symbol": "vZOO",
+      "decimals": "18"
+    },
+    "0x3a471089dc0a91676b1dbd62da7e49dab6b94d00": {
+      "id": 115,
+      "addr": "0x3a471089dc0a91676b1dbd62da7e49dab6b94d00",
+      "name": "XDC@avalanche",
+      "symbol": "XDC",
+      "decimals": "18"
+    },
+    "0x8d508595f094c42ade6d3625a206abe9551c5858": {
+      "id": 145,
+      "addr": "0x8d508595f094c42ade6d3625a206abe9551c5858",
+      "name": "OKT@avalanche",
+      "symbol": "OKT",
+      "decimals": "18"
+    },
+    "0x69282f841459a3d83984dbad366e2cc14c5b2aa2": {
+      "id": 376,
+      "addr": "0x69282f841459a3d83984dbad366e2cc14c5b2aa2",
+      "name": "ZOO-WAN-WSLP@avax",
+      "symbol": "ZOO-WAN-WSLP",
+      "decimals": "18"
+    },
+    "0x1e7e46945e50bbe7df7014c086b642e6b7b4a625": {
+      "id": 654,
+      "addr": "0x1e7e46945e50bbe7df7014c086b642e6b7b4a625",
+      "name": "DEAN@Avalanche",
+      "symbol": "DEAN",
+      "decimals": "0"
+    },
+    "0xb1f19e492401545c1b060c4b18688f9178325b4d": {
+      "id": 657,
+      "addr": "0xb1f19e492401545c1b060c4b18688f9178325b4d",
+      "name": "SHARDS@Avalanche",
+      "symbol": "SHARDS",
+      "decimals": "6"
+    },
+    "0x49a313673d4354ddc596e9b2131964fbfcd872b0": {
+      "id": 749,
+      "addr": "0x49a313673d4354ddc596e9b2131964fbfcd872b0",
+      "name": "CIFI@avalanche",
+      "symbol": "CIFI",
+      "decimals": "18"
+    },
+    "0x940f7994921a292a5062dc81c65511fda79f4bc9": {
+      "id": 883,
+      "addr": "0x940f7994921a292a5062dc81c65511fda79f4bc9",
+      "name": "REFI@avalanche",
+      "symbol": "REFI",
+      "decimals": "18"
+    },
+    "0xf197ffc28c23e0309b5559e7a166f2c6164c80aa": {
+      "id": 1192,
+      "addr": "0xf197ffc28c23e0309b5559e7a166f2c6164c80aa",
+      "name": "MXNB",
+      "symbol": "MXNB",
+      "decimals": "6"
+    }
+  },
+  "2147493445": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 1006,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "NRG",
+      "symbol": "NRG",
+      "decimals": "18"
+    }
+  },
+  "2147493655": {
+    "0x29219dd400f2bf60e5a23d13be72b486d4038894": {
+      "id": 1086,
+      "addr": "0x29219dd400f2bf60e5a23d13be72b486d4038894",
+      "name": "USDC",
+      "symbol": "USDC",
+      "decimals": "6"
+    }
+  },
+  "2147536400": {
+    "0xceba9300f2b948710d2653dd7b07f33a8b32118c": {
+      "id": 709,
+      "addr": "0xceba9300f2b948710d2653dd7b07f33a8b32118c",
+      "name": "USDC",
+      "symbol": "USDC",
+      "decimals": "6"
+    }
+  },
+  "2153201998": {
+    "0xe3ae74d1518a76715ab4c7bedf1af73893cd435a": {
+      "id": 1,
+      "addr": "0xe3ae74d1518a76715ab4c7bedf1af73893cd435a",
+      "name": "wanETH@wanchain",
+      "symbol": "wanETH",
+      "decimals": "18"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "id": 2,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "wanchain",
+      "symbol": "WAN",
+      "decimals": "18"
+    },
+    "0x06da85475f9d2ae79af300de474968cd5a4fde61": {
+      "id": 3,
+      "addr": "0x06da85475f9d2ae79af300de474968cd5a4fde61",
+      "name": "wanLINK@wanchain",
+      "symbol": "wanLINK",
+      "decimals": "18"
+    },
+    "0x50c439b6d602297252505a6799d84ea5928bcfb6": {
+      "id": 5,
+      "addr": "0x50c439b6d602297252505a6799d84ea5928bcfb6",
+      "name": "wanBTC@wanchain",
+      "symbol": "wanBTC",
+      "decimals": "8"
+    },
+    "0x81862b7622ced0defb652addd4e0c110205b0040": {
+      "id": 6,
+      "addr": "0x81862b7622ced0defb652addd4e0c110205b0040",
+      "name": "Wanchain EOS Crosschain Token",
+      "symbol": "EOS",
+      "decimals": "4"
+    },
+    "0xa31b67a8cba75ea6ced8340d8bc0431ab052a4fa": {
+      "id": 7,
+      "addr": "0xa31b67a8cba75ea6ced8340d8bc0431ab052a4fa",
+      "name": "wanMKR@wanchain",
+      "symbol": "wanMKR",
+      "decimals": "18"
+    },
+    "0x83b1427e95c6f50c547fb3578f7745418336c417": {
+      "id": 8,
+      "addr": "0x83b1427e95c6f50c547fb3578f7745418336c417",
+      "name": "wanZXC@wanchain",
+      "symbol": "wanZXC",
+      "decimals": "18"
+    },
+    "0x774e8ee296d7d9f5033a7483ecbf71234bdec5cf": {
+      "id": 9,
+      "addr": "0x774e8ee296d7d9f5033a7483ecbf71234bdec5cf",
+      "name": "wanEURS@wanchain",
+      "symbol": "wanEURS",
+      "decimals": "2"
+    },
+    "0x11e77e27af5539872efed10abaa0b408cfd9fbbd": {
+      "id": 10,
+      "addr": "0x11e77e27af5539872efed10abaa0b408cfd9fbbd",
+      "name": "wanUSDT@wanchain",
+      "symbol": "wanUSDT",
+      "decimals": "6"
+    },
+    "0x1efda4cfb47652d2193430c8da773d0d2dc425f8": {
+      "id": 11,
+      "addr": "0x1efda4cfb47652d2193430c8da773d0d2dc425f8",
+      "name": "wanTUSD@wanchain",
+      "symbol": "wanTUSD",
+      "decimals": "18"
+    },
+    "0xcf422327ddaaa409c2976d01131d8a3457f03251": {
+      "id": 12,
+      "addr": "0xcf422327ddaaa409c2976d01131d8a3457f03251",
+      "name": "wanGUSD@wanchain",
+      "symbol": "wanGUSD",
+      "decimals": "2"
+    },
+    "0x52a9cea01c4cbdd669883e41758b8eb8e8e2b34b": {
+      "id": 13,
+      "addr": "0x52a9cea01c4cbdd669883e41758b8eb8e8e2b34b",
+      "name": "wanUSDC@wanchain",
+      "symbol": "wanUSDC",
+      "decimals": "6"
+    },
+    "0x73eaa7431b11b1e7a7d5310de470de09883529df": {
+      "id": 16,
+      "addr": "0x73eaa7431b11b1e7a7d5310de470de09883529df",
+      "name": "wanUNI@wanchain",
+      "symbol": "wanUNI",
+      "decimals": "18"
+    },
+    "0x8b9f9f4aa70b1b0d586be8adfb19c1ac38e05e9a": {
+      "id": 17,
+      "addr": "0x8b9f9f4aa70b1b0d586be8adfb19c1ac38e05e9a",
+      "name": "WaspToken",
+      "symbol": "WASP",
+      "decimals": "18"
+    },
+    "0xf665e0e3e75d16466345e1129530ec28839efaea": {
+      "id": 20,
+      "addr": "0xf665e0e3e75d16466345e1129530ec28839efaea",
+      "name": "wanXRP@wanchain",
+      "symbol": "wanXRP",
+      "decimals": "6"
+    },
+    "0x9b6863f6ab2047069ad1cd15fff8c45af637d67c": {
+      "id": 21,
+      "addr": "0x9b6863f6ab2047069ad1cd15fff8c45af637d67c",
+      "name": "wanSUSHI@wanchain",
+      "symbol": "wanSUSHI",
+      "decimals": "18"
+    },
+    "0xf1d0ad0c4a612ecf4931b673245f1fc2935bccdc": {
+      "id": 22,
+      "addr": "0xf1d0ad0c4a612ecf4931b673245f1fc2935bccdc",
+      "name": "wanZCN@wanchain",
+      "symbol": "wanZCN",
+      "decimals": "10"
+    },
+    "0xde1a20792553b84ddb254ca78fa7c5996ad5fbe2": {
+      "id": 23,
+      "addr": "0xde1a20792553b84ddb254ca78fa7c5996ad5fbe2",
+      "name": "wanVIBE@wanchain",
+      "symbol": "wanVIBE",
+      "decimals": "18"
+    },
+    "0xdab498c11f19b25611331cebffd840576d1dc86d": {
+      "id": 24,
+      "addr": "0xdab498c11f19b25611331cebffd840576d1dc86d",
+      "name": "FNX",
+      "symbol": "FNX",
+      "decimals": "18"
+    },
+    "0x8f587d955f3cf200290426f91a7c3687787ed703": {
+      "id": 28,
+      "addr": "0x8f587d955f3cf200290426f91a7c3687787ed703",
+      "name": "wanOCEAN@wanchain",
+      "symbol": "wanOCEAN",
+      "decimals": "18"
+    },
+    "0xf17c59bf0f6326da7a8cc2ce417e4f53a26707bd": {
+      "id": 31,
+      "addr": "0xf17c59bf0f6326da7a8cc2ce417e4f53a26707bd",
+      "name": "Phoenix Token@WAN",
+      "symbol": "PHX",
+      "decimals": "18"
+    },
+    "0xd8fa6921b24ab1cd52ab553d1f99aaedc321e562": {
+      "id": 34,
+      "addr": "0xd8fa6921b24ab1cd52ab553d1f99aaedc321e562",
+      "name": "Convertible Phoenix Token@WAN",
+      "symbol": "cPHX",
+      "decimals": "18"
+    },
+    "0x716f88d32b52342af040b2e775871dff56ebd035": {
+      "id": 62,
+      "addr": "0x716f88d32b52342af040b2e775871dff56ebd035",
+      "name": "wanCFi@wanchain",
+      "symbol": "wanCFi",
+      "decimals": "18"
+    },
+    "0x4f1d3d9ce4bb7646c35dcd05d3296f106f12345c": {
+      "id": 64,
+      "addr": "0x4f1d3d9ce4bb7646c35dcd05d3296f106f12345c",
+      "name": "wanKYL@wanchain",
+      "symbol": "wanKYL",
+      "decimals": "18"
+    },
+    "0xaacb8505b680dd287ecde9679c72aa5fef2e9b0c": {
+      "id": 65,
+      "addr": "0xaacb8505b680dd287ecde9679c72aa5fef2e9b0c",
+      "name": "wanECR@wanchain",
+      "symbol": "wanECR",
+      "decimals": "18"
+    },
+    "0x74e121a34a66d54c33f3291f2cdf26b1cd037c3a": {
+      "id": 67,
+      "addr": "0x74e121a34a66d54c33f3291f2cdf26b1cd037c3a",
+      "name": "wanrETH@wanchain",
+      "symbol": "wanrETH",
+      "decimals": "18"
+    },
+    "0xb24999cf67e4eacbf164bce9138136f33589d969": {
+      "id": 88,
+      "addr": "0xb24999cf67e4eacbf164bce9138136f33589d969",
+      "name": "VOX@wanchain",
+      "symbol": "VOX",
+      "decimals": "18"
+    },
+    "0x382b085a47cff1ea34bac4fe016f5fa5f061af7a": {
+      "id": 196,
+      "addr": "0x382b085a47cff1ea34bac4fe016f5fa5f061af7a",
+      "name": "EURC@wanchain",
+      "symbol": "EURC",
+      "decimals": "6"
+    },
+    "0xcf37e8ff3df23b42ea6d8eac3c93f14c562b6985": {
+      "id": 224,
+      "addr": "0xcf37e8ff3df23b42ea6d8eac3c93f14c562b6985",
+      "name": "PRNT@wanchain",
+      "symbol": "wanPRINT",
+      "decimals": "18"
+    },
+    "0x992e4447f470ea47819d677b84d2459677bfdadf": {
+      "id": 253,
+      "addr": "0x992e4447f470ea47819d677b84d2459677bfdadf",
+      "name": "ZooGene",
+      "symbol": "ZooGene",
+      "decimals": "ERC721"
+    },
+    "0xecafc7c6119d9e5c896517bbdcb178c762d27022": {
+      "id": 293,
+      "addr": "0xecafc7c6119d9e5c896517bbdcb178c762d27022",
+      "name": "BLP@wanchain",
+      "symbol": "wanBLP",
+      "decimals": "18"
+    },
+    "0xa07c874323ab6ac31d7fa3dcfb92163f363f7113": {
+      "id": 299,
+      "addr": "0xa07c874323ab6ac31d7fa3dcfb92163f363f7113",
+      "name": "GMPD@wanchain",
+      "symbol": "wanGMPD",
+      "decimals": "18"
+    },
+    "0x785ff608235500aeeab02b60d2e5d8e97788927d": {
+      "id": 309,
+      "addr": "0x785ff608235500aeeab02b60d2e5d8e97788927d",
+      "name": "VINU@wanchain",
+      "symbol": "VINU",
+      "decimals": "18"
+    },
+    "0x8371f7e350f4f054e965a2abb629c38d4f7ed77f": {
+      "id": 414,
+      "addr": "0x8371f7e350f4f054e965a2abb629c38d4f7ed77f",
+      "name": "GTH@wanchain",
+      "symbol": "GTH",
+      "decimals": "18"
+    },
+    "0x6b747de9e98b333c489bfabcc08f5b47b1a6d1ad": {
+      "id": 555,
+      "addr": "0x6b747de9e98b333c489bfabcc08f5b47b1a6d1ad",
+      "name": "GERO@wanchain",
+      "symbol": "GERO",
+      "decimals": "18"
+    },
+    "0x18a39cdd1bfd592f40e4862728df8879e84bbc91": {
+      "id": 564,
+      "addr": "0x18a39cdd1bfd592f40e4862728df8879e84bbc91",
+      "name": "DAI@wanchain",
+      "symbol": "DAI",
+      "decimals": "18"
+    },
+    "0x85a457fdc949f01d41bb9204fd56827f1fbced88": {
+      "id": 612,
+      "addr": "0x85a457fdc949f01d41bb9204fd56827f1fbced88",
+      "name": "TADA@wanchain",
+      "symbol": "TADA",
+      "decimals": "9"
+    },
+    "0x4aa2f91e461ebd29e4b73defb7e2caa1a25081a1": {
+      "id": 628,
+      "addr": "0x4aa2f91e461ebd29e4b73defb7e2caa1a25081a1",
+      "name": "CARDS@wanchain",
+      "symbol": "CARDS",
+      "decimals": "18"
+    },
+    "0xb6500739151f255287c945602dfe17615fa1b8ea": {
+      "id": 694,
+      "addr": "0xb6500739151f255287c945602dfe17615fa1b8ea",
+      "name": "Dimo Token",
+      "symbol": "DIMO",
+      "decimals": "18"
+    },
+    "0xe6e221c02e6fc253899894b002ea1b4a3831ea39": {
+      "id": 755,
+      "addr": "0xe6e221c02e6fc253899894b002ea1b4a3831ea39",
+      "name": "ZON@wanchain",
+      "symbol": "ZON",
+      "decimals": "18"
+    },
+    "0x0914651ad9464373e2fb398fdee041ec71390ea2": {
+      "id": 778,
+      "addr": "0x0914651ad9464373e2fb398fdee041ec71390ea2",
+      "name": "XAUt@wanchain",
+      "symbol": "XAUt",
+      "decimals": "6"
+    },
+    "0xbca6af5de3e51c99577c1d30a156e5f934803bd8": {
+      "id": 805,
+      "addr": "0xbca6af5de3e51c99577c1d30a156e5f934803bd8",
+      "name": "DEGA@wanchain",
+      "symbol": "DEGA",
+      "decimals": "18"
+    },
+    "0x0caf2a5397e6ad9b7305ac6e6e54af9b6c0ccd42": {
+      "id": 901,
+      "addr": "0x0caf2a5397e6ad9b7305ac6e6e54af9b6c0ccd42",
+      "name": "PYUSD@wanchain",
+      "symbol": "PYUSD",
+      "decimals": "6"
+    },
+    "0x6534980d2df89377799bd15d38861e851c9b761d": {
+      "id": 974,
+      "addr": "0x6534980d2df89377799bd15d38861e851c9b761d",
+      "name": "HOSKY@wanchain",
+      "symbol": "wanHOSKY",
+      "decimals": "0"
+    },
+    "0x6e11655d6ab3781c6613db8cb1bc3dee9a7e111f": {
+      "id": 69,
+      "addr": "0x6e11655d6ab3781c6613db8cb1bc3dee9a7e111f",
+      "name": "ZooToken",
+      "symbol": "ZOO",
+      "decimals": "18"
+    },
+    "0x9de0405064bedd88399098b4fbb2f7fa462992e0": {
+      "id": 98,
+      "addr": "0x9de0405064bedd88399098b4fbb2f7fa462992e0",
+      "name": "BNB@wanchain",
+      "symbol": "wanBNB",
+      "decimals": "18"
+    },
+    "0x3906d89e4d29ecb47db33ca72d356246b7a7cbec": {
+      "id": 266,
+      "addr": "0x3906d89e4d29ecb47db33ca72d356246b7a7cbec",
+      "name": "BET@wanchain",
+      "symbol": "wanBET",
+      "decimals": "15"
+    },
+    "0x64d4e24eec3ef8b117f04f49578e8482f713287b": {
+      "id": 603,
+      "addr": "0x64d4e24eec3ef8b117f04f49578e8482f713287b",
+      "name": "VC@wanchain",
+      "symbol": "VC",
+      "decimals": "18"
+    },
+    "0xd3a33c6fea7f785ddc0915f6a76919c11abded45": {
+      "id": 347,
+      "addr": "0xd3a33c6fea7f785ddc0915f6a76919c11abded45",
+      "name": "wanDOGE@wanchain",
+      "symbol": "wanDOGE",
+      "decimals": "8"
+    },
+    "0x52f44783bdf480e88c0ed4cf341a933cacfdbcaa": {
+      "id": 349,
+      "addr": "0x52f44783bdf480e88c0ed4cf341a933cacfdbcaa",
+      "name": "wanDOT@wanchain",
+      "symbol": "wanDOT",
+      "decimals": "10"
+    },
+    "0x990825c5d894385f1c5bd36b6427c5336d984e07": {
+      "id": 351,
+      "addr": "0x990825c5d894385f1c5bd36b6427c5336d984e07",
+      "name": "TRX@wanchain",
+      "symbol": "wanTRX",
+      "decimals": "6"
+    },
+    "0xf8b0d176257f9dc1ee49f038bb4f6cfd51af5762": {
+      "id": 96,
+      "addr": "0xf8b0d176257f9dc1ee49f038bb4f6cfd51af5762",
+      "name": "wanFTM@wanchain",
+      "symbol": "wanFTM",
+      "decimals": "18"
+    },
+    "0xd8e7bd03920ba407d764789b11dd2b5eaee0961e": {
+      "id": 29,
+      "addr": "0xd8e7bd03920ba407d764789b11dd2b5eaee0961e",
+      "name": "wanLTC@wanchain",
+      "symbol": "wanLTC",
+      "decimals": "8"
+    },
+    "0xb333721251961337f67bbbcaed514f9f284ce8e8": {
+      "id": 39,
+      "addr": "0xb333721251961337f67bbbcaed514f9f284ce8e8",
+      "name": "wanAVAX@wanchain",
+      "symbol": "wanAVAX",
+      "decimals": "18"
+    },
+    "0x114fa1201f82b83c5a2ff0465b4024f01f966b91": {
+      "id": 40,
+      "addr": "0x114fa1201f82b83c5a2ff0465b4024f01f966b91",
+      "name": "wanMOVR@wanchain",
+      "symbol": "wanMOVR",
+      "decimals": "18"
+    },
+    "0xf46f29950116cc374868a981861ca4f942ed7269": {
+      "id": 112,
+      "addr": "0xf46f29950116cc374868a981861ca4f942ed7269",
+      "name": "vZOO Token",
+      "symbol": "vZOO",
+      "decimals": "18"
+    },
+    "0xc7dca84a81324075e90a39250b0e07b7daf4f45d": {
+      "id": 114,
+      "addr": "0xc7dca84a81324075e90a39250b0e07b7daf4f45d",
+      "name": "XDC@wanchain",
+      "symbol": "XDC",
+      "decimals": "18"
+    },
+    "0x3251495c721ebff6ca4376c97215d7013a50c3ae": {
+      "id": 118,
+      "addr": "0x3251495c721ebff6ca4376c97215d7013a50c3ae",
+      "name": "GLMR@wanchain",
+      "symbol": "GLMR",
+      "decimals": "18"
+    },
+    "0xfb1dfe6522a92e131c2d9ad423f622018de44226": {
+      "id": 130,
+      "addr": "0xfb1dfe6522a92e131c2d9ad423f622018de44226",
+      "name": "xcKSM@wanchain",
+      "symbol": "wanxcKSM",
+      "decimals": "12"
+    },
+    "0x86b830023a8593a6a98f30783029506290558d0e": {
+      "id": 141,
+      "addr": "0x86b830023a8593a6a98f30783029506290558d0e",
+      "name": "OKT@wanchain",
+      "symbol": "wanOKT",
+      "decimals": "18"
+    },
+    "0xbd4191828aeff23fb9e0249a5ae583a4b9425e49": {
+      "id": 206,
+      "addr": "0xbd4191828aeff23fb9e0249a5ae583a4b9425e49",
+      "name": "GZX@wanchain",
+      "symbol": "wanGZX",
+      "decimals": "15"
+    },
+    "0x2055ae7250f814995ab41499ba1963f2c2f58a3a": {
+      "id": 210,
+      "addr": "0x2055ae7250f814995ab41499ba1963f2c2f58a3a",
+      "name": "xBIBLx@wanchain",
+      "symbol": "wanxBIBLx",
+      "decimals": "15"
+    },
+    "0xd557cc89ca98db85ef5ad09afba7c22583fe727e": {
+      "id": 212,
+      "addr": "0xd557cc89ca98db85ef5ad09afba7c22583fe727e",
+      "name": "XLIST@wanchain",
+      "symbol": "wanXLIST",
+      "decimals": "15"
+    },
+    "0xbcc7ac1bd0204d492335b38d9877b627a2c04bfd": {
+      "id": 214,
+      "addr": "0xbcc7ac1bd0204d492335b38d9877b627a2c04bfd",
+      "name": "NVL@wanchain",
+      "symbol": "wanNVL",
+      "decimals": "15"
+    },
+    "0xcfad8a6ed9b7075c5a3b42557cf2b343b266c472": {
+      "id": 272,
+      "addr": "0xcfad8a6ed9b7075c5a3b42557cf2b343b266c472",
+      "name": "XDSea Marketplace",
+      "symbol": "XDSea Token",
+      "decimals": "ERC721"
+    },
+    "0xa6cbea6c72c002daa535b4a614e7246c2ae25e16": {
+      "id": 376,
+      "addr": "0xa6cbea6c72c002daa535b4a614e7246c2ae25e16",
+      "name": "WanSwap Liquidity Pool Token",
+      "symbol": "WSLP",
+      "decimals": "18"
+    },
+    "0x69a0b487f287d8b41ec1d26bcd11d101c2577a6b": {
+      "id": 395,
+      "addr": "0x69a0b487f287d8b41ec1d26bcd11d101c2577a6b",
+      "name": "PLAY@wanchain",
+      "symbol": "PLAY",
+      "decimals": "18"
+    },
+    "0xe91aa638947b3df089deb00770ab2d88b2721a46": {
+      "id": 397,
+      "addr": "0xe91aa638947b3df089deb00770ab2d88b2721a46",
+      "name": "FX@wanchain",
+      "symbol": "FX",
+      "decimals": "18"
+    },
+    "0x55922ec9e8fcdae54de7af18f8f5a96c1ab8c973": {
+      "id": 400,
+      "addr": "0x55922ec9e8fcdae54de7af18f8f5a96c1ab8c973",
+      "name": "PUNDIX@wanchain",
+      "symbol": "PUNDIX",
+      "decimals": "18"
+    },
+    "0x2fb75f36c3053acd8e35b6d58cdff35a263b7556": {
+      "id": 407,
+      "addr": "0x2fb75f36c3053acd8e35b6d58cdff35a263b7556",
+      "name": "FXG@wanchain",
+      "symbol": "FXG",
+      "decimals": "18"
+    },
+    "0xe5fc457a7d2932a4dd78634debf816962fde77bb": {
+      "id": 409,
+      "addr": "0xe5fc457a7d2932a4dd78634debf816962fde77bb",
+      "name": "NANOS@wanchain",
+      "symbol": "NANOS",
+      "decimals": "ERC721"
+    },
+    "0x79d745178bc271a1f29f8fbe9251dfc512db842c": {
+      "id": 524,
+      "addr": "0x79d745178bc271a1f29f8fbe9251dfc512db842c",
+      "name": "ADA@wanchain",
+      "symbol": "wanADA",
+      "decimals": "6"
+    },
+    "0xa92fa8dfd5e45f931221a43e6f330e785c8141bf": {
+      "id": 661,
+      "addr": "0xa92fa8dfd5e45f931221a43e6f330e785c8141bf",
+      "name": "WMT@wanchain",
+      "symbol": "WMT",
+      "decimals": "18"
+    },
+    "0x6425fec5faa08f8a0485265da5f4892776ace0f8": {
+      "id": 820,
+      "addr": "0x6425fec5faa08f8a0485265da5f4892776ace0f8",
+      "name": "ORACLE@wanchain",
+      "symbol": "ORACLE",
+      "decimals": "18"
+    },
+    "0x0b3d974a9077d4415ab414f398f9fa5d2ab62076": {
+      "id": 822,
+      "addr": "0x0b3d974a9077d4415ab414f398f9fa5d2ab62076",
+      "name": "NEXU@wanchain",
+      "symbol": "NEXU",
+      "decimals": "18"
+    },
+    "0x3db40923e0410e2d81d3a5e529b851a93313bb3f": {
+      "id": 830,
+      "addr": "0x3db40923e0410e2d81d3a5e529b851a93313bb3f",
+      "name": "SOL@wanchain",
+      "symbol": "SOL",
+      "decimals": "9"
+    },
+    "0xb6eb7359aa2258c610975e7e90cea9219abad9f4": {
+      "id": 56,
+      "addr": "0xb6eb7359aa2258c610975e7e90cea9219abad9f4",
+      "name": "POL@wanchain",
+      "symbol": "POL",
+      "decimals": "18"
+    },
+    "0x79d0da190684a26a6de462327c13539a6a65a0f8": {
+      "id": 639,
+      "addr": "0x79d0da190684a26a6de462327c13539a6a65a0f8",
+      "name": "OKB@wanchain",
+      "symbol": "OKB",
+      "decimals": "18"
+    },
+    "0x9c84fb9bb4ad3ab3c43e2280f1a116012ad466c1": {
+      "id": 824,
+      "addr": "0x9c84fb9bb4ad3ab3c43e2280f1a116012ad466c1",
+      "name": "WATER@wanchain",
+      "symbol": "WATER",
+      "decimals": "18"
+    },
+    "0x8b21d5b0913d59bfcd1bd1537ac69aaf0e9fb0b6": {
+      "id": 1006,
+      "addr": "0x8b21d5b0913d59bfcd1bd1537ac69aaf0e9fb0b6",
+      "name": "NRG@wanchain",
+      "symbol": "NRG",
+      "decimals": "18"
+    },
+    "0xd1f1f21aba3adcf6f74013ad773fd1cf91924550": {
+      "id": 1007,
+      "addr": "0xd1f1f21aba3adcf6f74013ad773fd1cf91924550",
+      "name": "BROCK@wanchain",
+      "symbol": "BROCK",
+      "decimals": "18"
+    },
+    "0x92affddc5260bfdb99c10ee661b4082e08f5486b": {
+      "id": 1008,
+      "addr": "0x92affddc5260bfdb99c10ee661b4082e08f5486b",
+      "name": "DIONE@wanchain",
+      "symbol": "DIONE",
+      "decimals": "18"
+    },
+    "0xa00fd70fbd7b6fa6807af1b2fca76c10fe33361c": {
+      "id": 1009,
+      "addr": "0xa00fd70fbd7b6fa6807af1b2fca76c10fe33361c",
+      "name": "PLYR@wanchain",
+      "symbol": "PLYR",
+      "decimals": "18"
+    },
+    "0xc21dd246d9b0d4526bcaedf02adba44b89757baf": {
+      "id": 1010,
+      "addr": "0xc21dd246d9b0d4526bcaedf02adba44b89757baf",
+      "name": "5IRE@wanchain",
+      "symbol": "5IRE",
+      "decimals": "18"
+    },
+    "0x025ad9f0a56988e106e2506b2151e0cb242c06bc": {
+      "id": 1011,
+      "addr": "0x025ad9f0a56988e106e2506b2151e0cb242c06bc",
+      "name": "EDX@wanchain",
+      "symbol": "EDX",
+      "decimals": "18"
+    },
+    "0xe61f47a5fa9db061e2d9e2e88c604a583d878a5f": {
+      "id": 933,
+      "addr": "0xe61f47a5fa9db061e2d9e2e88c604a583d878a5f",
+      "name": "VET@wanchain",
+      "symbol": "VET",
+      "decimals": "18"
+    },
+    "0xa28182eef82cf8a66acaf0c48497d7a6098a42d1": {
+      "id": 1027,
+      "addr": "0xa28182eef82cf8a66acaf0c48497d7a6098a42d1",
+      "name": "SHIDO@wanchain",
+      "symbol": "SHIDO",
+      "decimals": "18"
+    },
+    "0xf79c808ad7bdb2eb7b383a1f28e4a4061eb127a3": {
+      "id": 935,
+      "addr": "0xf79c808ad7bdb2eb7b383a1f28e4a4061eb127a3",
+      "name": "B3TR@wanchain",
+      "symbol": "B3TR",
+      "decimals": "18"
+    },
+    "0xacbbeb48c663ece0d6a82167f88bda8f5d0ed853": {
+      "id": 1192,
+      "addr": "0xacbbeb48c663ece0d6a82167f88bda8f5d0ed853",
+      "name": "MXNB@wanchain",
+      "symbol": "MXNB",
+      "decimals": "6"
+    }
+  },
+  "2154655314": {
+    "0x0000000000000000000000000000000000000000": {
+      "id": 1007,
+      "addr": "0x0000000000000000000000000000000000000000",
+      "name": "BROCK",
+      "symbol": "BROCK",
+      "decimals": "18"
+    }
+  },
+  "2166483766": {
+    "0xe15fc38f6d8c56af07bbcbe3baf5708a2bf42392": {
+      "id": 1172,
+      "addr": "0xe15fc38f6d8c56af07bbcbe3baf5708a2bf42392",
+      "name": "USDC",
+      "symbol": "USDC",
+      "decimals": "6"
+    }
+  }
+}

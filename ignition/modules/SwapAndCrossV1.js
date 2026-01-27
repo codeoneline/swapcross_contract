@@ -34,7 +34,8 @@ module.exports = buildModule("SwapAndCrossV1_1Module", (m) => {
 
 
 // npx hardhat ignition deploy ./ignition/modules/SwapAndCrossV1.js --network ethereum
-// npx hardhat ignition deploy ./ignition/modules/SwapAndCrossV2.js --network avalanche
+// npx hardhat ignition deploy ./ignition/modules/SwapAndCrossV1.js --network avalanche
 // npx hardhat ignition deploy ./ignition/modules/SwapAndCrossV1.js --network ethereum --reset
 
 // npx hardhat verify --network ethereum 0x7ADB5dB6830A726C89f953cfE26a3bCacA815010 "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC" "0xfceaaaeb8d564a9d0e71ef36f027b9d162bc334e"
+// npx hardhat verify --network avalanche 0xc529101eef9D1859Ee756ffF030e760f4e0a1461 "0x8aDFb0D24cdb09c6eB6b001A41820eCe98831B91" "0x74e121a34a66d54c33f3291f2cdf26b1cd037c3a"

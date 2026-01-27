@@ -7,6 +7,8 @@ const networksConfig = require(path.resolve(__dirname, "../config/networks"))
 const { getValidAmount, getNetworkfee, reqQuotaAndFee, tryLoadJsonObj, getNetworkByChainType, parseOkxCallData} = require(path.resolve(__dirname, "../lib/utils"))
 const gTokenPairsInfo = tryLoadJsonObj(path.resolve(__dirname, "../data/TokenPairs-mainnet.json"), {total: 0, tokenPairs: {}});
 const gTokenPairsInfoTestnet = tryLoadJsonObj(path.resolve(__dirname, "../data/TokenPairs-testnet.json"), {total: 0, tokenPairs: {}});
+const gTokensInfo = require(path.resolve(__dirname, "../data/tokens-mainnet.json"))
+const gTokensInfoTestnet = require(path.resolve(__dirname, "../data/tokens-testnet.json"))
 const { callContract, sendNativeAndWait, sendContractAndWait, diagnoseWallet} = require(path.resolve(__dirname, "../lib/chainManager"))
 const { getSwapData, sendGetRequest } = require(path.resolve(__dirname, "../lib/okxDexHelper"))
 
@@ -20,8 +22,9 @@ const swapAndCrossAbi = [
   'function swapAndCross(tuple(address tokenIn, address tokenOut, uint256 amountIn, uint256 minAmountOut, bytes swapCallData) swapParams, tuple(bytes32 smgID, uint256 tokenPairID, uint8 crossType, bytes recipient, uint256 networkFee) bridgeParams) external payable returns (bytes32 txHash, uint256 amountOut)',
 ]
 
-const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol, toChainSymbol, tokenPairId, isTestnet = false) => {
+const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol, toChainSymbol, tokenPairId, amount, isTestnet = false) => {
     const tokenPairs = isTestnet ? gTokenPairsInfoTestnet.tokenPairs : gTokenPairsInfo.tokenPairs
+    const tokens = isTestnet ? gTokenPairsInfoTestnet : gTokensInfo
     const tokenPair = tokenPairs[tokenPairId]
     const myFromConfig = getNetworkByChainType(fromChainSymbol, isTestnet)
     const myToConfig = getNetworkByChainType(toChainSymbol, isTestnet)
@@ -69,7 +72,14 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
 
     const tokenIn = swapFromTokenInfo.tokenContractAddress
     const tokenOut = swapToTokenInfo.tokenContractAddress
-    const amountIn = 1000000000000000; // 0.001 ETH
+    const tokenInfo = tokens[myFromConfig.bip44][tokenIn.toLowerCase()]
+    if (tokenInfo === undefined || tokenInfo === null) {
+      throw new Error('bad tokenIn Decimals');
+    } else {
+      console.log(`${myFromConfig.chainType} ${tokenInfo.symbol} ${tokenIn.toLowerCase()} decimals is ${tokenInfo.decimals}`)
+    }
+    const tokenUnit = BigNumber(10).pow(tokenInfo.decimals)
+    const amountIn = BigNumber(amount).multipliedBy(tokenUnit).toFixed(0); // 0.001000000000000000 ETH, 3$
     const slippagePercent = '3.0';
 
     const swapChainId = myFromConfig.chainId
@@ -93,7 +103,7 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
     const okxRouterFromApi = swapData.tx.to;
     console.log('OKX Router from API:', okxRouterFromApi);
     
-    if (okxRouterFromApi.toLowerCase() !== '0x5E1f62Dac767b0491e3CE72469C217365D5B48cC'.toLowerCase()) {
+    if (okxRouterFromApi.toLowerCase() !== myFromConfig.okxDexRouter.toLowerCase()) {
       console.error('❌ Router address mismatch!');
       return;
     }
@@ -120,9 +130,9 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
     const options = totalValue.isGreaterThan(0) ? { value: totalValue.toFixed(0) } : {};
     
     console.log(`\n=== Transaction Value Breakdown ===`);
-    console.log(`Swap input (ETH): ${ethers.formatEther(amountIn)} ETH`);
-    console.log(`Network fee: ${ethers.formatEther(networkFee.toFixed(0))} ETH`);
-    console.log(`Total value: ${ethers.formatEther(totalValue.toFixed(0))} ETH`);
+    console.log(`Swap input (${fromTokenSymbol}): ${amount} ${fromTokenSymbol}`);
+    console.log(`Network fee: ${ethers.formatEther(networkFee.toFixed(0))} ${fromChainSymbol}`);
+    console.log(`Total value: ${ethers.formatEther(totalValue.toFixed(0))} ${fromChainSymbol}`);
     console.log(`===================================\n`);
 
 
@@ -130,7 +140,7 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
     if (!isNativeSwap) {
       const allowance = await callContract(networkName, tokenIn, erc20Abi, 'allowance', [walletAddress, SwapAndCrossAddress])
       console.log(`allowance is ${allowance}, type is ${typeof allowance}`)
-      if (allowance < amountIn) {
+      if (BigNumber(amountIn).gt(allowance)) {
         console.log('Approving ERC20 token...');
         const { txResponse, receipt } = await sendContractAndWait(
           networkName,
@@ -164,7 +174,7 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
     };
 
     // ✅ 先测试 OKX Router 是否能直接调用成功
-    console.log('\n=== Pre-flight Check: Testing OKX Router ===');
+    // console.log('\n=== Pre-flight Check: Testing OKX Router ===');
     // try {
     //   const provider = new ethers.JsonRpcProvider(process.env.ETH_RPC_URL || 'https://ethereum.publicnode.com');
       
@@ -174,7 +184,7 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
     //     data: swapCallData,
     //     value: amountIn,
     //     from: SwapAndCrossAddress,
-    //     gasLimit: 1000000
+    //     gasLimit: 2000000
     //   };
       
     //   await provider.call(testTx);
@@ -191,7 +201,7 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
     //   return;
     // }
 
-    // 测试完整的 swapAndCross
+    // // 测试完整的 swapAndCross
     // console.log('\n=== Running Static Call (Full Contract) ===');
     // try {
     //   const provider = new ethers.JsonRpcProvider(process.env.ETH_RPC_URL || 'https://ethereum.publicnode.com');
@@ -203,7 +213,7 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
     //     crossParams,
     //     {
     //       ...options,
-    //       gasLimit: 800000
+    //       gasLimit: 2000000
     //     }
     //   );
       
@@ -249,6 +259,71 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
 }
 
 setTimeout(async () => {
-  await sendSwapAndCross('ETH', 'USDT', 'ETH', 'AVAX', 232)
-  // await sendSwapAndCross('ETH', 'USDC', 'ETH', 'AVAX', 241)
+  // await sendSwapAndCross('ETH', 'USDT', 'ETH', 'AVAX', 232, 0.001)
+  // await sendSwapAndCross('ETH', 'USDC', 'ETH', 'AVAX', 241, 0.001)
+
+  await sendSwapAndCross('USDT', 'WETH.e', 'AVAX', 'ETH', 572, 2)
+  // await sendSwapAndCross('USDC', 'WETH.e', 'AVAX', 'ETH', 572, 2)
 }, 0)
+
+
+// 1035
+// USDC
+// 源链ID:
+// 2147483708 (ETH)
+// 目标链ID:
+// 2147492648 (AVAX)
+// 源代币精度:
+// 6
+// 目标代币精度:
+// 6
+// 源地址:
+// 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+// 目标地址:
+// 0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e
+
+// 241
+// USDC
+// 源链ID:
+// 2147492648 (AVAX)
+// 目标链ID:
+// 2147483708 (ETH)
+// 源代币精度:
+// 6
+// 目标代币精度:
+// 6
+// 源地址:
+// 0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e
+// 目标地址:
+// 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+
+// 232
+// USDT
+// 源链ID:
+// 2147492648 (AVAX)
+// 目标链ID:
+// 2147483708 (ETH)
+// 源代币精度:
+// 6
+// 目标代币精度:
+// 6
+// 源地址:
+// 0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7
+// 目标地址:
+// 0xdac17f958d2ee523a2206206994597c13d831ec7
+
+// 572
+// WETH.e => ETH
+// 源链ID:
+// 2147483708 (ETH)
+// 目标链ID:
+// 2147492648 (AVAX)
+// 源代币精度:
+// 18
+// 目标代币精度:
+// 18
+// 源地址:
+// 0x0000000000000000000000000000000000000000
+// 目标地址:
+// 0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab
+
