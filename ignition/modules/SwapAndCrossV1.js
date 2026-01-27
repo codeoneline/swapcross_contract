@@ -10,7 +10,7 @@ const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
 const path = require('path')
 const networksConfig = require(path.resolve(__dirname, "../../config/networks"))
 
-module.exports = buildModule("SwapAndCrossV1Module", (m) => {
+module.exports = buildModule("SwapAndCrossV1_1Module", (m) => {
   const network = hre.network.name;
   const config = hre.network.config;
   const myConfig = networksConfig[network]
@@ -33,6 +33,8 @@ module.exports = buildModule("SwapAndCrossV1Module", (m) => {
 
 
 
-// npx hardhat ignition deploy ./ignition/modules/SwapAndCross.js --network ethereum --parameters '{"SwapModule":{"network":"ethereum"}}'
-// npx hardhat ignition deploy ./ignition/modules/SwapAndCross.js --network ethereum
-// npx hardhat ignition deploy ./ignition/modules/SwapAndCross.js --network avalanche
+// npx hardhat ignition deploy ./ignition/modules/SwapAndCrossV1.js --network ethereum
+// npx hardhat ignition deploy ./ignition/modules/SwapAndCrossV2.js --network avalanche
+// npx hardhat ignition deploy ./ignition/modules/SwapAndCrossV1.js --network ethereum --reset
+
+// npx hardhat verify --network ethereum 0x7ADB5dB6830A726C89f953cfE26a3bCacA815010 "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC" "0xfceaaaeb8d564a9d0e71ef36f027b9d162bc334e"

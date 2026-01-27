@@ -14,7 +14,7 @@ module.exports = {
     ],
     multiCall: "0x5ba1e12693dc8f9c48aad8770482f4739beed696",
     okxDexRouter: "0x5E1f62Dac767b0491e3CE72469C217365D5B48cC",
-    wanBridge: "0x589e12d073020f99febf32b739e58216748c9ed4",
+    wanBridge: "0xfceaaaeb8d564a9d0e71ef36f027b9d162bc334e",
   },
   wanchainMainnet: {
     chainName: "Wanchain",
@@ -40,7 +40,7 @@ module.exports = {
     ],
     multiCall: "0xb66f96e30d6a0ae64d24e392bb2dbd25155cb3a6",
     okxDexRouter: "0x368E01160C2244B0363a35B3fF0A971E44a89284",
-    wanBridge: "0x08bad1a48b0b08bf769f83ba30c1dad0f8bb8b6b",
+    wanBridge: "0xf7ba155556e2cd4dfe3fe26e506a14d2f4b97613",
   },
   bsc: {
     chainName: "BSC",
@@ -55,7 +55,7 @@ module.exports = {
     ],
     multiCall: "0x023a33445f11c978f8a99e232e1c526ae3c0ad70",
     okxDexRouter: "0x3156020dfF8D99af1dDC523ebDfb1ad2018554a0",
-    wanBridge: "0xb12513cfcb13b7be59ba431c040b7206b0a211b9",
+    wanBridge: "0xc3711bdbe7e3063bf6c22e7fed42f782ac82baee",
   },
   polygon: {
     chainName: "Polygon",

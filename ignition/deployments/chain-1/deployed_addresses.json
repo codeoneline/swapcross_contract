@@ -1,5 +1,3 @@
 {
-  "SwapModule#Swap": "0xc28F4d079fBB6B4AF630dd8822c59107c2402f8b",
-  "SwapAndCrossModule#SwapAndCross": "0x32d4464bb786c31375C61e22683642CA97B44854",
-  "SwapAndCrossV1Module#SwapAndCrossV1": "0x88381a53b020ea92fb1b059e0ead49cd88be3318"
+  "SwapAndCrossV1_1Module#SwapAndCrossV1": "0x7ADB5dB6830A726C89f953cfE26a3bCacA815010"
 }

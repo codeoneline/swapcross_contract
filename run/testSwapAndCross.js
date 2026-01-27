@@ -73,13 +73,13 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
     const slippagePercent = '3.0';
 
     const swapChainId = myFromConfig.chainId
-    const SwapAndCrossAddress = require(path.resolve(__dirname, `../ignition/deployments/chain-${swapChainId}/deployed_addresses.json`))["SwapAndCrossV1Module#SwapAndCrossV1"]
+    const SwapAndCrossAddress = require(path.resolve(__dirname, `../ignition/deployments/chain-${swapChainId}/deployed_addresses.json`))["SwapAndCrossV1_1Module#SwapAndCrossV1"]
 
     console.log('\n=== Getting Fresh Swap Data ===');
     console.log('⚠️  IMPORTANT: userWalletAddress = Contract Address');
     console.log('Contract Address:', SwapAndCrossAddress);
     
-    const swapData = await getSwapData(tokenIn, tokenOut, amountIn, slippagePercent, chainIndex, walletAddress, SwapAndCrossAddress, null, '6')
+    const swapData = await getSwapData(tokenIn, tokenOut, amountIn, slippagePercent, chainIndex, SwapAndCrossAddress, SwapAndCrossAddress, null, '6')
     // parseOkxCallData(swapData)
     console.log('Swap Route:', swapData.routerResult.router);
     console.log('Expected Output:', swapData.routerResult.toTokenAmount, `${toTokenSymbol} (raw)`);
@@ -165,87 +165,87 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
 
     // ✅ 先测试 OKX Router 是否能直接调用成功
     console.log('\n=== Pre-flight Check: Testing OKX Router ===');
-    try {
-      const provider = new ethers.JsonRpcProvider(process.env.ETH_RPC_URL || 'https://ethereum.publicnode.com');
+    // try {
+    //   const provider = new ethers.JsonRpcProvider(process.env.ETH_RPC_URL || 'https://ethereum.publicnode.com');
       
-      // 测试从合约地址调用 OKX Router
-      const testTx = {
-        to: okxRouterFromApi,
-        data: swapCallData,
-        value: amountIn,
-        from: SwapAndCrossAddress,
-        gasLimit: 1000000
-      };
+    //   // 测试从合约地址调用 OKX Router
+    //   const testTx = {
+    //     to: okxRouterFromApi,
+    //     data: swapCallData,
+    //     value: amountIn,
+    //     from: SwapAndCrossAddress,
+    //     gasLimit: 1000000
+    //   };
       
-      await provider.call(testTx);
-      console.log('✅ OKX Router call would succeed from contract');
-    } catch (routerError) {
-      console.error('❌ OKX Router call would FAIL from contract!');
-      console.error('Error:', routerError.message);
-      console.error('\n💡 This is the root cause! The swap will fail in your contract.');
-      console.error('   Possible reasons:');
-      console.error('   1. Deadline expired (check timestamp in callData)');
-      console.error('   2. Price moved too much (beyond slippage)');
-      console.error('   3. Route no longer has liquidity');
-      console.error('\n   Try getting FRESH swap data immediately before sending tx\n');
-      return;
-    }
+    //   await provider.call(testTx);
+    //   console.log('✅ OKX Router call would succeed from contract');
+    // } catch (routerError) {
+    //   console.error('❌ OKX Router call would FAIL from contract!');
+    //   console.error('Error:', routerError.message);
+    //   console.error('\n💡 This is the root cause! The swap will fail in your contract.');
+    //   console.error('   Possible reasons:');
+    //   console.error('   1. Deadline expired (check timestamp in callData)');
+    //   console.error('   2. Price moved too much (beyond slippage)');
+    //   console.error('   3. Route no longer has liquidity');
+    //   console.error('\n   Try getting FRESH swap data immediately before sending tx\n');
+    //   return;
+    // }
 
     // 测试完整的 swapAndCross
-    console.log('\n=== Running Static Call (Full Contract) ===');
-    try {
-      const provider = new ethers.JsonRpcProvider(process.env.ETH_RPC_URL || 'https://ethereum.publicnode.com');
-      const wallet = new ethers.Wallet(privateKey, provider);
-      const contract = new ethers.Contract(SwapAndCrossAddress, swapAndCrossAbi, wallet);
+    // console.log('\n=== Running Static Call (Full Contract) ===');
+    // try {
+    //   const provider = new ethers.JsonRpcProvider(process.env.ETH_RPC_URL || 'https://ethereum.publicnode.com');
+    //   const wallet = new ethers.Wallet(privateKey, provider);
+    //   const contract = new ethers.Contract(SwapAndCrossAddress, swapAndCrossAbi, wallet);
       
-      const staticResult = await contract.swapAndCross.staticCall(
-        swapParams,
-        crossParams,
-        {
-          ...options,
-          gasLimit: 800000
-        }
-      );
-      
-      console.log('✅ Static call SUCCESS!');
-      console.log('  Simulated TX Hash:', staticResult.txHash);
-      console.log('  Simulated Amount Out:', staticResult.amountOut.toString(), 'USDT (raw)');
-      console.log('  Simulated Amount Out:', ethers.formatUnits(staticResult.amountOut, 6), 'USDT');
-      console.log('========================================\n');
-      
-    } catch (staticError) {
-      console.error('❌ Static call FAILED!');
-      console.error('Error:', staticError.message);
-      
-      if (staticError.data) {
-        console.error('Error Data:', staticError.data);
-      }
-      
-      console.log('\n⚠️  Transaction would fail. Not sending to blockchain.\n');
-      return;
-    }
-
-    // 发送真实交易
-    // console.log('Executing real transaction...');
-    // const result = await sendContractAndWait(
-    //     networkName,
-    //     privateKey,
-    //     SwapAndCrossAddress,
-    //     swapAndCrossAbi,
-    //     'swapAndCross',
-    //     [swapParams, crossParams],
+    //   const staticResult = await contract.swapAndCross.staticCall(
+    //     swapParams,
+    //     crossParams,
     //     {
     //       ...options,
     //       gasLimit: 800000
-    //     },
-    //     1
+    //     }
     //   );
       
-    // console.log(`\n✅ Transaction successful!`);
-    // console.log(`  Hash: ${result.txResponse.hash}`);
-    // console.log(`  Block: ${result.receipt.blockNumber}`);
-    // console.log(`  Gas Used: ${result.receipt.gasUsed}`);
-    // console.log(`  Status: ${result.receipt.status === 1 ? 'Success' : 'Failed'}`);
+    //   console.log('✅ Static call SUCCESS!');
+    //   console.log('  Simulated TX Hash:', staticResult.txHash);
+    //   console.log('  Simulated Amount Out:', staticResult.amountOut.toString(), 'USDT (raw)');
+    //   console.log('  Simulated Amount Out:', ethers.formatUnits(staticResult.amountOut, 6), 'USDT');
+    //   console.log('========================================\n');
+      
+    // } catch (staticError) {
+    //   console.error('❌ Static call FAILED!');
+    //   console.error('Error:', staticError.message);
+      
+    //   if (staticError.data) {
+    //     console.error('Error Data:', staticError.data);
+    //   }
+      
+    //   console.log('\n⚠️  Transaction would fail. Not sending to blockchain.\n');
+    //   return;
+    // }
+
+    // 发送真实交易
+    console.log('Executing real transaction...');
+    const result = await sendContractAndWait(
+        networkName,
+        privateKey,
+        SwapAndCrossAddress,
+        swapAndCrossAbi,
+        'swapAndCross',
+        [swapParams, crossParams],
+        {
+          ...options,
+          gasLimit: 2000000
+        },
+        1
+      );
+      
+    console.log(`\n✅ Transaction successful!`);
+    console.log(`  Hash: ${result.txResponse.hash}`);
+    console.log(`  Block: ${result.receipt.blockNumber}`);
+    console.log(`  Gas Used: ${result.receipt.gasUsed}`);
+    console.log(`  Status: ${result.receipt.status === 1 ? 'Success' : 'Failed'}`);
 }
 
 setTimeout(async () => {
