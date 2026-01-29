@@ -18,10 +18,9 @@ const erc20Abi = [
     'function balanceOf(address account) external view returns (uint256)',
     'function decimals() external view returns (uint8)',
 ];
-
 const swapAndCrossAbi = [
   'function swapAndCross(tuple(address tokenIn, address tokenOut, uint256 amountIn, uint256 minAmountOut, bytes swapCallData) swapParams, tuple(bytes32 smgID, uint256 tokenPairID, uint8 crossType, bytes recipient, uint256 networkFee) bridgeParams) external payable returns (bytes32 txHash, uint256 amountOut)',
-  'function updateApproveProxy(address newProxy) external',
+  'function updateApproveProxy(address newProxy) external onlyOwner',
 ]
 
 const updateApproveProxy = async() => {
@@ -284,12 +283,11 @@ setTimeout(async () => {
   // await sendSwapAndCross('ETH', 'USDT', 'ETH', 'AVAX', 232, 0.001, "0x7ADB5dB6830A726C89f953cfE26a3bCacA815010")
   // await sendSwapAndCross('ETH', 'USDC', 'ETH', 'AVAX', 241, 0.001, "0x7ADB5dB6830A726C89f953cfE26a3bCacA815010")
   // await sendSwapAndCross('USDT', 'ETH', 'ETH', 'AVAX', 572, 10, "0x142B0B5EbFF5CfEf68A6375c31d14D55c7c0C05B")
-  await sendSwapAndCross('USDC', 'ETH', 'ETH', 'AVAX', 572, 10, "0x0E0fC3Fa527C03A43EfC8493C5de876ED3A80d3A")
+  // await sendSwapAndCross('USDC', 'ETH', 'ETH', 'AVAX', 572, 10, "0x142B0B5EbFF5CfEf68A6375c31d14D55c7c0C05B")
+  await updateApproveProxy()
 
   // await sendSwapAndCross('USDT', 'WETH.e', 'AVAX', 'ETH', 572, 5, "0x98FDFC27aA24e3c9cFeF47274d24253147755BF1")
   // await sendSwapAndCross('USDC', 'WETH.e', 'AVAX', 'ETH', 572, 5, "0x98FDFC27aA24e3c9cFeF47274d24253147755BF1")
-
-  // await updateApproveProxy()
 }, 0)
 
 
