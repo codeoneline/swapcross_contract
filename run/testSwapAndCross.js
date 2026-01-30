@@ -100,7 +100,7 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
     }
     const tokenUnit = BigNumber(10).pow(tokenInfo.decimals)
     const amountIn = BigNumber(amount).multipliedBy(tokenUnit).toFixed(0); // 0.001000000000000000 ETH, 3$
-    const slippagePercent = '3.0';
+    const slippagePercent = '0.5';
 
     // const swapChainId = myFromConfig.chainId
     // const SwapAndCrossAddress = require(path.resolve(__dirname, `../ignition/deployments/chain-${swapChainId}/deployed_addresses.json`))["SwapAndCrossV1_1Module#SwapAndCrossV1"]
@@ -197,65 +197,65 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
 
     // ✅ 先测试 OKX Router 是否能直接调用成功
     console.log('\n=== Pre-flight Check: Testing OKX Router ===');
-    // try {
-    //   const provider = new ethers.JsonRpcProvider(process.env.ETH_RPC_URL);
+    try {
+      const provider = new ethers.JsonRpcProvider(process.env.ETH_RPC_URL);
       
-    //   // 测试从合约地址调用 OKX Router
-    //   const testTx = {
-    //     to: swapData1.tx.to,
-    //     data: swapData1.tx.data,
-    //     value: amountIn,
-    //     from: SwapAndCrossAddress,
-    //     gasLimit: 2000000
-    //   };
+      // 测试从合约地址调用 OKX Router
+      const testTx = {
+        to: swapData1.tx.to,
+        data: swapData1.tx.data,
+        value: amountIn,
+        from: SwapAndCrossAddress,
+        gasLimit: 2000000
+      };
       
-    //   await provider.call(testTx);
-    //   console.log('✅ OKX Router call would succeed from contract');
-    // } catch (routerError) {
-    //   console.error('❌ OKX Router call would FAIL from contract!');
-    //   console.error('Error:', routerError.message);
-    //   console.error('\n💡 This is the root cause! The swap will fail in your contract.');
-    //   console.error('   Possible reasons:');
-    //   console.error('   1. Deadline expired (check timestamp in callData)');
-    //   console.error('   2. Price moved too much (beyond slippage)');
-    //   console.error('   3. Route no longer has liquidity');
-    //   console.error('\n   Try getting FRESH swap data immediately before sending tx\n');
-    //   return;
-    // }
+      await provider.call(testTx);
+      console.log('✅ OKX Router call would succeed from contract');
+    } catch (routerError) {
+      console.error('❌ OKX Router call would FAIL from contract!');
+      console.error('Error:', routerError.message);
+      console.error('\n💡 This is the root cause! The swap will fail in your contract.');
+      console.error('   Possible reasons:');
+      console.error('   1. Deadline expired (check timestamp in callData)');
+      console.error('   2. Price moved too much (beyond slippage)');
+      console.error('   3. Route no longer has liquidity');
+      console.error('\n   Try getting FRESH swap data immediately before sending tx\n');
+      return;
+    }
 
     // 测试完整的 swapAndCross
     console.log('\n=== Running Static Call (Full Contract) ===');
-    // try {
-    //   const provider = new ethers.JsonRpcProvider(process.env.ETH_RPC_URL);
-    //   const wallet = new ethers.Wallet(privateKey, provider);
-    //   const contract = new ethers.Contract(SwapAndCrossAddress, swapAndCrossAbi, wallet);
+    try {
+      const provider = new ethers.JsonRpcProvider(process.env.ETH_RPC_URL);
+      const wallet = new ethers.Wallet(privateKey, provider);
+      const contract = new ethers.Contract(SwapAndCrossAddress, swapAndCrossAbi, wallet);
       
-    //   const staticResult = await contract.swapAndCross.staticCall(
-    //     swapParams,
-    //     crossParams,
-    //     {
-    //       ...options,
-    //       gasLimit: 2000000
-    //     }
-    //   );
+      const staticResult = await contract.swapAndCross.staticCall(
+        swapParams,
+        crossParams,
+        {
+          ...options,
+          gasLimit: 2000000
+        }
+      );
       
-    //   console.log('✅ Static call SUCCESS!');
-    //   console.log('  Simulated TX Hash:', staticResult.txHash);
-    //   console.log('  Simulated Amount Out:', staticResult.amountOut.toString(), 'USDT (raw)');
-    //   console.log('  Simulated Amount Out:', ethers.formatUnits(staticResult.amountOut, 6), 'USDT');
-    //   console.log('========================================\n');
+      console.log('✅ Static call SUCCESS!');
+      console.log('  Simulated TX Hash:', staticResult.txHash);
+      console.log('  Simulated Amount Out:', staticResult.amountOut.toString(), 'USDT (raw)');
+      console.log('  Simulated Amount Out:', ethers.formatUnits(staticResult.amountOut, 6), 'USDT');
+      console.log('========================================\n');
       
-    // } catch (staticError) {
-    //   console.error('❌ Static call FAILED!');
-    //   console.error('Error:', staticError.message);
+    } catch (staticError) {
+      console.error('❌ Static call FAILED!');
+      console.error('Error:', staticError.message);
       
-    //   if (staticError.data) {
-    //     console.error('Error Data:', staticError.data);
-    //   }
+      if (staticError.data) {
+        console.error('Error Data:', staticError.data);
+      }
       
-    //   console.log('\n⚠️  Transaction would fail. Not sending to blockchain.\n');
-    //   return;
-    // }
+      console.log('\n⚠️  Transaction would fail. Not sending to blockchain.\n');
+      return;
+    }
 
     // 发送真实交易
     console.log('Executing real transaction...');
@@ -281,14 +281,21 @@ const sendSwapAndCross = async (fromTokenSymbol, toTokenSymbol, fromChainSymbol,
 }
 
 setTimeout(async () => {
+  /// eth -> avax
   // await sendSwapAndCross('ETH', 'USDT', 'ETH', 'AVAX', 232, 0.001, "0x7ADB5dB6830A726C89f953cfE26a3bCacA815010")
   // await sendSwapAndCross('ETH', 'USDC', 'ETH', 'AVAX', 241, 0.001, "0x7ADB5dB6830A726C89f953cfE26a3bCacA815010")
   // await sendSwapAndCross('USDT', 'ETH', 'ETH', 'AVAX', 572, 10, "0x142B0B5EbFF5CfEf68A6375c31d14D55c7c0C05B")
+
+  // good
   // await sendSwapAndCross('USDC', 'ETH', 'ETH', 'AVAX', 572, 10, "0x0E0fC3Fa527C03A43EfC8493C5de876ED3A80d3A")
+  // await sendSwapAndCross('ETH', 'USDT', 'ETH', 'AVAX', 232, 0.001, "0x0E0fC3Fa527C03A43EfC8493C5de876ED3A80d3A")
+  // await sendSwapAndCross('USDC', 'ETH', 'ETH', 'AVAX', 572, 15, "0x0E0fC3Fa527C03A43EfC8493C5de876ED3A80d3A")
   
+
+  /// avax -> eth
   // await sendSwapAndCross('USDT', 'WETH.e', 'AVAX', 'ETH', 572, 5, "0x98FDFC27aA24e3c9cFeF47274d24253147755BF1")
   // await sendSwapAndCross('USDC', 'WETH.e', 'AVAX', 'ETH', 572, 5, "0x98FDFC27aA24e3c9cFeF47274d24253147755BF1")
-  await sendSwapAndCross('USDC', 'WETH.e', 'AVAX', 'ETH', 572, 2, "0xC730d08f10CC76D372a1f5b8026732A0355c616B")
+  // await sendSwapAndCross('USDC', 'WETH.e', 'AVAX', 'ETH', 572, 2, "0xC730d08f10CC76D372a1f5b8026732A0355c616B")
 
   // await updateApproveProxy()
 }, 0)

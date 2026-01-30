@@ -26,7 +26,7 @@ module.exports = buildModule("SwapAndCrossV31Module", (m) => {
   if (!okxDexRouter || !wanBridge) {
     console(`bad okxDexRouter or wanBridge`)
     return 
-  } 
+  }
 
   const swapAndCrossV3 = m.contract("SwapAndCrossV3", [okxDexRouter, approveProxy, wanBridge], {});
 
