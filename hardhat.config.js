@@ -1,4 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("@openzeppelin/hardhat-upgrades");
+
 const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, "./.env") });
 
@@ -21,6 +23,14 @@ module.exports = {
         runs: 0
       }
     }
+  },
+  // 關鍵：讓 Hardhat 把 OpenZeppelin 的 proxy 也編譯進 artifacts
+  paths: {
+    sources: "./contracts",
+    // 如果你用 TypeScript，也可以加 artifacts: "./artifacts"
+  },
+  npm: {
+    packages: ["@openzeppelin/contracts"],
   },
   sourcify: {
     enabled: true

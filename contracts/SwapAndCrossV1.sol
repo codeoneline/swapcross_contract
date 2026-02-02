@@ -1,9 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
-import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol";
 
 // ==================== Interfaces ====================
 
@@ -25,11 +28,20 @@ interface IBridge {
     ) external payable;
 }
 
+interface IApproveProxy {
+    function claimTokens(
+        address token,
+        address from,
+        address to,
+        uint256 amount
+    ) external;
+}
+
 // ==================== Enums ====================
 
 enum CrossType {
-    UserLock,  // 锁定模式：锁定源链资产，目标链铸造映射资产
-    UserBurn   // 销毁模式：销毁源链映射资产，目标链解锁原生资产
+    UserLock,  // 锁定模式:锁定源链资产,目标链铸造映射资产
+    UserBurn   // 销毁模式:销毁源链映射资产,目标链解锁原生资产
 }
 
 // ==================== Structs ====================
@@ -64,6 +76,8 @@ event SwapAndCrossExecuted(
 );
 
 event RouterUpdated(address indexed oldRouter, address indexed newRouter);
+event ApproveProxyUpdated(address indexed oldProxy, address indexed newProxy);
+event BridgeUpdated(address indexed oldBridge, address indexed newBridge);
 
 event RefundProcessed(
     address indexed user,
@@ -72,46 +86,72 @@ event RefundProcessed(
     string reason
 );
 
+event EthReceived(address indexed sender, uint256 amount);
+
 // ==================== Main Contract ====================
 
 /**
  * @title SwapAndCrossV1
- * @notice 整合 OKX DEX Swap 和 Wanchain Bridge 的智能合约
- * @dev 先通过 OKX 进行代币兑换，再通过 Wanchain Bridge 跨链
+ * @notice 整合 OKX DEX Swap 和 Wanchain Bridge 的可升级智能合约
+ * @dev 使用 UUPS 代理模式实现可升级性
  * 
- * 改进点：
- * 1. 增加重入保护
- * 2. 支持接收 swap 后的代币（确保 receiver 是合约地址）
- * 3. 支持退款机制（处理 swap 失败或部分成功的情况）
- * 4. 增加更详细的错误处理
+ * 关键改进:
+ * 1. 使用 OpenZeppelin 可升级合约库
+ * 2. 采用 UUPS 代理模式
+ * 3. 移除 immutable 变量,支持运行时修改所有配置
+ * 4. 添加存储间隔以支持未来升级
+ * 5. 支持 OKX DEX 的 ApproveProxy 模式
  */
-contract SwapAndCrossV1 is ReentrancyGuard {
+contract SwapAndCrossV1 is 
+    Initializable,
+    ReentrancyGuardUpgradeable,
+    OwnableUpgradeable,
+    UUPSUpgradeable
+{
     using SafeERC20 for IERC20;
 
     // ==================== State Variables ====================
     
-    address public owner;
     address public okxDexRouter;
-    address public immutable wanBridge;
+    address public okxApproveProxy;
+    address public wanBridge;  // 改为可变,不再是 immutable
     
     // 原生代币地址标识
     address private constant NATIVE_TOKEN = 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE;
     
-    // ==================== Modifiers ====================
+    // ==================== Constructor & Initializer ====================
     
-    modifier onlyOwner() {
-        require(msg.sender == owner, "Not owner");
-        _;
+    /**
+     * @custom:oz-upgrades-unsafe-allow constructor
+     * @dev 禁用实现合约的初始化
+     */
+    constructor() {
+        _disableInitializers();
     }
-    
-    // ==================== Constructor ====================
-    
-    constructor(address _okxDexRouter, address _wanBridge) {
+
+    /**
+     * @notice 初始化合约(替代 constructor)
+     * @param _okxDexRouter OKX DexRouter 地址
+     * @param _okxApproveProxy OKX ApproveProxy 地址
+     * @param _wanBridge Wanchain Bridge 地址
+     */
+    function initialize(
+        address _okxDexRouter,
+        address _okxApproveProxy,
+        address _wanBridge
+    ) public initializer {
         require(_okxDexRouter != address(0), "Invalid router address");
+        require(_okxApproveProxy != address(0), "Invalid approve proxy address");
         require(_wanBridge != address(0), "Invalid bridge address");
         
-        owner = msg.sender;
+        // 初始化父合约
+        __ReentrancyGuard_init();
+        __Ownable_init(msg.sender);
+        __UUPSUpgradeable_init();
+        
+        // 初始化状态变量
         okxDexRouter = _okxDexRouter;
+        okxApproveProxy = _okxApproveProxy;
         wanBridge = _wanBridge;
     }
     
@@ -124,8 +164,10 @@ contract SwapAndCrossV1 is ReentrancyGuard {
      * @return txHash 跨链交易哈希
      * @return amountOut Swap 后得到的代币数量
      * 
-     * @dev 重要：调用 OKX API 时，必须设置 swapReceiverAddress = address(this)
-     *      否则代币会发送到其他地址，导致跨链失败
+     * @dev 重要:
+     *      1. 调用 OKX API 时,必须设置 swapReceiverAddress = address(this)
+     *      2. ERC20 代币必须授权给 ApproveProxy,而不是 DexRouter
+     *      3. 用户需要先授权本合约使用其代币
      */
     function swapAndCross(
         SwapParams calldata swapParams,
@@ -143,7 +185,7 @@ contract SwapAndCrossV1 is ReentrancyGuard {
         // Step 3: 执行跨链
         txHash = _executeCross(swapParams.tokenOut, amountOut, bridgeParams);
         
-        // Step 4: 退还剩余的代币（如果有）
+        // Step 4: 退还剩余的代币(如果有)
         _refundRemainingTokens(msg.sender, swapParams.tokenIn, swapParams.tokenOut);
         
         // 发出事件
@@ -165,10 +207,9 @@ contract SwapAndCrossV1 is ReentrancyGuard {
     
     /**
      * @notice 执行代币兑换
-     * @dev 改进点：
-     *      1. 更精确的余额追踪
-     *      2. 支持部分成功的 swap
-     *      3. 详细的错误信息
+     * @dev 关键改进:
+     *      1. ERC20 代币授权给 ApproveProxy 而不是 DexRouter
+     *      2. 这样 DexRouter 可以通过 ApproveProxy.claimTokens() 拉取代币
      */
     function _executeSwap(
         SwapParams calldata params
@@ -179,25 +220,25 @@ contract SwapAndCrossV1 is ReentrancyGuard {
         // 处理输入代币
         if (!isNativeIn) {
             // ERC20 代币
+            // Step 1: 从用户接收代币到本合约
             IERC20(params.tokenIn).safeTransferFrom(
                 msg.sender,
                 address(this),
                 params.amountIn
             );
             
-            // 授权 OKX Router（使用 forceApprove 避免授权问题）
-            IERC20(params.tokenIn).forceApprove(okxDexRouter, params.amountIn);
+            // Step 2: 授权给 ApproveProxy (而不是 DexRouter!)
+            IERC20(params.tokenIn).forceApprove(okxApproveProxy, params.amountIn);
         } else {
             // 原生代币
             swapValue = params.amountIn;
             require(msg.value >= swapValue, "Insufficient ETH for swap");
         }
         
-        // 记录兑换前的余额（同时处理 Native 和 ERC20）
+        // 记录兑换前的余额
         uint256 balanceBefore = _getBalance(params.tokenOut);
         
         // 调用 OKX DEX Router
-        // 注意：swapCallData 中的 receiver 必须是 address(this)
         (bool success, bytes memory returnData) = okxDexRouter.call{value: swapValue}(
             params.swapCallData
         );
@@ -215,9 +256,9 @@ contract SwapAndCrossV1 is ReentrancyGuard {
         // 滑点检查
         require(amountOut >= params.minAmountOut, "Insufficient output amount (slippage)");
         
-        // 重置授权（安全措施）
+        // 重置授权(安全措施)
         if (!isNativeIn) {
-            IERC20(params.tokenIn).forceApprove(okxDexRouter, 0);
+            IERC20(params.tokenIn).forceApprove(okxApproveProxy, 0);
         }
         
         return amountOut;
@@ -240,7 +281,7 @@ contract SwapAndCrossV1 is ReentrancyGuard {
             require(msg.value >= bridgeFee, "Insufficient network fee");
             
             if (params.crossType == CrossType.UserLock) {
-                // Lock 模式：授权给 bridge
+                // Lock 模式:授权给 bridge
                 IERC20(token).forceApprove(wanBridge, amount);
                 
                 IBridge(wanBridge).userLock{value: bridgeFee}(
@@ -253,7 +294,7 @@ contract SwapAndCrossV1 is ReentrancyGuard {
                 // 重置授权
                 IERC20(token).forceApprove(wanBridge, 0);
             } else {
-                // Burn 模式：直接销毁
+                // Burn 模式:直接销毁
                 IBridge(wanBridge).userBurn{value: bridgeFee}(
                     params.smgID,
                     params.tokenPairID,
@@ -264,8 +305,9 @@ contract SwapAndCrossV1 is ReentrancyGuard {
                 );
             }
         } else {
-            // 原生币跨链（只支持 Lock 模式）
-            require(msg.value >= bridgeFee + amount, "Insufficient value for native cross");
+            // 原生币跨链(只支持 Lock 模式)
+            require(address(this).balance >= amount, "Contract insufficient ETH balance");
+            require(msg.value >= bridgeFee, "Insufficient network fee");
             
             IBridge(wanBridge).userLock{value: bridgeFee + amount}(
                 params.smgID,
@@ -291,17 +333,13 @@ contract SwapAndCrossV1 is ReentrancyGuard {
     
     /**
      * @notice 退还剩余代币给用户
-     * @dev 处理以下情况：
-     *      1. Swap 未使用完的输入代币（部分成交）
-     *      2. Swap 产生的额外代币（超过跨链所需）
-     *      3. 合约中残留的代币
      */
     function _refundRemainingTokens(
         address user,
         address tokenIn,
         address tokenOut
     ) internal {
-        // 退还输入代币（如果有剩余）
+        // 退还输入代币(如果有剩余)
         uint256 remainingIn = _getBalance(tokenIn);
         if (remainingIn > 0) {
             if (tokenIn == NATIVE_TOKEN) {
@@ -313,7 +351,7 @@ contract SwapAndCrossV1 is ReentrancyGuard {
             emit RefundProcessed(user, tokenIn, remainingIn, "Remaining input tokens");
         }
         
-        // 退还输出代币（如果跨链后还有剩余）
+        // 退还输出代币(如果跨链后还有剩余)
         uint256 remainingOut = _getBalance(tokenOut);
         if (remainingOut > 0) {
             if (tokenOut == NATIVE_TOKEN) {
@@ -341,11 +379,9 @@ contract SwapAndCrossV1 is ReentrancyGuard {
      * @notice 从 returnData 中提取错误信息
      */
     function _getRevertMsg(bytes memory returnData) internal pure returns (string memory) {
-        // 如果 returnData 长度小于 68，则无法解码
         if (returnData.length < 68) return "Transaction reverted silently";
         
         assembly {
-            // 跳过前 68 字节（4 字节 selector + 32 字节 offset + 32 字节 length）
             returnData := add(returnData, 0x04)
         }
         
@@ -365,24 +401,51 @@ contract SwapAndCrossV1 is ReentrancyGuard {
     }
     
     /**
-     * @notice 转移合约所有权
+     * @notice 更新 OKX ApproveProxy 地址
      */
-    function transferOwnership(address newOwner) external onlyOwner {
-        require(newOwner != address(0), "Invalid owner address");
-        owner = newOwner;
+    function updateApproveProxy(address newProxy) external onlyOwner {
+        require(newProxy != address(0), "Invalid proxy address");
+        address oldProxy = okxApproveProxy;
+        okxApproveProxy = newProxy;
+        emit ApproveProxyUpdated(oldProxy, newProxy);
     }
     
     /**
-     * @notice 紧急恢复代币（仅用于误转入的资产）
-     * @dev 只能在没有进行中的交易时调用
+     * @notice 更新 Wanchain Bridge 地址
+     */
+    function updateBridge(address newBridge) external onlyOwner {
+        require(newBridge != address(0), "Invalid bridge address");
+        address oldBridge = wanBridge;
+        wanBridge = newBridge;
+        emit BridgeUpdated(oldBridge, newBridge);
+    }
+    
+    /**
+     * @notice 紧急恢复代币(仅用于误转入的资产)
      */
     function emergencyWithdraw(address token, uint256 amount) external onlyOwner {
         if (token == NATIVE_TOKEN) {
-            (bool success, ) = owner.call{value: amount}("");
+            (bool success, ) = owner().call{value: amount}("");
             require(success, "ETH transfer failed");
         } else {
-            IERC20(token).safeTransfer(owner, amount);
+            IERC20(token).safeTransfer(owner(), amount);
         }
+    }
+    
+    // ==================== Upgrade Authorization ====================
+    
+    /**
+     * @notice 授权升级(UUPS 模式要求)
+     * @dev 只有 owner 可以升级合约
+     */
+    function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}
+    
+    /**
+     * @notice 获取当前实现版本
+     * @return 版本字符串
+     */
+    function version() public pure virtual returns (string memory) {
+        return "1.0.0";
     }
     
     // ==================== View Functions ====================
@@ -394,16 +457,20 @@ contract SwapAndCrossV1 is ReentrancyGuard {
         return _getBalance(token);
     }
     
-    // ==================== Receive Function ====================
-    
+    // ==================== Receive Functions ====================
+
     /**
-     * @notice 接收原生代币
-     * @dev 用于接收：
-     *      1. Swap 产生的原生代币
-     *      2. 退款
-     *      3. 用户发送的原生代币
+     * @notice 接收原生代币(无数据的纯转账)
      */
     receive() external payable {
-        // 可以添加日志或其他逻辑
+        emit EthReceived(msg.sender, msg.value);
+    }
+
+    /**
+     * @notice 处理带数据的调用
+     */
+    fallback() external payable {
+        require(msg.value > 0, "Fallback: no ETH sent");
+        emit EthReceived(msg.sender, msg.value);
     }
 }
