@@ -7,6 +7,44 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "upgradeV2 to avalanche",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "hardhat"
+      ],
+      "args": [
+        "run",
+        "./scripts/upgradeV2.js",
+        "--network",
+        "avalanche"
+      ],
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "DeployV1 to avalanche",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "hardhat"
+      ],
+      "args": [
+        "run",
+        "./scripts/deployV1.js",
+        "--network",
+        "avalanche"
+      ],
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Deploy SwapAndCrossV1 to Avalanche",
       "runtimeExecutable": "npx",
       "runtimeArgs": [

@@ -3,7 +3,11 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
     "@openzeppelin/hardhat-upgrades": "^3.9.1",
-    "hardhat": "^2.28.3"
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "chai": "^4.5.0",
+    "hardhat": "^2.28.3",
+    "mocha": "^11.7.5",
+    "solidity-coverage": "^0.8.17"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.4.0",
@@ -13,5 +17,17 @@
     "crypto-js": "^4.2.0",
     "dotenv": "^17.2.3",
     "ethers": "^6.16.0"
+  },
+  "scripts": {
+    "test": "hardhat test --no-compile",
+    "test:deploy": "hardhat test test/00_deployment.test.js --no-compile",
+    "test:basic": "hardhat test test/01_basic_functions.test.js --no-compile",
+    "test:upgrade": "hardhat test test/02_upgradeability.test.js --no-compile",
+    "test:uups": "hardhat test test/02b_uups_upgrade.test.js --no-compile",
+    "test:swap": "hardhat test test/03_swap_integration.test.js --no-compile",
+    "test:all": "hardhat test --no-compile",
+    "compile": "hardhat compile",
+    "clean": "hardhat clean",
+    "verify": "npx hardhat clean && npx hardhat compile && npm run test:deploy && npm run test:basic && npm run test:upgrade"
   }
 }
