@@ -28,6 +28,11 @@
     "test:all": "hardhat test --no-compile",
     "compile": "hardhat compile",
     "clean": "hardhat clean",
-    "verify": "npx hardhat clean && npx hardhat compile && npm run test:deploy && npm run test:basic && npm run test:upgrade"
+    "verify": "npx hardhat clean && npx hardhat compile && npm run test:deploy && npm run test:basic && npm run test:upgrade",
+
+    "coverage": "hardhat coverage --temp artifacts --testfiles \"test/**/*.test.js\"",
+    "coverage:html": "hardhat coverage && open coverage/index.html",
+    "coverage:summary": "hardhat coverage --report lcov",
+    "coverage:ci": "hardhat coverage --report lcovonly"
   }
 }

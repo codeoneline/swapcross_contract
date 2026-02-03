@@ -32,7 +32,22 @@ module.exports = {
   etherscan: {
     apiKey: "NR74JXIII693YYXXTTKHENDPTT8QVG8PG2"
   },
+  // 覆盖率配置
+  coverage: {
+    exclude: [
+      "test/",           // 排除测试文件
+      "scripts/",        // 排除脚本文件
+      "coverage/",       // 排除覆盖率报告目录
+      "node_modules/",   // 排除node_modules
+    ],
+  },
   networks: {
+    hardhat: {
+      // 覆盖率测试可能需要更多gas
+      gas: 12000000,
+      blockGasLimit: 0x1fffffffffffff,
+      allowUnlimitedContractSize: true,
+    },
     ethereum: {
       url: "https://ethereum-rpc.publicnode.com",
       accounts: [process.env.PK],
