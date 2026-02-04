@@ -14,13 +14,6 @@ npx hardhat ignition deploy ./ignition/modules/Lock.js
 
 # Folder
 
-## config
- key必须和hardhat.config.js中的networks下的key保持一致
-
-
-## data
- token和tokenPair 信息
-
 ## 核心目录
   1. contracts : 合约， SwapAndCrossV1为核心合约，其它为测试合约
   2. config : 合约的网络配置，key必须和hardhat.config.js中的networks下的key保持一致
