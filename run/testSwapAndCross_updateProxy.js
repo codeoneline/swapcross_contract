@@ -23,6 +23,7 @@ const swapAndCrossAbi = [
   'function updateApproveProxy(address newProxy) external onlyOwner',
 ]
 
+/// 
 const updateApproveProxy = async() => {
   const privateKey = process.env.EVM_PRIVATE_KEY;
 
@@ -284,7 +285,7 @@ setTimeout(async () => {
   // await sendSwapAndCross('ETH', 'USDC', 'ETH', 'AVAX', 241, 0.001, "0x7ADB5dB6830A726C89f953cfE26a3bCacA815010")
   // await sendSwapAndCross('USDT', 'ETH', 'ETH', 'AVAX', 572, 10, "0x142B0B5EbFF5CfEf68A6375c31d14D55c7c0C05B")
   // await sendSwapAndCross('USDC', 'ETH', 'ETH', 'AVAX', 572, 10, "0x142B0B5EbFF5CfEf68A6375c31d14D55c7c0C05B")
-  await updateApproveProxy()
+  // await updateApproveProxy()
 
   // await sendSwapAndCross('USDT', 'WETH.e', 'AVAX', 'ETH', 572, 5, "0x98FDFC27aA24e3c9cFeF47274d24253147755BF1")
   // await sendSwapAndCross('USDC', 'WETH.e', 'AVAX', 'ETH', 572, 5, "0x98FDFC27aA24e3c9cFeF47274d24253147755BF1")

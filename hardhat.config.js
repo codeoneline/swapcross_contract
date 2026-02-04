@@ -1,9 +1,13 @@
+const path = require('path')
+
+// 设置环境变量
+require('dotenv').config({ path: path.resolve(__dirname, "./.env") });
+process.env.MANIFEST_DEFAULT_DIR = path.resolve(__dirname, "./deployments/.openzeppelin")
+
 require("@nomicfoundation/hardhat-toolbox");
 require("@openzeppelin/hardhat-upgrades");
 require('solidity-coverage');
 
-const path = require('path')
-require('dotenv').config({ path: path.resolve(__dirname, "./.env") });
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
@@ -25,6 +29,13 @@ module.exports = {
       }
     }
   },
+
+  // 配置 OpenZeppelin 升级插件
+  // upgrades: {
+  //   // 指定 .openzeppelin 文件夹的路径
+  //   // 貌似没作用把？
+  //   // deploymentsPath: path.join(__dirname, 'deployments', '.openzeppelin'),
+  // },
 
   sourcify: {
     enabled: true
