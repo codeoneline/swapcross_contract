@@ -20,7 +20,7 @@ npx hardhat ignition deploy ./ignition/modules/Lock.js
   3. test : 合约的单元测试
   4. ignition : 非可升级合约的部署脚本和信息，以后会废弃
   5. scripts: 可升级合约的部署脚本，测试脚本
-  6. run : 调用部署好的合约功能的脚本，之前是基于ignition部署的合约写的，之后需改成基于scripts手动部署的合约
+  6. run : 调用部署好的合约功能，基于ignition部署的合约写的，后面得改成基于scripts手动部署的合约
   7. lib : run目录的支持库
   8. abi : run目录的支持abi
   9. data : run目录的token, tokenPair信息
