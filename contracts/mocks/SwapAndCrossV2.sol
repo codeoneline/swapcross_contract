@@ -5,7 +5,7 @@ pragma solidity ^0.8.24;
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import "./SwapAndCrossV1.sol";
+import "../SwapAndCrossV1.sol";
 
 contract SwapAndCrossV2 is SwapAndCrossV1 {
     // 添加新状态变量
