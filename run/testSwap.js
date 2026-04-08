@@ -36,9 +36,11 @@ const sendSwap = async () => {
     const WETH_ETH = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'; // WETH on ETH
     const USDT_ETH = '0xdac17f958d2ee523a2206206994597c13d831ec7'; // USDT on ETH
     const USDC_ETH = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'; // USDC on ETH
+    const Native_ETH = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE'
 
-    const tokenIn = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE";
-    const tokenOut = USDC_ETH
+    // const tokenIn = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE";
+    const tokenIn = USDC_ETH //"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE";
+    const tokenOut = USDT_ETH// USDC_ETH
     const amountIn = 100000000000000;//ethers.parseUnits("1000", 6); // 1000 USDT
     const slippagePercent = '0.5';
 

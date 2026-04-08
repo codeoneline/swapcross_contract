@@ -24,17 +24,25 @@ async function testLargerAmount() {
   console.log('Contract:', contractAddress);
   console.log('');
   
-  const tokenIn = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE';
-  const tokenOut = '0xdac17f958d2ee523a2206206994597c13d831ec7'; // USDT
+  // const WETH_ETH = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'; // WETH on ETH
+  const USDT_ETH = '0xdac17f958d2ee523a2206206994597c13d831ec7'; // USDT on ETH
+  const USDC_ETH = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'; // USDC on ETH
+  
+  // const tokenIn = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE';
+  // const tokenOut = '0xdac17f958d2ee523a2206206994597c13d831ec7'; // USDT
+
+  const tokenIn = USDC_ETH;
+  const tokenOut = USDT_ETH;
   
   // 测试不同的金额
-  const amounts = [
-    ethers.parseEther('0.01'),   // $28
-    ethers.parseEther('0.05'),   // $143
-    ethers.parseEther('0.1'),    // $286
-  ];
+  // const amounts = [
+  //   ethers.parseEther('0.01'),   // $28
+  //   ethers.parseEther('0.05'),   // $143
+  //   ethers.parseEther('0.1'),    // $286
+  // ];
   
-  for (const amount of amounts) {
+  // for (const amount of amounts) {
+    let amount = 1000000
     console.log(`\n=== Testing ${ethers.formatEther(amount)} ETH ===\n`);
     
     try {
@@ -50,7 +58,7 @@ async function testLargerAmount() {
         contractAddress,  // userWalletAddress
         contractAddress,  // swapReceiverAddress
         null,
-        '2,6'            // 排除 Curve 和 Balancer
+        // '2,6'            // 排除 Curve 和 Balancer
       );
       
       console.log('✅ Got swap route');
@@ -139,13 +147,13 @@ async function testLargerAmount() {
         console.log('');
       }
     }
-  }
+  // }
   
-  console.log('\n⚠️  All amounts tested failed');
-  console.log('Next steps:');
-  console.log('1. Try even larger amounts (0.5 ETH+)');
-  console.log('2. Try different token pairs (ETH → DAI, WETH → USDC)');
-  console.log('3. Use a different DEX aggregator (1inch, ParaSwap)');
+  // console.log('\n⚠️  All amounts tested failed');
+  // console.log('Next steps:');
+  // console.log('1. Try even larger amounts (0.5 ETH+)');
+  // console.log('2. Try different token pairs (ETH → DAI, WETH → USDC)');
+  // console.log('3. Use a different DEX aggregator (1inch, ParaSwap)');
 }
 
 testLargerAmount().catch(error => {

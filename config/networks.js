@@ -6,8 +6,8 @@ module.exports = {
     bip44: 2147483708,
     chainId: 1,
     rpcs: [
-      "https://eth.meowrpc.com",
-      "https://rpc.mevblocker.io",
+      // "https://eth.meowrpc.com",
+      // "https://rpc.mevblocker.io",
       "https://ethereum.publicnode.com",
       "https://gateway.tenderly.co/public/mainnet",
       "https://1rpc.io/eth"

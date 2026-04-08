@@ -7,6 +7,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol";
 
 // ==================== Interfaces ====================
 
@@ -65,7 +66,6 @@ struct BridgeParams {
 // ==================== Events ====================
 
 event SwapAndCrossExecuted(
-    bytes32 indexed txHash,
     address indexed user,
     address indexed tokenIn,
     address tokenOut,
@@ -86,8 +86,6 @@ event RefundProcessed(
     string reason
 );
 
-event EthReceived(address indexed sender, uint256 amount);
-
 // ==================== Main Contract ====================
 
 /**
@@ -101,12 +99,20 @@ event EthReceived(address indexed sender, uint256 amount);
  * 3. 移除 immutable 变量,支持运行时修改所有配置
  * 4. 添加存储间隔以支持未来升级
  * 5. 支持 OKX DEX 的 ApproveProxy 模式
+
+ * 新的改进:
+ * 1. swapAndCross 入口统一校验 msg.value，防止 ETH 双重消耗
+ * 2. 移除伪造 txHash：_executeCross 不再返回值，追踪请使用链上 tx.hash
+ * 3. 移除 fallback
+ * 4. 添加 PausableUpgradeable，支持紧急暂停/恢复
+ * 5. 避免用户直接发币到合约地址
  */
 contract SwapAndCrossV1 is 
     Initializable,
     ReentrancyGuardUpgradeable,
     OwnableUpgradeable,
-    UUPSUpgradeable
+    UUPSUpgradeable,
+    PausableUpgradeable
 {
     using SafeERC20 for IERC20;
 
@@ -148,6 +154,7 @@ contract SwapAndCrossV1 is
         __ReentrancyGuard_init();
         __Ownable_init(msg.sender);
         __UUPSUpgradeable_init();
+        __Pausable_init();
         
         // 初始化状态变量
         okxDexRouter = _okxDexRouter;
@@ -161,7 +168,6 @@ contract SwapAndCrossV1 is
      * @notice 执行 Swap + Cross 操作
      * @param swapParams Swap 参数
      * @param bridgeParams Bridge 参数
-     * @return txHash 跨链交易哈希
      * @return amountOut Swap 后得到的代币数量
      * 
      * @dev 重要:
@@ -172,9 +178,13 @@ contract SwapAndCrossV1 is
     function swapAndCross(
         SwapParams calldata swapParams,
         BridgeParams calldata bridgeParams
-    ) external payable nonReentrant returns (bytes32 txHash, uint256 amountOut) {
+    ) external payable nonReentrant whenNotPaused returns (uint256 amountOut) {
         require(swapParams.amountIn > 0, "Amount must be greater than 0");
         require(bridgeParams.recipient.length > 0, "Invalid recipient");
+
+        bool isNativeIn = swapParams.tokenIn == NATIVE_TOKEN;
+        uint256 requiredEth = bridgeParams.networkFee + (isNativeIn ? swapParams.amountIn : 0);
+        require(msg.value >= requiredEth, "Insufficient ETH: need swap amount + network fee");
         
         // Step 1: 执行 Swap
         amountOut = _executeSwap(swapParams);
@@ -183,14 +193,13 @@ contract SwapAndCrossV1 is
         require(amountOut > 0, "No tokens received from swap");
         
         // Step 3: 执行跨链
-        txHash = _executeCross(swapParams.tokenOut, amountOut, bridgeParams);
+        _executeCross(swapParams.tokenOut, amountOut, bridgeParams);
         
         // Step 4: 退还剩余的代币(如果有)
         _refundRemainingTokens(msg.sender, swapParams.tokenIn, swapParams.tokenOut);
         
         // 发出事件
         emit SwapAndCrossExecuted(
-            txHash,
             msg.sender,
             swapParams.tokenIn,
             swapParams.tokenOut,
@@ -199,8 +208,6 @@ contract SwapAndCrossV1 is
             bridgeParams.recipient,
             bridgeParams.networkFee
         );
-        
-        return (txHash, amountOut);
     }
     
     // ==================== Internal Functions ====================
@@ -232,7 +239,7 @@ contract SwapAndCrossV1 is
         } else {
             // 原生代币
             swapValue = params.amountIn;
-            require(msg.value >= swapValue, "Insufficient ETH for swap");
+            // require(msg.value >= swapValue, "Insufficient ETH for swap");
         }
         
         // 记录兑换前的余额
@@ -271,15 +278,13 @@ contract SwapAndCrossV1 is
         address token,
         uint256 amount,
         BridgeParams calldata params
-    ) internal returns (bytes32 txHash) {
+    ) internal {
         require(amount > 0, "Amount must be greater than 0");
         
         uint256 bridgeFee = params.networkFee;
         
         if (token != NATIVE_TOKEN) {
             // ERC20 代币跨链
-            require(msg.value >= bridgeFee, "Insufficient network fee");
-            
             if (params.crossType == CrossType.UserLock) {
                 // Lock 模式:授权给 bridge
                 IERC20(token).forceApprove(wanBridge, amount);
@@ -305,9 +310,9 @@ contract SwapAndCrossV1 is
                 );
             }
         } else {
-            // 原生币跨链(只支持 Lock 模式)
-            require(address(this).balance >= amount, "Contract insufficient ETH balance");
-            require(msg.value >= bridgeFee, "Insufficient network fee");
+            // 原生币跨链（只支持 Lock 模式）
+            require(address(this).balance >= bridgeFee + amount, "Contract insufficient ETH balance");
+
             
             IBridge(wanBridge).userLock{value: bridgeFee + amount}(
                 params.smgID,
@@ -316,19 +321,6 @@ contract SwapAndCrossV1 is
                 params.recipient
             );
         }
-        
-        // 生成交易哈希
-        txHash = keccak256(
-            abi.encodePacked(
-                msg.sender,
-                token,
-                amount,
-                block.timestamp,
-                block.number
-            )
-        );
-        
-        return txHash;
     }
     
     /**
@@ -431,6 +423,23 @@ contract SwapAndCrossV1 is
             IERC20(token).safeTransfer(owner(), amount);
         }
     }
+
+    // ==================== Pause / Unpause ====================
+
+    /**
+     * @notice 暂停合约（紧急情况使用）
+     * [修复4] 暂停后 swapAndCross 将无法调用
+     */
+    function pause() external onlyOwner {
+        _pause();
+    }
+
+    /**
+     * @notice 恢复合约
+     */
+    function unpause() external onlyOwner {
+        _unpause();
+    }
     
     // ==================== Upgrade Authorization ====================
     
@@ -463,14 +472,6 @@ contract SwapAndCrossV1 is
      * @notice 接收原生代币(无数据的纯转账)
      */
     receive() external payable {
-        emit EthReceived(msg.sender, msg.value);
-    }
-
-    /**
-     * @notice 处理带数据的调用
-     */
-    fallback() external payable {
-        require(msg.value > 0, "Fallback: no ETH sent");
-        emit EthReceived(msg.sender, msg.value);
+        require(msg.sender != tx.origin, "ETH deposit rejected");
     }
 }

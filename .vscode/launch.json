@@ -7,6 +7,33 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "run checkSei",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/run/checkSei.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "run changeOwner",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/run/changeOwner.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "run changeAdmin",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/run/changeAdmin.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "upgradeV2 to avalanche",
       "runtimeExecutable": "npx",
       "runtimeArgs": [

@@ -120,5 +120,5 @@ main()
   });
 
 // 运行命令：
-// npx hardhat run scripts/deploy.js --network avalanche
-// npx hardhat run scripts/deploy.js --network ethereum
+// npx hardhat run scripts/deployV1.js --network avalanche
+// npx hardhat run scripts/deployV1.js --network ethereum
