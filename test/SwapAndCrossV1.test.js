@@ -104,9 +104,8 @@ describe("SwapAndCrossV1", function () {
       });
       
       it("非 owner 不能升级合约", async function () {
-        const SwapAndCrossV2 = await ethers.getContractFactory("SwapAndCrossV2");
-
         // 尝试用非 owner 账户升级，应该失败
+        const SwapAndCrossV2 = await ethers.getContractFactory("SwapAndCrossV2");
         try {
             await upgrades.upgradeProxy(await swapAndCross.getAddress(), SwapAndCrossV2, { 
                 kind: "uups",
@@ -117,6 +116,37 @@ describe("SwapAndCrossV1", function () {
             // 预期的错误
             expect(error.message).to.include("reverted");
         }
+
+        // 模拟非 owner 尝试升级，应该被 revert
+        // 注意：我们需要直接调用 upgradeTo 来测试权限
+        
+        // const SwapAndCrossV2 = await ethers.getContractFactory("SwapAndCrossV2");
+            
+        // // 获取代理地址
+        // const proxyAddress = await swapAndCross.getAddress();
+        
+        // // 部署新的实现合约
+        // const newImplementation = await SwapAndCrossV2.deploy();
+        
+        // // OZ v5 使用 upgradeToAndCall，第二个参数是空字节数组（表示不调用任何函数）
+        // const uupsInterface = new ethers.Interface([
+        //     "function upgradeToAndCall(address newImplementation, bytes memory data) external payable"
+        // ]);
+        
+        // // 编码空数据
+        // const emptyData = "0x";
+        
+        // // 非 owner 尝试升级，应该被 revert
+        // await expect(
+        //     user1.sendTransaction({
+        //         to: proxyAddress,
+        //         data: uupsInterface.encodeFunctionData("upgradeToAndCall", [
+        //             await newImplementation.getAddress(),
+        //             emptyData
+        //         ]),
+        //         value: 0
+        //     })
+        // ).to.be.reverted;
       });
     });
     
