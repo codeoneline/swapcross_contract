@@ -4,7 +4,10 @@ const { ethers, upgrades } = require("hardhat");
 const path = require('path');
 const networksConfig = require(path.resolve(__dirname, "../config/networks"));
 
+const { getSwapData } = require(path.resolve(__dirname, "../lib/okxDexHelper"));
 
+// 设置PK
+// process.env.PK = ""
 
 async function main() {
   const network = hre.network.name;
@@ -14,17 +17,15 @@ async function main() {
   console.log(`Deploying SwapAndCrossV1 to ${network}`);
   console.log(`${"=".repeat(50)}\n`);
   
-  const okxDexRouter = myConfig.okxDexRouter;
   const approveProxy = myConfig.approveProxy;
   const wanBridge = myConfig.wanBridge;
   
   console.log(`Configuration:`);
-  console.log(`- okxDexRouter: ${okxDexRouter}`);
   console.log(`- approveProxy: ${approveProxy}`);
   console.log(`- wanBridge: ${wanBridge}`);
   
-  if (!okxDexRouter || !wanBridge) {
-    throw new Error("❌ Missing okxDexRouter or wanBridge");
+  if (!wanBridge) {
+    throw new Error("❌ Missing wanBridge");
   }
 
   // 获取部署账户
@@ -39,7 +40,7 @@ async function main() {
   console.log("📦 Deploying SwapAndCrossV1 proxy...");
   const proxy = await upgrades.deployProxy(
     SwapAndCrossV1,
-    [okxDexRouter, approveProxy, wanBridge],
+    [approveProxy, wanBridge],
     {
       initializer: "initialize",
       kind: "uups"
@@ -70,7 +71,6 @@ async function main() {
     deployer: deployer.address,
     timestamp: new Date().toISOString(),
     config: {
-      okxDexRouter,
       approveProxy,
       wanBridge
     }

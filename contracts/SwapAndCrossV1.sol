@@ -48,6 +48,7 @@ enum CrossType {
 // ==================== Structs ====================
 
 struct SwapParams {
+    address okxDexRouter;
     address tokenIn;         // 输入代币地址 (0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE 表示原生代币)
     address tokenOut;        // 输出代币地址
     uint256 amountIn;        // 输入代币数量
@@ -106,6 +107,7 @@ event RefundProcessed(
  * 3. 移除 fallback
  * 4. 添加 PausableUpgradeable，支持紧急暂停/恢复
  * 5. 避免用户直接发币到合约地址
+ * 6. swapAndCross 由参数传入okxDexRouter合约地址
  */
 contract SwapAndCrossV1 is 
     Initializable,
@@ -118,7 +120,6 @@ contract SwapAndCrossV1 is
 
     // ==================== State Variables ====================
     
-    address public okxDexRouter;
     address public okxApproveProxy;
     address public wanBridge;  // 改为可变,不再是 immutable
     
@@ -137,16 +138,13 @@ contract SwapAndCrossV1 is
 
     /**
      * @notice 初始化合约(替代 constructor)
-     * @param _okxDexRouter OKX DexRouter 地址
      * @param _okxApproveProxy OKX ApproveProxy 地址
      * @param _wanBridge Wanchain Bridge 地址
      */
     function initialize(
-        address _okxDexRouter,
         address _okxApproveProxy,
         address _wanBridge
     ) public initializer {
-        require(_okxDexRouter != address(0), "Invalid router address");
         require(_okxApproveProxy != address(0), "Invalid approve proxy address");
         require(_wanBridge != address(0), "Invalid bridge address");
         
@@ -157,7 +155,6 @@ contract SwapAndCrossV1 is
         __Pausable_init();
         
         // 初始化状态变量
-        okxDexRouter = _okxDexRouter;
         okxApproveProxy = _okxApproveProxy;
         wanBridge = _wanBridge;
     }
@@ -246,7 +243,7 @@ contract SwapAndCrossV1 is
         uint256 balanceBefore = _getBalance(params.tokenOut);
         
         // 调用 OKX DEX Router
-        (bool success, bytes memory returnData) = okxDexRouter.call{value: swapValue}(
+        (bool success, bytes memory returnData) = params.okxDexRouter.call{value: swapValue}(
             params.swapCallData
         );
         
@@ -381,17 +378,6 @@ contract SwapAndCrossV1 is
     }
     
     // ==================== Admin Functions ====================
-    
-    /**
-     * @notice 更新 OKX Router 地址
-     */
-    function updateRouter(address newRouter) external onlyOwner {
-        require(newRouter != address(0), "Invalid router address");
-        address oldRouter = okxDexRouter;
-        okxDexRouter = newRouter;
-        emit RouterUpdated(oldRouter, newRouter);
-    }
-    
     /**
      * @notice 更新 OKX ApproveProxy 地址
      */
